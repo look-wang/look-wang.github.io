@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | wll的技术博客</title>
+  <title>python基础7——Python数学和列表操作 | wll的技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="wll的技术博客">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="什么是模块Python 模块(Module)，是一个 Python 文件，以 .py 结尾，包含了 Python 对象定义和Python语句。模块让你能够有逻辑地组织你的 Python 代码段。把相关的代码分配到一个模块里能让你的代码更好用，更易懂。模块能定义函数，类和变量，模块里也能包含可执行的代码 字符串模块的引入义存放的位置：     C:\Users\Ran\AppData\Local\P">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础7——Python数学和列表操作">
+<meta property="og:url" content="http://yoursite.com/2018/07/21/python-07/index.html">
 <meta property="og:site_name" content="wll的技术博客">
+<meta property="og:description" content="什么是模块Python 模块(Module)，是一个 Python 文件，以 .py 结尾，包含了 Python 对象定义和Python语句。模块让你能够有逻辑地组织你的 Python 代码段。把相关的代码分配到一个模块里能让你的代码更好用，更易懂。模块能定义函数，类和变量，模块里也能包含可执行的代码 字符串模块的引入义存放的位置：     C:\Users\Ran\AppData\Local\P">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-21T11:53:44.320Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wll的技术博客">
+<meta name="twitter:title" content="python基础7——Python数学和列表操作">
+<meta name="twitter:description" content="什么是模块Python 模块(Module)，是一个 Python 文件，以 .py 结尾，包含了 Python 对象定义和Python语句。模块让你能够有逻辑地组织你的 Python 代码段。把相关的代码分配到一个模块里能让你的代码更好用，更易懂。模块能定义函数，类和变量，模块里也能包含可执行的代码 字符串模块的引入义存放的位置：     C:\Users\Ran\AppData\Local\P">
   
     <link rel="alternative" href="/atom.xml" title="wll的技术博客" type="application/atom+xml">
   
@@ -150,292 +154,177 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-python-07" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      python基础7——Python数学和列表操作
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-07/" class="archive-article-date">
+
+        
+        <a href="/2018/07/21/python-07/" class="archive-article-date">
   	<time datetime="2018-07-21T11:36:37.955Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-07/">python基础7——Python数学和列表操作</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是模块"><a href="#什么是模块" class="headerlink" title="什么是模块"></a>什么是模块</h2><p>Python 模块(Module)，是一个 Python 文件，以 .py 结尾，包含了 Python 对象定义和Python语句。<br>模块让你能够有逻辑地组织你的 Python 代码段。<br>把相关的代码分配到一个模块里能让你的代码更好用，更易懂。<br>模块能定义函数，类和变量，模块里也能包含可执行的代码</p>
+<h2 id="字符串模块的引入义"><a href="#字符串模块的引入义" class="headerlink" title="字符串模块的引入义"></a>字符串模块的引入义</h2><p>存放的位置：     C:\Users\Ran\AppData\Local\Programs\Python\Python36\Lib<br>引入模块<br>import keyword<br>import string</p>
+<h2 id="数字模块math"><a href="#数字模块math" class="headerlink" title="数字模块math"></a>数字模块math</h2><p>python中的数学模块需要导入<br>导入模块：import math<br>数学模块分为三个模块：数学函数，随机数函数，三角函数</p>
+<h3 id="math数学函数"><a href="#math数学函数" class="headerlink" title="math数学函数"></a>math数学函数</h3><p>abs(x)    返回数字的绝对值，如abs(-10) 返回 10<br>sum(x)    将一个序列的数值进行相加求和<br>round(x [,n])    返回浮点数x的四舍五入值，如给出n值，则代表舍入到小数点后的位数。</p>
+<p>ceil(x)    返回数字的上入整数，如math.ceil(4.1) 返回 5<br>fsum(x)    将一个序列的数值进行相加求和<br>exp(x)    返回e的x次幂(ex),如math.exp(1) 返回2.718281828459045<br>fabs(x)    返回数字的绝对值，如math.fabs(-10) 返回10.0<br>floor(x)    返回数字的下舍整数，如math.floor(4.9)返回 4<br>max(x1, x2,…)    返回给定参数的最大值，参数可以为序列。<br>min(x1, x2,…)    返回给定参数的最小值，参数可以为序列。<br>modf(x)    返回x的整数部分与小数部分，两部分的数值符号与x相同，整数部分以浮点型表示。<br>pow(x, y)    x**y 运算后的值。<br>sqrt(x)    返回数字x的平方根<br>pi    数学常量 pi（圆周率，一般以π来表示）<br>e    数学常量 e，e即自然常数（自然常数）。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line"><span class="built_in">print</span>(abs(-10))    <span class="comment">#绝对值</span></span><br><span class="line"><span class="built_in">print</span>(math.ceil(3.3)) <span class="comment">#向上取整</span></span><br><span class="line"><span class="built_in">print</span>(math.floor(3.8))  <span class="comment">#向下取整 </span></span><br><span class="line"><span class="comment">#print(sum(1,2,3))   #sum()参数不能为3，报错</span></span><br><span class="line"><span class="built_in">print</span>(sum([1,2,3]))</span><br><span class="line"><span class="built_in">print</span>(sum((1,2,3)))</span><br><span class="line"><span class="built_in">print</span>(sum(&#123;1,2,3&#125;))</span><br><span class="line"><span class="built_in">print</span>(sum(range(5)))</span><br><span class="line"><span class="built_in">print</span>(math.exp(3))  <span class="comment">#返回e的x的幂</span></span><br><span class="line"><span class="built_in">print</span>(math.fabs(5))   <span class="comment">#返回数字的绝对值，浮点型</span></span><br><span class="line"><span class="built_in">print</span>(math.modf(5.75))  <span class="comment">#返回x的整数部分与小数部分（0.75,5.0）符号与x相同</span></span><br><span class="line"><span class="built_in">print</span>(round(5.75,2))    <span class="comment">#四舍五入，取两位小数位</span></span><br><span class="line"><span class="built_in">print</span>(math.pi)     <span class="comment">#获取pi常量</span></span><br><span class="line"><span class="built_in">print</span>(math.e)</span><br></pre></td></tr></table></figure></p>
+<h3 id="math随机数函数"><a href="#math随机数函数" class="headerlink" title="math随机数函数"></a>math随机数函数</h3><p>入随机数：import random<br>随机数可以用于数学，游戏，安全等领域中，还经常被嵌入到算法中，用以提高算法效率，并提高程序的安全性</p>
+<p>random()    随机生成下一个实数，它在[0,1)范围内。<br>choice(seq)    从序列的元素中随机挑选一个元素，比如random.choice(range(10))，从0到9中随机挑选一个整数。<br>shuffle(lst)    将序列的所有元素随机排序<br>randrange ([start,] stop [,step])    从指定范围内，按指定基数递增的集合中获取一个随机数，基数缺省值为1<br>randint([low,high])    用于生成一个指定范围内的整数。其中参数low是下限，参数high是上限,[0,heg]<br>uniform(x, y)    随机生成下一个实数，它在[x,y]范围内。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import math</span><br><span class="line">import random</span><br><span class="line">shu=math.floor(random.random()*11)   <span class="comment">#random()[0-1)的数 *floor(max-min+1)+min(公式)</span></span><br><span class="line">shu1=math.floor(random.uniform(1,3))  <span class="comment">#uniform(x,y)[x-y)的数，不包含y</span></span><br><span class="line"><span class="built_in">print</span>(shu,shu1)    </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ran1=random.choice(range(10))   <span class="comment">#随机挑选</span></span><br><span class="line"><span class="built_in">print</span>(ran1)</span><br><span class="line">ran1=[<span class="string">'小蓝'</span>,<span class="string">'小白'</span>,<span class="string">'小橙'</span>,<span class="string">'小粉'</span>,<span class="string">'小青'</span>]</span><br><span class="line"><span class="built_in">print</span>(random.choice(ran1))     </span><br><span class="line">random.shuffle(ran1)       <span class="comment">#随机排序，ran[0]随机是哪个数</span></span><br><span class="line"><span class="built_in">print</span>(ran1[0])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(random.randrange(100,1000,2))  <span class="comment">#包前不包后</span></span><br><span class="line"><span class="built_in">print</span>(random.randint(2,9))    <span class="comment">#整数，包前包后</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="其他內建函数"><a href="#其他內建函数" class="headerlink" title="其他內建函数"></a>其他內建函数</h3><p>max()    获取最大值<br>min()    获取最小值<br>range()    产生连续序列的数字<br>repr(seq)    原型打印内容。<br>eval(lst)    将一个字符串当做python代码执行<br>locals()    获取当前环境所有变量<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">str1=<span class="string">'hello world'</span></span><br><span class="line"><span class="built_in">print</span>(str1)</span><br><span class="line"><span class="built_in">print</span>(repr(str1))  <span class="comment">#原型打印，带''</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">eval</span>(repr(str1)))  <span class="comment">#把字符串当做python代码执行</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># print(locals())  #获取当前环境所有变量</span></span><br><span class="line">def one():</span><br><span class="line">    a=<span class="string">'123'</span></span><br><span class="line">    b=<span class="string">'345'</span></span><br><span class="line">    <span class="built_in">print</span>(locals)</span><br><span class="line">one()            <span class="comment">#定义在函数里面只打印定义的变量</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="其他操作函数"><a href="#其他操作函数" class="headerlink" title="其他操作函数"></a>其他操作函数</h3><p>import operator<br>operator.ge()         大于等于<br>operator.gt()         大于<br>operator.eq()       等于<br>operator.ne()        不等于<br>operator.le()           小于等于<br>operator.lt()          小于<br>格式：operator.ge(列表1,列表2)。<br>功能：对两个列表进行比较，若第一个列表大于第二个，则结果为True，否则返回False<br>代替原来的cmp(x,y) 函数，用于比较2个对象，如果 x &lt; y 返回 -1, 如果 x == y 返回 0, 如果 x &gt; y 返回 1<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#进行比较operator.ge()大于等于，operator.gt()大于，operator.eq()等于，operator.ne()不等于，operator.le()#小于等于,operator.lt()小于</span></span><br><span class="line"></span><br><span class="line">import operator</span><br><span class="line">list1=[15,13]</span><br><span class="line">list2=[13,25]</span><br><span class="line"><span class="built_in">print</span>(operator.ge(list1,list2))  <span class="comment">#True,按照列表顺序比</span></span><br><span class="line">list1=[13,13]</span><br><span class="line">list2=[13,25]</span><br><span class="line"><span class="built_in">print</span>(operator.ge(list1,list2))</span><br></pre></td></tr></table></figure></p>
+<h2 id="列表简单操作"><a href="#列表简单操作" class="headerlink" title="列表简单操作"></a>列表简单操作</h2><p>创建列表<br>空列表   []<br>创建具有一个数据的列表<br>创建具有多个数据的列表<br>列表的操作<br>访问<br>添加<br>修改<br>删除  del 删除的是变量，而不是数据</p>
+<p>创建的序列操作<br>序列相加  +<br>序列相乘  *<br>索引操作  下标 [] -值<br>分片操作  - list<br>成员检测   in/not in  -  bool</p>
+<h3 id="列表函数"><a href="#列表函数" class="headerlink" title="列表函数"></a>列表函数</h3><p>len(list)    列表元素个数<br>max(list)    返回列表元素最大值<br>min(list)    返回列表元素最小值<br>list(seq)    将其他数据类型转换为列表<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">lis=[<span class="string">'one'</span>,<span class="string">'two'</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(lis)): <span class="comment">#根据len循环，根据下标取列表的值</span></span><br><span class="line">    <span class="built_in">print</span>(lis[i])</span><br><span class="line"></span><br><span class="line">list1=[<span class="string">'appless'</span>,<span class="string">'banana'</span>,<span class="string">'orange'</span>,<span class="string">'strawberry'</span>]</span><br><span class="line"><span class="built_in">print</span>(max(list1))      <span class="comment">#strawberry</span></span><br><span class="line"><span class="built_in">print</span>(min(list1))      <span class="comment">#appless</span></span><br><span class="line"></span><br><span class="line">str1=<span class="string">'hello'</span></span><br><span class="line"><span class="built_in">print</span>(list(str1))    <span class="comment">#['h', 'e', 'l', 'l', 'o']</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="列表的方法操作"><a href="#列表的方法操作" class="headerlink" title="列表的方法操作"></a>列表的方法操作</h3><p>函数关键词后面加（），方法后面加.<br>list.append(obj)    在列表末尾添加新的对象<br>list.insert(index, obj)    将对象插入列表<br>list.extend(seq)==+    在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）<br>list.copy()    复制列表<br>list.count(obj)    统计某个元素在列表中出现的次数<br>list.index(obj)    从列表中找出某个值第一个匹配项的索引位置<br>list.pop([index=-1])    移除列表中的一个元素（默认最后一个元素），并且返回该元素的值，下标删除指定值<br>list.remove(obj)    移除列表中某个值的第一个匹配项<br>del    del语句删除某个特定位置的元素，从列表中删除切片或清空整个列表<br>list.reverse()    反向列表中元素<br>list.sort(cmp=None, key=None, reverse=False)    对原列表进行排序</p>
+<p>sorted()和resersed()<br>格式：sorted(列表)  reversed(列表)。<br>功能：前者的功能是对列表进行排序，默认是按升序排序，还可在列表的后面增加一个reverse参数，其等于True则表示按降序排序；后者的功能是对列表进行逆序。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#列表的方法操作  函数关键词后面加（），方法后面加.</span></span><br><span class="line"><span class="comment">#添加+（字符串连接）append（在列表末尾加）extend（在列表末尾一次性追加多个值）insert（插入对象）</span></span><br><span class="line">lis=[<span class="string">'one'</span>,<span class="string">'two'</span>]</span><br><span class="line">lis+=[<span class="string">'thr'</span>]</span><br><span class="line"><span class="comment">#lis+=12        #不能是数字，报错</span></span><br><span class="line">lis+=<span class="string">'thr'</span>     <span class="comment">#['one','two',t','h','r']</span></span><br><span class="line"><span class="built_in">print</span>(lis)</span><br><span class="line"><span class="comment">#append</span></span><br><span class="line">list3=[<span class="string">'appless'</span>,<span class="string">'banana'</span>,<span class="string">'orange'</span>,<span class="string">'strawberry'</span>]</span><br><span class="line"><span class="built_in">print</span>(list3.append(<span class="string">'tomato'</span>))  <span class="comment">#追加是一个过程，没有返回值</span></span><br><span class="line"><span class="built_in">print</span>(list3)</span><br><span class="line"><span class="comment">#循环字符串，将内容追加(append)到指定列表中</span></span><br><span class="line">str1=<span class="string">'hello'</span></span><br><span class="line">list2=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> str1:</span><br><span class="line">    list2.append(i)</span><br><span class="line"><span class="built_in">print</span>(list2)</span><br><span class="line"></span><br><span class="line"><span class="comment">#向list3中插入(insert)指定内容，第一个参数可以指定追加位置</span></span><br><span class="line">list3=[<span class="string">'apple'</span>,<span class="string">'banana'</span>,<span class="string">'orange'</span>,<span class="string">'strawberry'</span>]</span><br><span class="line">list3.insert(2,<span class="string">'car'</span>)   <span class="comment">#在下标2位置插入’car'</span></span><br><span class="line"><span class="built_in">print</span>(list3)</span><br><span class="line"><span class="comment">#用insert实现字符串的翻转</span></span><br><span class="line">list3=[<span class="string">'apple'</span>,<span class="string">'banana'</span>,<span class="string">'orange'</span>,<span class="string">'strawberry'</span>]</span><br><span class="line">list4=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list3:</span><br><span class="line">    list4.insert(0,i)</span><br><span class="line"><span class="built_in">print</span>(list4)</span><br><span class="line"><span class="comment">#extend</span></span><br><span class="line">list3=[<span class="string">'apple'</span>,<span class="string">'orange'</span>,<span class="string">'strawberry'</span>,<span class="string">'banana'</span>]</span><br><span class="line">list4=[<span class="string">'oppo'</span>,<span class="string">'华为'</span>,<span class="string">'小米'</span>,<span class="string">'vivo'</span>,<span class="string">'联想'</span>,<span class="string">'360'</span>,<span class="string">'格力'</span>,<span class="string">'坚果'</span>]</span><br><span class="line">list3.extend(list4)</span><br><span class="line"><span class="built_in">print</span>(list3)</span><br><span class="line"><span class="comment">#copy</span></span><br><span class="line">list5=[]</span><br><span class="line">list5=list3.copy()</span><br><span class="line"><span class="built_in">print</span>(list5)</span><br><span class="line"><span class="comment">#count</span></span><br><span class="line">list3=[<span class="string">'apple'</span>,<span class="string">'orange'</span>,<span class="string">'strawberry'</span>,<span class="string">'banana'</span>]</span><br><span class="line"><span class="built_in">print</span>(list3.count(<span class="string">'apple'</span>))  <span class="comment">#统计单词</span></span><br><span class="line"></span><br><span class="line">list6=[]           <span class="comment">#统计单个如‘a’的个数</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list3:</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> i:</span><br><span class="line">        list6.append(j)</span><br><span class="line"><span class="built_in">print</span>(list6.count(<span class="string">'a'</span>))</span><br><span class="line"></span><br><span class="line">newlist=<span class="string">''</span>.join(list3)</span><br><span class="line"><span class="built_in">print</span>(newlist.count(<span class="string">'a'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#index</span></span><br><span class="line">list4=[<span class="string">'oppo'</span>,<span class="string">'华为'</span>,<span class="string">'小米'</span>,<span class="string">'vivo'</span>,<span class="string">'联想'</span>,<span class="string">'360'</span>,<span class="string">'格力'</span>,<span class="string">'坚果'</span>]</span><br><span class="line"><span class="built_in">print</span>(list4.index(<span class="string">'360'</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="删除操作"><a href="#删除操作" class="headerlink" title="删除操作"></a>删除操作</h3><p>del删除指定位置元素<br>    del是python语句，而不是列表方法，无法通过list来调用。使用del可以删除一个元素，当元素删除之后，位于它后面的元素会自动移动填补空出来的位置。<br>remove()删除指定值<br>    如果不确定或不关心元素在列表中的位置，可以使用remove()根据指定的值来删除元素。<br>pop()获取并删除指定位置元素<br>    使用pop()获取并删除指定位置元素<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#pop 默认删除最后一个元素，可通过下标删除</span></span><br><span class="line">list4=[<span class="string">'oppo'</span>,<span class="string">'华为'</span>,<span class="string">'小米'</span>,<span class="string">'vivo'</span>,<span class="string">'联想'</span>,<span class="string">'360'</span>,<span class="string">'格力'</span>,<span class="string">'坚果'</span>]</span><br><span class="line">list4.pop()</span><br><span class="line">list4.pop(2)</span><br><span class="line"><span class="built_in">print</span>(list4)</span><br><span class="line"><span class="comment">#remove(obj),根据内容， 移除列表中某个值的第一个匹配项</span></span><br><span class="line">list4=[<span class="string">'oppo'</span>,<span class="string">'华为'</span>,<span class="string">'小米'</span>,<span class="string">'vivo'</span>,<span class="string">'联想'</span>,<span class="string">'360'</span>,<span class="string">'格力'</span>,<span class="string">'坚果'</span>]</span><br><span class="line">list4.remove(<span class="string">'oppo'</span>)</span><br><span class="line"><span class="built_in">print</span>(list4)</span><br><span class="line"></span><br><span class="line"><span class="comment">#使用del删除元素，删除多个时，中间用逗号隔开，在列表中删除一个元素之后，会重新将内容的下标排序</span></span><br><span class="line">var1=1</span><br><span class="line">var2=2</span><br><span class="line">del var2,var1</span><br><span class="line"><span class="comment">#print(var1)   #报错name 'var1' is not defined   del 删除的是变量，而不是数据</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#删除列表中的前两个元素</span></span><br><span class="line">lists=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>]</span><br><span class="line"><span class="built_in">print</span>(lists)</span><br><span class="line">del lists[0],lists[0]  <span class="comment">#删除第一个时重新排序</span></span><br><span class="line"><span class="built_in">print</span>(lists)</span><br></pre></td></tr></table></figure></p>
+<p>sort()、sorted()、reverse()、reversed()对比<br>Python list内置sort()方法用来排序，也可以用python内置的全局sorted()方法来对可迭代的序列排序生成新的序列。<br>    sorted(iterable,key=None,reverse=False)，返回新的列表，对所有可迭代的对象均有效<br>    sort(key=None,reverse=False) 就地改变列表  reverse：True反序；False 正序<br>    reverse()与sort的使用方式一样，而reversed()与sorted()的使用方式相同<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#reverse(),reversed(),结果一样，过程返回值不同</span></span><br><span class="line">list3=[<span class="string">'apple'</span>,<span class="string">'orange'</span>,<span class="string">'strawberry'</span>,<span class="string">'banana'</span>]</span><br><span class="line"><span class="built_in">print</span>(list3.reverse())  <span class="comment">#None</span></span><br><span class="line"><span class="built_in">print</span>(list3)</span><br><span class="line"><span class="built_in">print</span>(reversed(list3))   <span class="comment">#&lt;list_reverseiterator object at 0x000000000292B630&gt;</span></span><br><span class="line"><span class="built_in">print</span>(list3)</span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">#sort(),sorted()对列表内容进行排序，默认升序,其等于True则表示按降序排序</span></span><br><span class="line"><span class="string">list3=['</span>apple<span class="string">','</span>orange<span class="string">','</span>strawberry<span class="string">','</span>banana<span class="string">']</span></span><br><span class="line"><span class="string">print(list3.sort())</span></span><br><span class="line"><span class="string">print(list3)</span></span><br><span class="line"><span class="string">print(sorted(list3))</span></span><br><span class="line"><span class="string">print(list3)</span></span><br><span class="line"><span class="string">print(sorted(list3,reverse=True))</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="列表的遍历"><a href="#列表的遍历" class="headerlink" title="列表的遍历"></a>列表的遍历</h3><p>for 变量 in 遍历<br>    for  变量   in   列表：<br>        使用变量<br>while 循环遍历<br>    i=0<br>    while i&lt;len(列表)<br>二级列表遍历<br>    for  变量1，变量2   in   列表：<br>        使用变量1和变量2<br>注意：变量1取二级列表中的第一个值，变量2取第二个值</p>
+<p>非同等长度的二级列表遍历<br>    列表=[[值1,值2],[值1,值2,值3],[值1]]<br>    for   变量1   in   列表：<br>        for   变量2   in   变量1：<br>            使用变量2（变量2是二级列表中的每个值）</p>
+<p>列表推导式提供了一种创建list的简便方法。应用程序创建列表时，列表中的元素来源于其他序列、可迭代对象或创建的一个满足一定条件的序列。<br>格式：　　<br>[表达式 for 变量 in 列表]    或者  [表达式 for 变量 in 列表 if 条件]<br>分类<br>简单的列表推导式<br>带有判断条件的列表推导式<br>多个列表同时循环的列表推导式<br>带有判断条件的多个列表的同时循环列表推导式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#列表的遍历 for 变量1，变量2 in 对象</span></span><br><span class="line">list7=[[<span class="string">'age'</span>,<span class="string">'18'</span>,20],[<span class="string">'class'</span>,<span class="string">'py'</span>],[<span class="string">'name'</span>,<span class="string">'林俊杰'</span>]]</span><br><span class="line">dict1=&#123;<span class="string">'age'</span>:<span class="string">'18'</span>,<span class="string">'name'</span>:<span class="string">'林俊杰'</span>&#125;</span><br><span class="line"><span class="keyword">for</span> i,j <span class="keyword">in</span> dict1.items():</span><br><span class="line">    <span class="built_in">print</span>(i,j)</span><br><span class="line">li=[1,2,3,4,5,6]</span><br><span class="line">li2=[<span class="string">'apple'</span>,<span class="string">'orange'</span>,<span class="string">'strawberry'</span>,<span class="string">'banana'</span>,<span class="string">'xigua'</span>,<span class="string">'li'</span>]</span><br><span class="line"><span class="comment">#列表推导式的四种格式</span></span><br><span class="line"><span class="comment"># 简单的列表推导式</span></span><br><span class="line"><span class="comment"># 带有判断条件的列表推导式</span></span><br><span class="line"><span class="comment"># 多个列表同时循环的列表推导式</span></span><br><span class="line"><span class="comment"># 带有判断条件的多个列表的同时循环列表推导式</span></span><br><span class="line"><span class="built_in">print</span>([i**2 <span class="keyword">for</span> i <span class="keyword">in</span> li])</span><br><span class="line"><span class="built_in">print</span>([i**2 <span class="keyword">for</span> i <span class="keyword">in</span> li <span class="keyword">if</span> i&gt;3])</span><br><span class="line"><span class="built_in">print</span>([str(i)+<span class="string">'=&gt;'</span>+j <span class="keyword">for</span> i <span class="keyword">in</span> li <span class="keyword">for</span> j <span class="keyword">in</span> li2])</span><br><span class="line"><span class="built_in">print</span>([str(i)+<span class="string">'=&gt;'</span>+j <span class="keyword">for</span> i <span class="keyword">in</span> li <span class="keyword">for</span> j <span class="keyword">in</span> li2 <span class="keyword">if</span> li.index(i)==li2.index(j)])</span><br></pre></td></tr></table></figure></p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>类型相关函数：int,float,bool,str,list,tuple,set,dict,complex<br>变量相关：type,id,print<br>数学函数:abs，round，sum,min,max,pow,range,repr,eval,locals<br>进制<br>bin,oct,hex,ord,chr</p>
+<p>3.6之前的版本获取所有内置变量和函数名需要import，3.6.5中不需要引入<br>import builtins<br>print(dir(<strong>builtins</strong>))</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/21/python-07/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-06/" class="archive-article-date">
-  	<time datetime="2018-07-21T10:59:12.016Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/21/python-06/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python基础6——Python字符串操作</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-06/">python基础6——Python字符串操作</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python05/" class="archive-article-date">
-  	<time datetime="2018-07-21T10:05:58.333Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python05/">python基础5——Python高级特性</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-04(2)/" class="archive-article-date">
-  	<time datetime="2018-07-21T09:14:01.918Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-04(2)/">控制语句整理案例</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-04/" class="archive-article-date">
-  	<time datetime="2018-07-21T07:42:15.741Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-04/">Python基础4——流程控制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-03/" class="archive-article-date">
-  	<time datetime="2018-07-21T06:40:58.128Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-03/">Python基础3——运算和运算符</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/20/python02/" class="archive-article-date">
-  	<time datetime="2018-07-20T05:08:33.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/20/python02/">python基础2——数据类型转换</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/19/Python_01/" class="archive-article-date">
-  	<time datetime="2018-07-19T09:15:26.100Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/19/Python_01/">Python基础1-数据类型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/17/text/" class="archive-article-date">
-  	<time datetime="2018-07-17T08:23:41.541Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/17/text/">text</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/14/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-14T08:39:23.965Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -458,8 +347,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
