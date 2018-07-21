@@ -152,6 +152,130 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python-03" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/21/python-03/">Python基础3——运算和运算符</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/21/python-03/" class="archive-article-date">
+  	<time datetime="2018-07-21T06:40:58.128Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><p>运算<br>    由一个以上的值经过变化得到新值的过程就是运算<br>运算符<br>    用于运算的符号就是运算符<br>表达式<br>    操作数和运算符组成了表达式<br>    例：4 +5 = 9<br>    4和5是数值<br>    +和=是运算符<br>    整个称为表达式</p>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><p>‘+’    加    a + b 输出结果 30<br>‘-‘    减    a - b 输出结果 -10<br>‘<em>    乘    a </em> b 输出结果 200<br>/    除    a * b 输出结果 200<br>%    取模（余数）    b % a 输出结果 0<br><strong>    幂-返回x的y次幂    a</strong>b 为10的20次<br>//    求整除（商）    9//2 输出结果 4 , 9.0//2.0 输出结果 4.0<br>以上假设变量： a=10，b=20</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#加法+:在字符串中连接字符串，连接字符串与常量，连接变量</span></span><br><span class="line">name=<span class="string">'Tom'</span></span><br><span class="line">age=<span class="string">'18'</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">'我的名字是'</span>+name+<span class="string">',今年'</span>+age+<span class="string">'岁了。'</span>)</span><br><span class="line">str1=<span class="string">'100'</span></span><br><span class="line"><span class="built_in">print</span>(int(str1)+100)</span><br><span class="line"><span class="built_in">print</span>(str1,100)</span><br><span class="line"><span class="built_in">print</span>(str1,<span class="string">'100'</span>)</span><br><span class="line"><span class="built_in">print</span>(str1+str(100))</span><br><span class="line"><span class="built_in">print</span>(str1)</span><br><span class="line"><span class="comment">#/除，//整除，%取余数运算，*乘，**幂，a的平方位a**2</span></span><br><span class="line"><span class="built_in">print</span>(4/2)  <span class="comment">#2.0</span></span><br><span class="line"><span class="built_in">print</span>(4//2) <span class="comment">#2</span></span><br><span class="line"><span class="built_in">print</span>(4.0/2.0) <span class="comment">#2.0</span></span><br><span class="line"><span class="built_in">print</span>(4.0//2.0) <span class="comment">#2.0</span></span><br><span class="line"><span class="built_in">print</span>(5/2)  <span class="comment">#2.5</span></span><br><span class="line"><span class="built_in">print</span>(5//2)  <span class="comment">#2</span></span><br><span class="line">num1=90  </span><br><span class="line">num2=-20</span><br><span class="line"><span class="built_in">print</span>(num1%num2) <span class="comment">#-10 在%运算中，余数的正负与除数保持一致 </span></span><br><span class="line">num3=10.9</span><br><span class="line">num4=3.3</span><br><span class="line"><span class="built_in">print</span>(num3//num4) </span><br><span class="line"><span class="built_in">print</span>(int(num3%num4)) </span><br><span class="line"><span class="built_in">print</span>(round(3.1415926,2)) <span class="comment">#3.14 round函数可以控制小数点输出几位</span></span><br><span class="line"><span class="built_in">print</span>(round(num3%num4,5)) <span class="comment">#1.0  当小数点后面为0时，不管小数点输出几位，都只输出一位0</span></span><br><span class="line"><span class="built_in">print</span>(2**4)  <span class="comment">#16</span></span><br></pre></td></tr></table></figure>
+<h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><p>==    等于 - 比较对象是否相等    (a == b) 返回 False。<br>!=    不等于 - 比较两个对象是否不相等    (a != b) 返回 true.<br>&lt;&gt;    不等于 - 比较两个对象是否不相等    (a &lt;&gt; b) 返回 true。这个运算符类似 !=<br>‘&gt;’    大于 - 返回x是否大于y    (a &gt; b) 返回 False<br>&lt;    小于 - 返回x是否小于y。所有比较运算符返回1表示真，返回0表示假。这分别与特殊的变量True和False等价。    (a &lt; b) 返回 true<br>‘&gt;=’    大于等于-返回x是否大于等于y    (a &gt;= b) 返回 False<br>&lt;=    小于等于 -返回x是否小于等于y    (a &lt;= b) 返回 true。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#等于==，值和类型都要一样</span></span><br><span class="line">str1=<span class="string">'123'</span></span><br><span class="line">num=123</span><br><span class="line"><span class="keyword">if</span> str1==num:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'相等'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'no'</span>)    <span class="comment">#no,当num='123'时才相等</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#大于小于，字符串是按照ASCI码值,且从左到右依次比较，遇到不相等的直接出结果，不再往下比</span></span><br><span class="line">str1=<span class="string">'xyz'</span></span><br><span class="line">str2=<span class="string">'aaaa'</span></span><br><span class="line"><span class="keyword">if</span> str1&gt;str2:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'1'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'2'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><p>=    简单的赋值运算符    c = a + b 将 a + b 的运算结果赋值为 c<br>+=    加法赋值运算符    c += a 等效于 c = c + a<br>-=    减法赋值运算符    c -= a 等效于 c = c - a<br><em>=    乘法赋值运算符    c </em>= a 等效于 c = c * a<br>/=    除法赋值运算符    c /= a 等效于 c = c / a<br>%=    取模赋值运算符    c %= a 等效于 c = c % a<br><strong>=    幂赋值运算符    c </strong>= a 等效于 c = c ** a<br>//=    取整除赋值运算符    c //= a 等效于 c = c // a</p>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><p>and        x and y         逻辑”与” ，如果x为False，xandy返回False，否则它返回y的计                       算值(a and b) 返回 20<br>or        x or y         逻辑”或”，如果x是非0，它返回x的值，否则它返回y的计算值(a                         or b) 返回 10<br>not        not x        逻辑”非” ，如果 x 为 True，返回 False 。如果 x 为 False，                     它返回 True    not(a and b) 返回 False</p>
+<h3 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h3><p>&amp;    按位与运算符：参与运算的两个值,如果两个相应位都为1,则该位的结果为1,否则为0    (a &amp;     b) 输出结果 12 ，二进制解释： 0000 1100<br>|    按位或运算符：只要对应的二个二进位有一个为1时，结果位就为1。    (a | b) 输出结      果 61 ，二进制解释： 0011 1101<br>^    按位异或运算符：当两对应的二进位相异时，结果为1    (a ^ b) 输出结果 49 ，二进制     解释： 0011 0001<br>~    按位取反运算符：对数据的每个二进制位取反,即把1变为0,把0变为1 。~x 类似于 -x-1    (~a ) 输出结果 -61 ，二进制解释： 1100 0011，在一个有符号二进制数的补码形式。<br>&lt;&lt;    左移动运算符：运算数的各二进位全部左移若干位，由 &lt;&lt; 右边的数字指定了移动的位      数，高位丢弃，低位补0。    a &lt;&lt; 2 输出结果 240 ,二进制解释：1111 0000</p>
+<blockquote>
+<blockquote>
+<p>   右移动运算符：把”&gt;&gt;”左边的运算数的各二进位全部右移若干位，&gt;&gt; 右边的数字指定了     移动的位数    a &gt;&gt; 2 输出结果 15 ，二进制解释：0000 1111<br>a 为 60，b 为 13</p>
+</blockquote>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#左移右移规律 ,对于偶数左移1位乘以2，右移一位除以2，奇数近似这样</span></span><br><span class="line">a=0b111110 <span class="comment">#62</span></span><br><span class="line">b=a&gt;&gt;1     <span class="comment">#31</span></span><br><span class="line">c=a&lt;&lt;1     <span class="comment">#124</span></span><br><span class="line"><span class="built_in">print</span>(a,b,c)</span><br><span class="line">a=0b100111 <span class="comment">#39</span></span><br><span class="line">b=a&gt;&gt;1     <span class="comment">#19</span></span><br><span class="line">c=a&lt;&lt;1     <span class="comment">#78</span></span><br><span class="line"><span class="built_in">print</span>(a,b,c)</span><br></pre></td></tr></table></figure>
+<h3 id="成员运算符"><a href="#成员运算符" class="headerlink" title="成员运算符"></a>成员运算符</h3><p>in         如果在指定的序列中找到值返回 True，否则返回 False。    x 在 y 序列中 , 如果 x 在 y 序列中返回              True。<br>not in      如果在指定的序列中没有找到值返回 True，否则返回 False。    x 不在 y 序列中 , 如果 x 不在 y 序列中          返回True。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#成员运算符，in和not in</span></span><br><span class="line">str1=<span class="string">'张三'</span></span><br><span class="line">str2=<span class="string">'张'</span></span><br><span class="line">res=str2 <span class="keyword">in</span> str1</span><br><span class="line"><span class="built_in">print</span>(res)</span><br><span class="line">list1=[<span class="string">'北京'</span>,<span class="string">'上海'</span>,<span class="string">'杭州'</span>,<span class="string">'苏州'</span>,<span class="string">'云台山'</span>]</span><br><span class="line">list2=<span class="string">'广东'</span></span><br><span class="line">res1=list2 <span class="keyword">in</span> list1</span><br><span class="line"><span class="built_in">print</span>(res1)</span><br><span class="line">tuple1=(<span class="string">'华为'</span>,<span class="string">'小米'</span>,<span class="string">'魅族'</span>,<span class="string">'坚果'</span>)</span><br><span class="line">tuple2=<span class="string">'华为'</span></span><br><span class="line">res2=tuple2 <span class="keyword">in</span> tuple1</span><br><span class="line"><span class="built_in">print</span>(res2)</span><br><span class="line"></span><br><span class="line"><span class="comment">#字典里查询的是对应字的键，类型保持一致</span></span><br><span class="line">dict=&#123;<span class="string">'name'</span>:<span class="string">'小蓝'</span>,<span class="string">'sex'</span>:<span class="string">'女'</span>,<span class="string">'age'</span>:<span class="string">'18'</span>&#125;</span><br><span class="line">dict1=<span class="string">'name'</span></span><br><span class="line">res3=dict1 <span class="keyword">in</span> dict</span><br><span class="line"><span class="built_in">print</span>(res3)</span><br></pre></td></tr></table></figure></p>
+<h3 id="身份运算符"><a href="#身份运算符" class="headerlink" title="身份运算符"></a>身份运算符</h3><p>身份运算符用于比较两个对象的存储单元<br>注： id() 函数用于获取对象内存地址</p>
+<p>is            is 是判断两个标识符是不是引用自一个对象    x is y, 类似 id(x) == id(y) , 如果引用的是同一个对象则返回 True，否则返回 False<br>is not        is not 是判断两个标识符是不是引用自不同对象    x is not y ， 类似 id(a) != id(b)。如果引用的不是同一个对象则返回结果 True，否则返回 False。</p>
+<h3 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h3><p><strong>             指数 (最高优先级)<br>~ + -         按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@)<br>‘<em>‘ / % //     乘，除，取模和取整除<br>‘+’ -             加法减法<br>‘&gt;&gt;’ &lt;&lt;         右移，左移运算符<br>&amp;             位 ‘AND’<br>^ |            位运算符<br>&lt;= &lt; &gt; &gt;=    比较运算符<br>&lt;&gt; == !=    等于运算符<br>= %= /= //= -= += </em>= </strong>=    赋值运算符<br>is is not    身份运算符<br>in not in    成员运算符<br>not or and    逻辑运算符</p>
+<h3 id="获取变量类型"><a href="#获取变量类型" class="headerlink" title="获取变量类型"></a>获取变量类型</h3><p>获取变量类型 type()<br>isinstance() 函数来判断一个对象是否是一个已知的类型<br>    语法：isinstance(object, classinfo)<br>    object – 实例对象。<br>    classinfo – 可以是直接或间接类名、基本类型或者由它们组成的元组</p>
+<p>isinstance() 与 type() 区别：<br>type() 不会认为子类是一种父类类型，不考虑继承关系。<br>isinstance() 会认为子类是一种父类类型，考虑继承关系。<br>如果要判断两个类型是否相同推荐使用 isinstance()<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">num=10</span><br><span class="line">num1=num</span><br><span class="line"><span class="built_in">print</span>(isinstance(120,object)) <span class="comment">#True</span></span><br><span class="line"><span class="built_in">print</span>(isinstance(3.14,<span class="built_in">float</span>))</span><br></pre></td></tr></table></figure></p>
+<h3 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h3><p>1、制作简易计算机，输入两个数字能够进行（+、-、*、/）运算<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">def add(x,y):</span><br><span class="line">    <span class="built_in">return</span>(x+y)</span><br><span class="line">def sub(x,y):</span><br><span class="line">    <span class="built_in">return</span>(x-y)</span><br><span class="line">def mul(x,y):</span><br><span class="line">    <span class="built_in">return</span>(x*y)</span><br><span class="line">def div(x,y):</span><br><span class="line">    <span class="built_in">return</span>(x/y)</span><br><span class="line">user=int(input(<span class="string">'用户选择运算方式加(-1，减-2，乘-3，除-4):'</span>))</span><br><span class="line">a=int(input(<span class="string">'输入第一个数'</span>))</span><br><span class="line">b=int(input(<span class="string">'输入第二个数'</span>))</span><br><span class="line"><span class="keyword">if</span> user==1:</span><br><span class="line">    <span class="built_in">print</span>(a,<span class="string">'+'</span>,b,<span class="string">'='</span>,add(a,b))</span><br><span class="line"><span class="keyword">elif</span> user==2:</span><br><span class="line">    <span class="built_in">print</span>(a,<span class="string">'-'</span>,b,<span class="string">'='</span>,sub(a,b))</span><br><span class="line"><span class="keyword">elif</span> user==3:</span><br><span class="line">    <span class="built_in">print</span>(a,<span class="string">'*'</span>,b,<span class="string">'='</span>,mul(a,b))</span><br><span class="line"><span class="keyword">elif</span> user==4:</span><br><span class="line">    <span class="built_in">print</span>(a,<span class="string">'/'</span>,b,<span class="string">'='</span>,div(a,b))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'输入错误'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>2、小明身高1.75，体重80.5kg。请根据BMI公式（体重除以身高的平方）帮小明计算他的BMI指数，并根据BMI指数：<br>低于18.5：过轻， 18.5-21.5：正常 ，25-28：过重 ，28-32：肥胖 ，高于32：严重肥胖 ，weight/pow(height,2)</p>
+<pre><code class="bash">height=<span class="built_in">float</span>(input(<span class="string">'请输入你的身高：'</span>))
+weight=<span class="built_in">float</span>(input(<span class="string">'请输入你的体重：'</span>))
+BIM=weight/pow(height,2)
+<span class="built_in">print</span>(BIM)
+<span class="keyword">if</span> BIM&lt;18.5:
+    <span class="built_in">print</span>(<span class="string">'过轻'</span>)
+<span class="keyword">elif</span> BIM&gt;=18.5 and BIM&lt;21.5:
+    <span class="built_in">print</span>(<span class="string">'正常'</span>)
+<span class="keyword">elif</span> BIM&gt;=25 and BIM&lt;28:
+    <span class="built_in">print</span>(<span class="string">'过重'</span>)
+<span class="keyword">elif</span> BIM&gt;=28 and BIM&lt;=32:
+    <span class="built_in">print</span>(<span class="string">'肥胖'</span>)
+<span class="keyword">elif</span> BIM&gt;32:
+    <span class="built_in">print</span>(<span class="string">'严重肥胖'</span>)
+<span class="keyword">else</span>:
+    <span class="built_in">print</span>(<span class="string">'输入有误'</span>)
+</code></pre>
+<p>3、cars=[‘audi’,’bmw’,’subaru’,’toyota’]<br>将列表中的第一个单词大写，后面每个单词首字母大写，并输出在一行显示，用空格隔开<br>参考函数:str.upper()和str.title()</p>
+<pre><code class="bash">a=<span class="string">'love python!'</span>
+<span class="built_in">print</span>(str.title(a))
+<span class="built_in">print</span>(str.upper(a))
+cars=[<span class="string">'audi'</span>,<span class="string">'bmw'</span>,<span class="string">'subaru'</span>,<span class="string">'toyota'</span>]
+<span class="keyword">for</span> i <span class="keyword">in</span> cars:
+    <span class="keyword">if</span> i==cars[0]:
+        <span class="built_in">print</span>(str.upper(i),end=<span class="string">' '</span>)
+    <span class="keyword">else</span>:
+        <span class="built_in">print</span>(str.title(i),end=<span class="string">' '</span>)
+</code></pre>
+<p>4、计算1+到10的和。并输出格式1+2+3+4+5+6+7+8+9+10=55</p>
+<pre><code class="bash">sum=0
+<span class="keyword">for</span> i <span class="keyword">in</span> range(1,11):
+    <span class="keyword">if</span> i&lt;10:
+        <span class="built_in">print</span>(i,end=<span class="string">'+'</span>)
+        sum+=i
+    <span class="keyword">else</span>:
+        <span class="built_in">print</span>(i,end=<span class="string">'='</span>)
+        sum+=i
+<span class="built_in">print</span>(sum)
+</code></pre>
+<p>运算符优先级<br>    a = 4<em>2**3=4</em>8=32<br>    a = 2<em>3+5 &lt;= 5+1</em>3= 6+5&lt;=5+3 = 11&lt;=8 =0=False<br>    a=3+4-7 or 4*0.25-0.09 =0 or 0.91=0=False</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/21/python-03/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
