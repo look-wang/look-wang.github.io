@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Python基础8（一）——元组，字典和集合相关操作 | 好好学习，天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="元组">
+  <meta name="description" content="元组元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改 元组与列表的区别：元组基本上都是不可改变的列表。元组几乎具有列表所有的特性，除开那些违反不变性的特征。也就是说，没有函数和方法可以改变元组">
 <meta name="keywords" content="calm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python基础8（一）——元组，字典和集合相关操作">
 <meta property="og:url" content="http://yoursite.com/2018/07/23/python-08/index.html">
 <meta property="og:site_name" content="好好学习，天天向上">
-<meta property="og:description" content="元组">
+<meta property="og:description" content="元组元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改 元组与列表的区别：元组基本上都是不可改变的列表。元组几乎具有列表所有的特性，除开那些违反不变性的特征。也就是说，没有函数和方法可以改变元组">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-23T09:27:46.016Z">
+<meta property="og:updated_time" content="2018-07-23T09:29:37.678Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python基础8（一）——元组，字典和集合相关操作">
-<meta name="twitter:description" content="元组">
+<meta name="twitter:description" content="元组元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改 元组与列表的区别：元组基本上都是不可改变的列表。元组几乎具有列表所有的特性，除开那些违反不变性的特征。也就是说，没有函数和方法可以改变元组">
   
     <link rel="alternative" href="/atom.xml" title="好好学习，天天向上" type="application/atom+xml">
   
@@ -175,10 +175,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><a id="more"></a>
-<p>元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改</p>
-<p>元组与列表的区别：<br>元组基本上都是不可改变的列表。元组几乎具有列表所有的特性，除开那些违反不变性的特征。也就是说，没有函数和方法可以改变元组</p>
-<p>元组的操作：<br>由于元组和列表比较相似，使得对列表的很多操作如“+”、“*”等运算符以及长度（len）、最大（max）、最小（min）等运算都适用于元组。而那些如append、extend、insert、remove、pop、reverse和sort等能改变元素的操作都不能直接操作元组。<br>然而，当元组中存在列表元素项时，就可以使用上述如append等方法修改list中的元素，达到间接修改元组元素的目的。</p>
+        <h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><p>元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改</p>
+<p>元组与列表的区别：<br>元组基本上都是不可改变的列表。元组几乎具有列表所有的特性，除开那些违反不变性的特征。也就是说，没有函数和方法可以改变元组<br><a id="more"></a><br>元组的操作：<br>由于元组和列表比较相似，使得对列表的很多操作如“+”、“*”等运算符以及长度（len）、最大（max）、最小（min）等运算都适用于元组。而那些如append、extend、insert、remove、pop、reverse和sort等能改变元素的操作都不能直接操作元组。<br>然而，当元组中存在列表元素项时，就可以使用上述如append等方法修改list中的元素，达到间接修改元组元素的目的。</p>
 <p>元组的创建：<br>  创建空元组：<br>    tuple1=()           注：tuple(0)类型返回为int类型<br>  创建单个元素的元组：<br>    tuple1=(‘小花花’，)      tuple1=(,)不可以创建元组<br>    tuple1=’小花花’，<br>  创建多个元素的元组：<br>    tuple1=(‘小明’,’小花’,’小张’,’小翠’)<br>    tuple2=’小明’,’小花’,’小张’,’小翠’</p>
 <p>元组的基本操作：<br>访问元素<br>    print(tuple1[2])<br>删除元素(No)<br>    del   tuple1[2]   报错<br>修改元素(No)<br>    tuple1[‘2’]=’一朵 小花花’  #报错<br>添加元素(No)<br>    元组不可以</p>
 <p>元组的序列操作：<br>元组相加   +<br>元组相乘   *<br>索引操作   [索引]<br>分片          [:]<br>成员检查    in  /   not  in</p>
