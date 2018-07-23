@@ -8,17 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Python基础4——流程控制 | 好好学习，天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="流程控制概述流程：程序执行的顺序流程控制：对程序代码执行流程的控制(从上到下，从左到右)。在任何一门程序设计语言中，都需要支持满足程序结构化所需要的三种基本结构:顺序结构分支结构（选择结构）循环结构顺序结构：在程序结构中，最基本的就是顺序结构。程序会按照自上而下的顺序执行。 条件控制单项分支条件控制语句单分支    格式：if(表达式):                    语句序列功能：如果条">
+  <meta name="description" content="流程控制概述流程：程序执行的顺序流程控制：对程序代码执行流程的控制(从上到下，从左到右)。在任何一门程序设计语言中，都需要支持满足程序结构化所需要的三种基本结构:顺序结构分支结构（选择结构）循环结构顺序结构：在程序结构中，最基本的就是顺序结构。程序会按照自上而下的顺序执行。">
+<meta name="keywords" content="calm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python基础4——流程控制">
 <meta property="og:url" content="http://yoursite.com/2018/07/21/python-04/index.html">
 <meta property="og:site_name" content="好好学习，天天向上">
-<meta property="og:description" content="流程控制概述流程：程序执行的顺序流程控制：对程序代码执行流程的控制(从上到下，从左到右)。在任何一门程序设计语言中，都需要支持满足程序结构化所需要的三种基本结构:顺序结构分支结构（选择结构）循环结构顺序结构：在程序结构中，最基本的就是顺序结构。程序会按照自上而下的顺序执行。 条件控制单项分支条件控制语句单分支    格式：if(表达式):                    语句序列功能：如果条">
+<meta property="og:description" content="流程控制概述流程：程序执行的顺序流程控制：对程序代码执行流程的控制(从上到下，从左到右)。在任何一门程序设计语言中，都需要支持满足程序结构化所需要的三种基本结构:顺序结构分支结构（选择结构）循环结构顺序结构：在程序结构中，最基本的就是顺序结构。程序会按照自上而下的顺序执行。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-21T09:08:24.702Z">
+<meta property="og:updated_time" content="2018-07-23T09:51:00.761Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python基础4——流程控制">
-<meta name="twitter:description" content="流程控制概述流程：程序执行的顺序流程控制：对程序代码执行流程的控制(从上到下，从左到右)。在任何一门程序设计语言中，都需要支持满足程序结构化所需要的三种基本结构:顺序结构分支结构（选择结构）循环结构顺序结构：在程序结构中，最基本的就是顺序结构。程序会按照自上而下的顺序执行。 条件控制单项分支条件控制语句单分支    格式：if(表达式):                    语句序列功能：如果条">
+<meta name="twitter:description" content="流程控制概述流程：程序执行的顺序流程控制：对程序代码执行流程的控制(从上到下，从左到右)。在任何一门程序设计语言中，都需要支持满足程序结构化所需要的三种基本结构:顺序结构分支结构（选择结构）循环结构顺序结构：在程序结构中，最基本的就是顺序结构。程序会按照自上而下的顺序执行。">
   
     <link rel="alternative" href="/atom.xml" title="好好学习，天天向上" type="application/atom+xml">
   
@@ -174,7 +175,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="流程控制概述"><a href="#流程控制概述" class="headerlink" title="流程控制概述"></a>流程控制概述</h2><p>流程：程序执行的顺序<br>流程控制：对程序代码执行流程的控制(从上到下，从左到右)。<br>在任何一门程序设计语言中，都需要支持满足程序结构化所需要的三种基本结构:<br>顺序结构<br>分支结构（选择结构）<br>循环结构<br>顺序结构：在程序结构中，最基本的就是顺序结构。程序会按照自上而下的顺序执行。</p>
+        <h2 id="流程控制概述"><a href="#流程控制概述" class="headerlink" title="流程控制概述"></a>流程控制概述</h2><p>流程：程序执行的顺序<br>流程控制：对程序代码执行流程的控制(从上到下，从左到右)。<br>在任何一门程序设计语言中，都需要支持满足程序结构化所需要的三种基本结构:<br>顺序结构<br>分支结构（选择结构）<br>循环结构<br>顺序结构：在程序结构中，最基本的就是顺序结构。程序会按照自上而下的顺序执行。<br><a id="more"></a></p>
 <h2 id="条件控制"><a href="#条件控制" class="headerlink" title="条件控制"></a>条件控制</h2><h3 id="单项分支条件控制语句"><a href="#单项分支条件控制语句" class="headerlink" title="单项分支条件控制语句"></a>单项分支条件控制语句</h3><p>单分支<br>    格式：if(表达式):<br>                    语句序列<br>功能：如果条件表达式的值为真，则执行后面的语句序列。</p>
 <h3 id="双向分支条件控制"><a href="#双向分支条件控制" class="headerlink" title="双向分支条件控制"></a>双向分支条件控制</h3><p>双分支<br>    格式：if(表达式):<br>    语句序列1<br>else:<br>    语句序列2<br>功能：如果“条件表达式”的判断结果为真，则执行语句序列1；否则，执行语句序列2。 </p>
 <h3 id="多项分支条件控制"><a href="#多项分支条件控制" class="headerlink" title="多项分支条件控制"></a>多项分支条件控制</h3><p>if…elif…else语句<br>if/elif语句是if语句的扩展版本，它包含多个条件，用于作出复杂的判断。<br> 格式：<br>if &lt;条件判断1&gt;:<br>        &lt;执行1&gt;<br>elif &lt;条件判断2&gt;:<br>        &lt;执行2&gt;<br>….<br>else:<br>        &lt;执行3&gt;</p>
@@ -298,6 +299,17 @@ weeks=datetime.datetime.now().weekday()
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -392,6 +404,19 @@ weeks=datetime.datetime.now().weekday()
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#流程控制概述"><span class="toc-number">1.</span> <span class="toc-text">流程控制概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#条件控制"><span class="toc-number">2.</span> <span class="toc-text">条件控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#单项分支条件控制语句"><span class="toc-number">2.1.</span> <span class="toc-text">单项分支条件控制语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#双向分支条件控制"><span class="toc-number">2.2.</span> <span class="toc-text">双向分支条件控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多项分支条件控制"><span class="toc-number">2.3.</span> <span class="toc-text">多项分支条件控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if语句的嵌套（巢状分支结构）"><span class="toc-number">2.4.</span> <span class="toc-text">if语句的嵌套（巢状分支结构）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#条件控制案例"><span class="toc-number">2.5.</span> <span class="toc-text">条件控制案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#循环结构"><span class="toc-number">3.</span> <span class="toc-text">循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#while循环控制"><span class="toc-number">3.1.</span> <span class="toc-text">while循环控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#while循环案例"><span class="toc-number">3.2.</span> <span class="toc-text">while循环案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#for循环控制"><span class="toc-number">4.</span> <span class="toc-text">for循环控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#对比while循环和for循环"><span class="toc-number">4.1.</span> <span class="toc-text">对比while循环和for循环</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#range函数"><span class="toc-number">5.</span> <span class="toc-text">range函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特殊控制语句"><span class="toc-number">6.</span> <span class="toc-text">特殊控制语句</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -500,6 +525,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">calm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">fighting</a>
               </li>
             
             <div class="clearfix"></div>

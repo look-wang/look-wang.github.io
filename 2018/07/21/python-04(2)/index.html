@@ -9,13 +9,14 @@
   <title>控制语句整理案例 | 好好学习，天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1、石头剪刀布游戏用户：石头 1  剪刀 2  布 3电脑：石头 1  剪刀 2  布 3   电脑 石头 1123456789101112131415161718192021222324#固定：电脑出石头user=int(input(&apos;请开始你的表演（石头-1，剪刀-2，布-3）：&apos;))if user==3:    print(&apos;win&apos;)elif user==1:    print(&apos;平局&apos;)">
+<meta name="keywords" content="fighting">
 <meta property="og:type" content="article">
 <meta property="og:title" content="控制语句整理案例">
 <meta property="og:url" content="http://yoursite.com/2018/07/21/python-04(2)/index.html">
 <meta property="og:site_name" content="好好学习，天天向上">
 <meta property="og:description" content="1、石头剪刀布游戏用户：石头 1  剪刀 2  布 3电脑：石头 1  剪刀 2  布 3   电脑 石头 1123456789101112131415161718192021222324#固定：电脑出石头user=int(input(&apos;请开始你的表演（石头-1，剪刀-2，布-3）：&apos;))if user==3:    print(&apos;win&apos;)elif user==1:    print(&apos;平局&apos;)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-21T09:58:14.336Z">
+<meta property="og:updated_time" content="2018-07-23T09:51:02.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="控制语句整理案例">
 <meta name="twitter:description" content="1、石头剪刀布游戏用户：石头 1  剪刀 2  布 3电脑：石头 1  剪刀 2  布 3   电脑 石头 1123456789101112131415161718192021222324#固定：电脑出石头user=int(input(&apos;请开始你的表演（石头-1，剪刀-2，布-3）：&apos;))if user==3:    print(&apos;win&apos;)elif user==1:    print(&apos;平局&apos;)">
@@ -175,6 +176,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>1、石头剪刀布游戏<br>用户：石头 1  剪刀 2  布 3<br>电脑：石头 1  剪刀 2  布 3   电脑 石头 1<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#固定：电脑出石头</span></span><br><span class="line">user=int(input(<span class="string">'请开始你的表演（石头-1，剪刀-2，布-3）：'</span>))</span><br><span class="line"><span class="keyword">if</span> user==3:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'win'</span>)</span><br><span class="line"><span class="keyword">elif</span> user==1:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'平局'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'loser'</span>)</span><br><span class="line"><span class="comment">#随机</span></span><br><span class="line">user=int(input(<span class="string">'请开始你的表演（石头-1，剪刀-2，布-3）：'</span>))</span><br><span class="line">import random</span><br><span class="line">com=random.randint(1,3)</span><br><span class="line"><span class="keyword">if</span> com==1:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'石头'</span>)</span><br><span class="line"><span class="keyword">elif</span> com==2:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'剪刀'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'布'</span>)</span><br><span class="line"><span class="keyword">if</span> (user==1 and com==2) and (user==2 and com==3) and (user==3 and com==1):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'win'</span>)</span><br><span class="line"><span class="keyword">elif</span> user==com:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'平局'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'loser'</span>)</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>2、金字塔<br>       金<br>     金金金<br>   金金金金金<br> 金金金金金金金<br>金金金金金金金金金<br>第一种方法：简洁</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">n=1</span><br><span class="line"><span class="keyword">while</span> n&lt;=5:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">' '</span>*(5-n),<span class="string">'金'</span>*(2*n-1))</span><br><span class="line">    n+=1</span><br></pre></td></tr></table></figure>
 <p>第二种方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">hang=1</span><br><span class="line"><span class="keyword">while</span> hang&lt;=5:</span><br><span class="line">    k=1</span><br><span class="line">    <span class="keyword">while</span> k&lt;=5-hang:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'  '</span>,end=<span class="string">''</span>)</span><br><span class="line">        k+=1</span><br><span class="line">    j=1</span><br><span class="line">    <span class="keyword">while</span> j&lt;=hang*2-1:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'金'</span>,end=<span class="string">''</span>)</span><br><span class="line">        j+=1</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">''</span>)</span><br><span class="line">    hang+=1</span><br></pre></td></tr></table></figure></p>
@@ -221,6 +223,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -315,6 +328,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -423,6 +449,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">calm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">fighting</a>
               </li>
             
             <div class="clearfix"></div>
