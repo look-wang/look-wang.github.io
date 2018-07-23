@@ -8,17 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Python基础8（一）——元组，字典和集合相关操作 | 好好学习，天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="元组元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改 元组与列表的区别：元组基本上都是不可改变的列表。元组几乎具有列表所有的特性，除开那些违反不变性的特征。也就是说，没有函数和方法可以改变元组 元组的操作：由于元组和列表比较相似，使得对列表的很多操作如“+”、“*”等运算符以及长度（len）、最大（max）、最">
+  <meta name="description" content="元组">
+<meta name="keywords" content="calm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python基础8（一）——元组，字典和集合相关操作">
 <meta property="og:url" content="http://yoursite.com/2018/07/23/python-08/index.html">
 <meta property="og:site_name" content="好好学习，天天向上">
-<meta property="og:description" content="元组元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改 元组与列表的区别：元组基本上都是不可改变的列表。元组几乎具有列表所有的特性，除开那些违反不变性的特征。也就是说，没有函数和方法可以改变元组 元组的操作：由于元组和列表比较相似，使得对列表的很多操作如“+”、“*”等运算符以及长度（len）、最大（max）、最">
+<meta property="og:description" content="元组">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-23T03:59:09.639Z">
+<meta property="og:updated_time" content="2018-07-23T09:27:46.016Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python基础8（一）——元组，字典和集合相关操作">
-<meta name="twitter:description" content="元组元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改 元组与列表的区别：元组基本上都是不可改变的列表。元组几乎具有列表所有的特性，除开那些违反不变性的特征。也就是说，没有函数和方法可以改变元组 元组的操作：由于元组和列表比较相似，使得对列表的很多操作如“+”、“*”等运算符以及长度（len）、最大（max）、最">
+<meta name="twitter:description" content="元组">
   
     <link rel="alternative" href="/atom.xml" title="好好学习，天天向上" type="application/atom+xml">
   
@@ -174,7 +175,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><p>元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改</p>
+        <h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><a id="more"></a>
+<p>元组（tuple）是值的一个序列。其中的值可以是任何类型，并且按照整数下标索引，与列表类似。但元组中的元素不能修改，列表中的元素可以修改</p>
 <p>元组与列表的区别：<br>元组基本上都是不可改变的列表。元组几乎具有列表所有的特性，除开那些违反不变性的特征。也就是说，没有函数和方法可以改变元组</p>
 <p>元组的操作：<br>由于元组和列表比较相似，使得对列表的很多操作如“+”、“*”等运算符以及长度（len）、最大（max）、最小（min）等运算都适用于元组。而那些如append、extend、insert、remove、pop、reverse和sort等能改变元素的操作都不能直接操作元组。<br>然而，当元组中存在列表元素项时，就可以使用上述如append等方法修改list中的元素，达到间接修改元组元素的目的。</p>
 <p>元组的创建：<br>  创建空元组：<br>    tuple1=()           注：tuple(0)类型返回为int类型<br>  创建单个元素的元组：<br>    tuple1=(‘小花花’，)      tuple1=(,)不可以创建元组<br>    tuple1=’小花花’，<br>  创建多个元素的元组：<br>    tuple1=(‘小明’,’小花’,’小张’,’小翠’)<br>    tuple2=’小明’,’小花’,’小张’,’小翠’</p>
@@ -222,6 +224,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -316,6 +329,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#元组"><span class="toc-number">1.</span> <span class="toc-text">元组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字典"><span class="toc-number">2.</span> <span class="toc-text">字典</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字典的创建"><span class="toc-number">2.1.</span> <span class="toc-text">字典的创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python的三种映射"><span class="toc-number">2.2.</span> <span class="toc-text">python的三种映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字典的遍历"><span class="toc-number">2.3.</span> <span class="toc-text">字典的遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字典推导式和内置函数"><span class="toc-number">2.4.</span> <span class="toc-text">字典推导式和内置函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字典的查找"><span class="toc-number">2.5.</span> <span class="toc-text">字典的查找</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
