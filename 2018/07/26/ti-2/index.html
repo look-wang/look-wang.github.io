@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>好好学习，天天向上</title>
+  <title>小型练习题 | 好好学习，天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="好好学习，天天向上">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="1、写程序：模拟公司hr录入员工账号密码的程序。（10分）   1)，员工的账号密码存储在这种数据类型中：   user_list = [     {‘username’:’barry’,’password’:’1234’},     {‘username’:’alex’,’password’:’asdf’},     ………              ]  2)非法字符模板：board = [‘">
+<meta name="keywords" content="calm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小型练习题">
+<meta property="og:url" content="http://yoursite.com/2018/07/26/ti-2/index.html">
 <meta property="og:site_name" content="好好学习，天天向上">
+<meta property="og:description" content="1、写程序：模拟公司hr录入员工账号密码的程序。（10分）   1)，员工的账号密码存储在这种数据类型中：   user_list = [     {‘username’:’barry’,’password’:’1234’},     {‘username’:’alex’,’password’:’asdf’},     ………              ]  2)非法字符模板：board = [‘">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-26T12:26:09.715Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="好好学习，天天向上">
+<meta name="twitter:title" content="小型练习题">
+<meta name="twitter:description" content="1、写程序：模拟公司hr录入员工账号密码的程序。（10分）   1)，员工的账号密码存储在这种数据类型中：   user_list = [     {‘username’:’barry’,’password’:’1234’},     {‘username’:’alex’,’password’:’asdf’},     ………              ]  2)非法字符模板：board = [‘">
   
     <link rel="alternative" href="/atom.xml" title="好好学习，天天向上" type="application/atom+xml">
   
@@ -150,34 +155,55 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-python-03" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-ti-2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/21/python-03/">Python基础3——运算和运算符</a>
+    <h1 class="article-title" itemprop="name">
+      小型练习题
     </h1>
   
 
         
-        <a href="/2018/07/21/python-03/" class="archive-article-date">
-  	<time datetime="2018-07-21T06:40:58.128Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
+        <a href="/2018/07/26/ti-2/" class="archive-article-date">
+  	<time datetime="2018-07-26T11:57:41.401Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><p>运算<br>    由一个以上的值经过变化得到新值的过程就是运算<br>运算符<br>    用于运算的符号就是运算符<br>表达式<br>    操作数和运算符组成了表达式<br>    例：4 +5 = 9<br>    4和5是数值<br>    +和=是运算符<br>    整个称为表达式<br>
-        
-          <a class="article-more-a" href="/2018/07/21/python-03/#more">more >></a>
-        
+        <p>1、写程序：模拟公司hr录入员工账号密码的程序。（10分）<br>   1)，员工的账号密码存储在这种数据类型中：<br>   user_list = [<br>     {‘username’:’barry’,’password’:’1234’},<br>     {‘username’:’alex’,’password’:’asdf’},<br>     ………<br>              ]<br>  2)非法字符模板：board = [‘共产党’,’毛主席’,’周恩来’]<br>  3)Hr输入用户名，密码（可持续输入，如果想终止程序，那就在输入用户名时输入Q或者q退出程序），在Hr输入用户名时，检测此用户名是否有board里面的非法字符，如果有非法字符，则将非法字符替换成同数量的*（如王二麻子替换成<em>**</em>），然后添加到user_list中，如果没有非法字符，则直接添加到user_list中，每次添加成功后，打印出刚添加的用户名，密码。</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">board = [<span class="string">'共产党'</span>,<span class="string">'毛主席'</span>,<span class="string">'周恩来'</span>]  <span class="comment">#用列表放非法字符</span></span><br><span class="line">ulist=[]  <span class="comment">#存储注册的用户名密码</span></span><br><span class="line">t=0</span><br><span class="line">flag=True</span><br><span class="line"><span class="keyword">while</span> flag:</span><br><span class="line">    name=input(<span class="string">'请输入你的用户名：'</span>).strip()  <span class="comment">#去空格</span></span><br><span class="line">    <span class="keyword">if</span> name.upper()==<span class="string">'Q'</span>:   <span class="comment">#退出</span></span><br><span class="line">        flag=False</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> board:</span><br><span class="line">            <span class="keyword">if</span> i <span class="keyword">in</span> name:</span><br><span class="line">               name=name.replace(i,len(i)*<span class="string">'*'</span>) <span class="comment">#替换成等长度的*</span></span><br><span class="line">        <span class="built_in">pwd</span>=input(<span class="string">'请输入你的密码:'</span>)</span><br><span class="line">        ulist.append(&#123;&#125;)</span><br><span class="line">        ulist[t][<span class="string">'uname'</span>]=name  <span class="comment">#添加到列表中</span></span><br><span class="line">        ulist[t][<span class="string">'pwd'</span>]=<span class="built_in">pwd</span></span><br><span class="line">        t+=1</span><br><span class="line">        <span class="built_in">print</span>(ulist)</span><br><span class="line">        <span class="built_in">print</span>(ulist[-1])  <span class="comment">#输出最新添加的一组</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'Exit'</span>)</span><br><span class="line"><span class="comment">#执行结果</span></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">请输入你的用户名：共产党</span></span><br><span class="line"><span class="string">请输入你的密码:123</span></span><br><span class="line"><span class="string">[&#123;'</span>uname<span class="string">': '</span>***<span class="string">', '</span><span class="built_in">pwd</span><span class="string">': '</span>123<span class="string">'&#125;]</span></span><br><span class="line"><span class="string">请输入你的用户名：123</span></span><br><span class="line"><span class="string">请输入你的密码:123</span></span><br><span class="line"><span class="string">[&#123;'</span>uname<span class="string">': '</span>***<span class="string">', '</span><span class="built_in">pwd</span><span class="string">': '</span>123<span class="string">'&#125;, &#123;'</span>uname<span class="string">': '</span>123<span class="string">', '</span><span class="built_in">pwd</span><span class="string">': '</span>123<span class="string">'&#125;]</span></span><br><span class="line"><span class="string">请输入你的用户名：www</span></span><br><span class="line"><span class="string">请输入你的密码:123</span></span><br><span class="line"><span class="string">[&#123;'</span>uname<span class="string">': '</span>***<span class="string">', '</span><span class="built_in">pwd</span><span class="string">': '</span>123<span class="string">'&#125;, &#123;'</span>uname<span class="string">': '</span>123<span class="string">', '</span><span class="built_in">pwd</span><span class="string">': '</span>123<span class="string">'&#125;, &#123;'</span>uname<span class="string">': '</span>www<span class="string">', '</span><span class="built_in">pwd</span><span class="string">': '</span>123<span class="string">'&#125;]</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br></pre></td></tr></table></figure>
+<p>2、设计一个验证用户密码程序，用户只有三次机会输入错误，不过如果用户输入的内容中包含“*”则不计算在内。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">'look'</span></span><br><span class="line">mima=123</span><br><span class="line">c=0</span><br><span class="line"><span class="keyword">while</span> c&lt;3:</span><br><span class="line">    uname=input(<span class="string">'请输入用户名：'</span>)</span><br><span class="line">    <span class="built_in">pwd</span>=input(<span class="string">'请输入密码：'</span>)</span><br><span class="line">    <span class="keyword">if</span> uname==<span class="string">'look'</span> and <span class="built_in">pwd</span>==<span class="string">'123'</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'登录成功'</span>)</span><br><span class="line">        <span class="built_in">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> uname.count(<span class="string">'*'</span>)==0:</span><br><span class="line">            c+=1</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'账户或密码错误，你还有%d次机会'</span>%(3-c))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'输入次数已达上限，账户已冻结'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#结果</span></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">请输入用户名：qw</span></span><br><span class="line"><span class="string">请输入密码：12</span></span><br><span class="line"><span class="string">账户或密码错误，你还有2次机会</span></span><br><span class="line"><span class="string">请输入用户名：**e</span></span><br><span class="line"><span class="string">请输入密码：23</span></span><br><span class="line"><span class="string">账户或密码错误，你还有2次机会</span></span><br><span class="line"><span class="string">请输入用户名：12</span></span><br><span class="line"><span class="string">请输入密码：3</span></span><br><span class="line"><span class="string">账户或密码错误，你还有1次机会</span></span><br><span class="line"><span class="string">请输入用户名：look</span></span><br><span class="line"><span class="string">请输入密码：123</span></span><br><span class="line"><span class="string">登录成功</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br></pre></td></tr></table></figure></p>
+<p>3、用集合保存4个人的随机投票，列出最终票数及各自的名字，随机给四个人投票【票数限制在1-10票之间】。十轮之后显示投票的数量<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">list1=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>] <span class="comment">#四个人abcd</span></span><br><span class="line">listname=[]  <span class="comment">#存储每轮投给谁</span></span><br><span class="line">piao=[]      <span class="comment">#存储每轮投了多少票</span></span><br><span class="line">sum1,sum2,sum3,sum4=0,0,0,0</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(10):</span><br><span class="line">    listname.append(random.choice(list1)) </span><br><span class="line">               <span class="comment">#在abcd中随机选10次，代表每轮投给谁</span></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> range(10):</span><br><span class="line">    piao.append(random.choice(range(1,11)))</span><br><span class="line">               <span class="comment">#随机投10次随机的票数，与每轮投给  谁 一一对应</span></span><br><span class="line"><span class="built_in">print</span>(listname)</span><br><span class="line"><span class="built_in">print</span>(piao)</span><br><span class="line">c=0</span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> listname:</span><br><span class="line">    <span class="keyword">if</span> k==<span class="string">'a'</span>:</span><br><span class="line">        sum1=sum1+int(piao[c])</span><br><span class="line">    <span class="keyword">elif</span> k==<span class="string">'b'</span>:</span><br><span class="line">        sum2=sum2+int(piao[c])</span><br><span class="line">    <span class="keyword">elif</span> k==<span class="string">'c'</span>:</span><br><span class="line">        sum3=sum3+int(piao[c])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        sum4=sum4+int(piao[c])</span><br><span class="line">    c+=1</span><br><span class="line"><span class="built_in">print</span>(sum1,sum2,sum3,sum4)  <span class="comment">#abcd四个人各对应的总票数</span></span><br><span class="line"><span class="built_in">set</span>=&#123;sum1,sum2,sum3,sum4&#125;</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">set</span>)</span><br><span class="line"><span class="comment">#结果</span></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">['</span>b<span class="string">', '</span>a<span class="string">', '</span>a<span class="string">', '</span>c<span class="string">', '</span>c<span class="string">', '</span>d<span class="string">', '</span>a<span class="string">', '</span>d<span class="string">', '</span>a<span class="string">', '</span>b<span class="string">']</span></span><br><span class="line"><span class="string">[2, 4, 7, 7, 2, 10, 3, 4, 1, 6]</span></span><br><span class="line"><span class="string">15 8 9 14</span></span><br><span class="line"><span class="string">&#123;8, 9, 14, 15&#125;</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br></pre></td></tr></table></figure></p>
+<p>4、编程模拟一个与计算机扔骰子猜大小的游戏。每次游戏采用三局两胜，计算机扔一个骰子，其中1，2，3算为小，4，5，6算为大。用户每次可以猜大或者猜小，猜中则用户赢，否则计算机赢。如程序的一次运行情况如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">u=0</span><br><span class="line">flag=True</span><br><span class="line"><span class="keyword">while</span> flag:</span><br><span class="line">    c=0</span><br><span class="line">    <span class="keyword">while</span> c&lt;3:</span><br><span class="line">        computer=random.randint(1,6)</span><br><span class="line">        <span class="built_in">print</span>(computer)  <span class="comment">#电脑随机出的数，在此打印是为了让自己能决定输赢</span></span><br><span class="line">        <span class="keyword">if</span> computer&lt;=3:</span><br><span class="line">            a=<span class="string">'small'</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            a=<span class="string">'big'</span></span><br><span class="line">        uname=input(<span class="string">'Please input your guess(big/small):'</span>) <span class="comment">#用户猜大小</span></span><br><span class="line">        <span class="keyword">if</span> uname ==<span class="string">'small'</span> or uname==<span class="string">'big'</span>:</span><br><span class="line">            <span class="keyword">if</span> uname==a:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">'You are right'</span>)</span><br><span class="line">                u+=1</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">'You are wrong.'</span>)</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'非法输入，请重新输入'</span>)</span><br><span class="line">            <span class="built_in">continue</span></span><br><span class="line">        c+=1</span><br><span class="line">    w=0</span><br><span class="line">    y=1</span><br><span class="line">    <span class="keyword">if</span> u&gt;=2:  <span class="comment">#三局两胜</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'You win this round'</span>)</span><br><span class="line">        w+=1   <span class="comment">#统计用户赢了几次</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'You lost this round'</span>)</span><br><span class="line">    choose=input(<span class="string">'Play again?(y/n):'</span>)</span><br><span class="line">    <span class="keyword">if</span> choose==<span class="string">'y'</span>:</span><br><span class="line">        y+=1  <span class="comment">#统计用户玩了几局</span></span><br><span class="line">        <span class="built_in">continue</span></span><br><span class="line">    <span class="keyword">elif</span> choose==<span class="string">'n'</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'You played %d rounds, and you won %d rounds'</span>%(y,w))</span><br><span class="line">        flag=False</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'非法输入'</span>)</span><br><span class="line"><span class="comment">#结果</span></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">6</span></span><br><span class="line"><span class="string">Please input your guess(big/small):big</span></span><br><span class="line"><span class="string">You are right</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">Please input your guess(big/small):big</span></span><br><span class="line"><span class="string">You are wrong.</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">Please input your guess(big/small):big</span></span><br><span class="line"><span class="string">You are wrong.</span></span><br><span class="line"><span class="string">You lost this round</span></span><br><span class="line"><span class="string">Play again?(y/n):y</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string">Please input your guess(big/small):big</span></span><br><span class="line"><span class="string">You are wrong.</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">Please input your guess(big/small):big</span></span><br><span class="line"><span class="string">You are wrong.</span></span><br><span class="line"><span class="string">4</span></span><br><span class="line"><span class="string">Please input your guess(big/small):big</span></span><br><span class="line"><span class="string">You are right</span></span><br><span class="line"><span class="string">You win this round</span></span><br><span class="line"><span class="string">Play again?(y/n):n</span></span><br><span class="line"><span class="string">You played 1 rounds, and you won 1 rounds</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br></pre></td></tr></table></figure></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -197,16 +223,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/21/python-03/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/26/ti-2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/26/python-9(2)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python基础九（二）——函数</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -221,246 +306,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/20/python02/">python基础2——数据类型转换</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/20/python02/" class="archive-article-date">
-  	<time datetime="2018-07-20T05:08:33.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>数据类型转换分为两种：自动转换和强制转换<br>自动转换<br>    自动转换不需要人工干预<br>    自动类型转换多发生在运算或者判断过程中<br>    转换时向着更加精确的类型转换<br>强制转换<br>    根据程序需要，由程序员人为改变数据类型的方式就叫做强制转换。例：int()、float()、str()等等。<br>
-        
-          <a class="article-more-a" href="/2018/07/20/python02/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/20/python02/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-Python_01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/19/Python_01/">Python基础1-数据类型</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/19/Python_01/" class="archive-article-date">
-  	<time datetime="2018-07-19T09:15:26.100Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a>python基础</h2><p>1.1<br>开发工具：<br>IDLE：Python内置IDE (随python安装包提供)<br>Vscode：图形化界面，比之前的好看<br>PyCharm：有调试、语法高亮、Project管理、代码跳转、智能提示、自动完成、单元测试、版本控制。此外，该IDE提供了一些高级功能，以用于支持Django框架下的专业Web开发。<br>Vim: 最新7.3版编译时可以加入python支持，提供python代码自动提示支持<br>Visual Studio：仅适用Windows，已停止维护，功能较差<br>Sublime、Notepad++、EditPlus、UltraEdit等<br>
-        
-          <a class="article-more-a" href="/2018/07/19/Python_01/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/19/Python_01/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/14/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-14T08:39:23.965Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
-        
-          <a class="article-more-a" href="/2018/07/14/hello-world/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/14/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -483,8 +354,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
