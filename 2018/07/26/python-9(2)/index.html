@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | 好好学习，天天向上</title>
+  <title>python基础八（二）——函数 | 好好学习，天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="好好学习，天天向上">
-<meta property="og:url" content="http://yoursite.com/archives/2018/page/2/index.html">
+  <meta name="description" content="匿名函数python 使用 lambda 来创建匿名函数。lambda只是一个表达式，函数体比def简单很多。lambda的主体是一个表达式，而不是一个代码块。仅仅能在lambda表达式中封装有限的逻辑进去。lambda函数拥有自己的命名空间，且不能访问自有参数列表之外或全局命名空间里的参数。虽然lambda函数看起来只能写一行，却不等同于C或C++的内联函数，后者的目的是调用小函数时不占用栈内存">
+<meta name="keywords" content="calm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础八（二）——函数">
+<meta property="og:url" content="http://yoursite.com/2018/07/26/python-9(2)/index.html">
 <meta property="og:site_name" content="好好学习，天天向上">
+<meta property="og:description" content="匿名函数python 使用 lambda 来创建匿名函数。lambda只是一个表达式，函数体比def简单很多。lambda的主体是一个表达式，而不是一个代码块。仅仅能在lambda表达式中封装有限的逻辑进去。lambda函数拥有自己的命名空间，且不能访问自有参数列表之外或全局命名空间里的参数。虽然lambda函数看起来只能写一行，却不等同于C或C++的内联函数，后者的目的是调用小函数时不占用栈内存">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-26T09:53:15.623Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="好好学习，天天向上">
+<meta name="twitter:title" content="python基础八（二）——函数">
+<meta name="twitter:description" content="匿名函数python 使用 lambda 来创建匿名函数。lambda只是一个表达式，函数体比def简单很多。lambda的主体是一个表达式，而不是一个代码块。仅仅能在lambda表达式中封装有限的逻辑进去。lambda函数拥有自己的命名空间，且不能访问自有参数列表之外或全局命名空间里的参数。虽然lambda函数看起来只能写一行，却不等同于C或C++的内联函数，后者的目的是调用小函数时不占用栈内存">
   
     <link rel="alternative" href="/atom.xml" title="好好学习，天天向上" type="application/atom+xml">
   
@@ -150,36 +155,87 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-python-9(2)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python基础八（二）——函数
+    </h1>
+  
+
+        
+        <a href="/2018/07/26/python-9(2)/" class="archive-article-date">
+  	<time datetime="2018-07-26T09:30:15.632Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p>python 使用 lambda 来创建匿名函数。<br>lambda只是一个表达式，函数体比def简单很多。<br>lambda的主体是一个表达式，而不是一个代码块。仅仅能在lambda表达式中封装有限的逻辑进去。<br>lambda函数拥有自己的命名空间，且不能访问自有参数列表之外或全局命名空间里的参数。<br>虽然lambda函数看起来只能写一行，却不等同于C或C++的内联函数，后者的目的是调用小函数时不占用栈内存从而增加运行效率。<br>语法：<br>lambda [arg1 [,arg2,…..argn]]:expression<br><a id="more"></a><br>匿名函数的优缺点：<br>优点<br>    书写简单，不需要def关键词<br>    不需要费脑子想函数名（匿名函数）<br>    看起来高大上<br>缺点<br>    bambda表达式功能受限，无法使用循环和功能分支<br>    复杂的操作，不适合bambda表达式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">sums=lambda a,b:a+b</span><br><span class="line"><span class="built_in">print</span>(sums(1,2)) <span class="comment">#实现加法</span></span><br><span class="line"></span><br><span class="line">def fun():</span><br><span class="line">    <span class="built_in">return</span> True</span><br><span class="line"><span class="built_in">print</span>(fun())</span><br><span class="line"></span><br><span class="line">funs=lambda :True</span><br><span class="line"><span class="built_in">print</span>(funs)  <span class="comment">#&lt;function &lt;lambda&gt; at 0x0000000001E799D8&gt;</span></span><br><span class="line"><span class="built_in">print</span>(funs())  <span class="comment">#实现返回True</span></span><br><span class="line"></span><br><span class="line">asum=lambda a:a*a</span><br><span class="line"><span class="built_in">print</span>(asum(3))  <span class="comment">#实现求i*i</span></span><br><span class="line"></span><br><span class="line">asum=lambda a=5:a*a</span><br><span class="line"><span class="built_in">print</span>(asum())  <span class="comment">#25</span></span><br><span class="line"><span class="built_in">print</span>(asum(3))  <span class="comment">#9  #实参和形参</span></span><br><span class="line"></span><br><span class="line">bsum=lambda a,b:a-b</span><br><span class="line"><span class="built_in">print</span>(bsum(b=20,a=10))  <span class="comment">#-10</span></span><br><span class="line"></span><br><span class="line">str1=<span class="string">'this is\nan\tisland'</span></span><br><span class="line">new=lambda a:<span class="string">' '</span>.join(a.split())</span><br><span class="line"><span class="built_in">print</span>(new(str1))</span><br></pre></td></tr></table></figure></p>
+<h3 id="map函数"><a href="#map函数" class="headerlink" title="map函数"></a>map函数</h3><p>map() 会根据提供的函数对指定序列做映射。<br>第一个参数 function 以参数序列中的每一个元素调用 function 函数，返回包含每次 function 函数返回值的新列表<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def mul(a):</span><br><span class="line">    <span class="built_in">return</span> a*a</span><br><span class="line"><span class="built_in">print</span>(list(map(mul,[1,2,3,4,5]))) <span class="comment">#[1,4,9,16,25]</span></span><br><span class="line"></span><br><span class="line">mul=lambda a:a*a</span><br><span class="line"><span class="built_in">print</span>(list(map(mul,[1,2,3,4,5])))</span><br></pre></td></tr></table></figure></p>
+<h2 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h2><p>一个程序的所有的变量并不是在哪个位置都可以访问的。访问权限决定于这个变量是在哪里赋值的。</p>
+<p>变量的作用域决定了在哪一部分程序你可以访问哪个特定的变量名称。两种最基本的变量作用域如下：<br>    全局变量<br>    局部变量</p>
+<p>定义在函数内部的变量拥有一个局部作用域，定义在函数外的拥有全局作用域。<br>局部变量只能在其被声明的函数内部访问，而全局变量可以在整个程序范围内访问。调用函数时，所有在函数内声明的变量名称都将被加入到作用域中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#局部变量，全局变量</span></span><br><span class="line"></span><br><span class="line">name=<span class="string">'生如夏花'</span> <span class="comment">#全局</span></span><br><span class="line">def fun():</span><br><span class="line">    name=<span class="string">'清白之年'</span>  <span class="comment">#局部</span></span><br><span class="line">    <span class="built_in">print</span>(name)</span><br><span class="line"><span class="built_in">print</span>(name)  <span class="comment">#生如夏花</span></span><br><span class="line">fun()        <span class="comment">#清白之年</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#全局的变量可以在局部进行使用，局部的变量不能在全局使用</span></span><br><span class="line">name=<span class="string">'生如夏花'</span></span><br><span class="line">def fun():</span><br><span class="line">    <span class="built_in">print</span>(name)  <span class="comment">#在局部可以使用全局变量</span></span><br><span class="line">fun()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def fun():</span><br><span class="line">    name=<span class="string">'生如夏花'</span></span><br><span class="line">    <span class="built_in">print</span>(name)</span><br><span class="line"><span class="comment"># print(name)  #报错，name没有定义</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">name=<span class="string">'生如夏花'</span></span><br><span class="line">def fun():</span><br><span class="line">    <span class="built_in">print</span>(name)</span><br><span class="line">    two()</span><br><span class="line">def two():</span><br><span class="line">    name=<span class="string">'清白之年'</span></span><br><span class="line">    <span class="built_in">print</span>(name)</span><br><span class="line">fun()    <span class="comment">#生如夏花</span></span><br><span class="line">         <span class="comment">#清白之年</span></span><br><span class="line"></span><br><span class="line">name=<span class="string">'生如夏花'</span></span><br><span class="line">def fun():</span><br><span class="line">    <span class="built_in">print</span>(name)</span><br><span class="line">def two():</span><br><span class="line">    name=<span class="string">'清白之年'</span></span><br><span class="line">    fun()</span><br><span class="line">    <span class="built_in">print</span>(name)</span><br><span class="line">two()</span><br><span class="line">       </span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">#全局变量-局部变量</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line">name=<span class="string">'生如夏花'</span></span><br><span class="line">def one(name):</span><br><span class="line">    <span class="built_in">print</span>(name)</span><br><span class="line">one(name)</span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">#局部变量-全局变量</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line">def one():</span><br><span class="line">    name=<span class="string">'清白之年'</span></span><br><span class="line">    <span class="comment">#print(name)</span></span><br><span class="line">    <span class="built_in">return</span> name</span><br><span class="line">dname=one()</span><br><span class="line"><span class="built_in">print</span>(dname)</span><br></pre></td></tr></table></figure>
+<h2 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h2><p>函数可以调用其他函数，令人惊讶的是函数还可以调用自身。递归这个词对于没有接触过程序设计的人来说可能会比较陌生。简单说来就是引用（或者调用）自身的意思。<br>一个类似递归的定义如下。<br>def recursion():<br>    return recursion()<br>理论上讲此递归会永远运行下去。<br>注意：每次调用函数都会用掉一点内存，在足够多次数的函数调用发生后（在之前的调用返回后），空间就不够了，程序会以一个“超过最大递归深度”的错误信息结束。</p>
+<p>在使用递归时，需要注意以下几点：<br>递归就是在过程或函数里调用自身<br>必须有一个明确的递归结束条件，称为递归出口。<br>注意： 切勿忘记递归出口，避免函数无限调用。</p>
+<p>递归的优缺点：<br>优点：<br>递归使代码看起来更加整洁、优雅<br>可以用递归将复杂任务分解成更简单的子问题<br>使用递归比使用一些嵌套迭代更容易<br>缺点:<br>递归的逻辑很难调试、跟进<br>递归调用的代价高昂（效率低），因为占用了大量的内存和时间。</p>
+<h3 id="题-理解"><a href="#题-理解" class="headerlink" title="题 理解"></a>题 理解</h3><p>求和<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sum=0</span><br><span class="line">def sums(num,sum):</span><br><span class="line">    sum+=num</span><br><span class="line">    num+=1</span><br><span class="line">    <span class="keyword">if</span> num&lt;=100:</span><br><span class="line">        sums(num,sum)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(sum)</span><br><span class="line">sums(1,sum)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def sum1(n):</span><br><span class="line">    sum=0</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1,n+1):</span><br><span class="line">        sum+=i</span><br><span class="line">    <span class="built_in">return</span> sum</span><br><span class="line"><span class="built_in">print</span>(sum1(10))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def sum2(n):</span><br><span class="line">    <span class="keyword">if</span> n==0:</span><br><span class="line">        <span class="built_in">return</span> 0</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">return</span> n+sum2(n-1)</span><br><span class="line"><span class="built_in">print</span>(sum2(10))</span><br></pre></td></tr></table></figure>
+<p>求1<em>1+2</em>2+…+n*n<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def sum3(n):</span><br><span class="line">    <span class="keyword">if</span> n==1:</span><br><span class="line">        <span class="built_in">return</span> 1</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">return</span> n*n+sum3(n-1)</span><br><span class="line"><span class="built_in">print</span>(sum3(3))</span><br></pre></td></tr></table></figure></p>
+<p>4、一天小熊来到一片玉米地，兴奋的掰了若干个玉米，他发现太多了，<br>于是扔了其中一半，感觉还是有点多，于是又扔了一个后往家赶；<br>当它走了一米的时候感觉有点累，于是扔掉其中的一半加一个，<br>继续往前每走一米重复以往的动作，扔掉其中的一半加一个；<br>当它走到10米时候，发现手中就剩一个了，有点伤感，<br>也忘了开始自己摘了几个玉米了，那么你帮小熊算算，它开始掰了几个玉米？<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def yumi(n,sum):</span><br><span class="line">    sum=2*sum+2</span><br><span class="line">    n-=1</span><br><span class="line">    <span class="keyword">if</span> n&gt;0:</span><br><span class="line">        yumi(n,sum)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(sum)</span><br><span class="line">yumi(10,1)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def getyumi(length):</span><br><span class="line">    yumi=1</span><br><span class="line">    <span class="keyword">if</span> length==0:</span><br><span class="line">        yumi=1</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        yumi=2*(getyumi(length-1)+1)</span><br><span class="line">    <span class="built_in">return</span> yumi</span><br><span class="line"><span class="built_in">print</span>(getyumi(10))</span><br></pre></td></tr></table></figure>
+<h2 id="递归函数-二元查找"><a href="#递归函数-二元查找" class="headerlink" title="递归函数-二元查找"></a>递归函数-二元查找</h2><p>假设提问者可能在想一个1~100的数字，提问者需要猜中它。当然，提问者可以耐心地猜上100次，但是真正需要猜多少次呢？<br>答案就是只需要问7次即可。第一个问题类似于“数字是否大于50？”，如果被提问者回答说数字大于50，那么就问“是否大于75”，然后继续将满足条件的值等分（排除不满足条件的值），直到找到正确答案。这个不需要太多考虑就能解答出来。这个就是所谓的二元查找。</p>
+<p>这个递归例子的关键就是顺序，所以当找到中间元素的时候，只需要比较它和所查找的数字，如果要查找数字较大，那么该数字一定在右侧，反之在左侧。递归部分就是“继续查找数字所在的那半部分”，因为搜索的具体实现可能会和定义中完全相同。（注意搜索的算法返回的是数字应该在的位置—如果它本身不在序列中，那么所返回位置上的其实是其他数字。）</p>
+<p>二元搜索案例</p>
+<pre><code class="bash">def search(sequence,number,lower,upper):
+    <span class="keyword">if</span> lower == upper:
+        assert number == sequence[upper]
+        <span class="built_in">return</span> upper
+    <span class="keyword">else</span>:
+        middle = (lower + upper)//2
+        <span class="keyword">if</span> number &gt; sequence[middle]:
+            <span class="built_in">return</span> search(sequence,
+                    number,middle+1,upper)
+        <span class="keyword">else</span>:
+            <span class="built_in">return</span> search(sequence,
+                    number,lower,middle)
+</code></pre>
+<h3 id="递归函数-循环语句VS递归"><a href="#递归函数-循环语句VS递归" class="headerlink" title="递归函数-循环语句VS递归"></a>递归函数-循环语句VS递归</h3><p>尽管递归对于前面求和的例子有效，但在那种环境中，它可能过于追求技巧了。实际上，递归在Python中并不像在prolog或Lisp这样更加深奥的语言中那样常用，因为Python强调像循环这样简单的过程式语句，循环语句通常更为自然。例如，while常常使得事情更为具体一些，并且它不需要定义一个支持递归调用的函数。<br>更好的情况，for循环为我们自动迭代，使得在大多数情况下不必使用递归（并且很可能，递归在内存空间和执行时间方面效率较低）</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/20/python02/" class="archive-article-date">
-  	<time datetime="2018-07-20T05:08:33.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/20/python02/">python基础2——数据类型转换</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,98 +247,118 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/26/python-9(2)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/19/Python_01/" class="archive-article-date">
-  	<time datetime="2018-07-19T09:15:26.100Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/26/python-09/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python基础9——函数</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/19/Python_01/">Python基础1-数据类型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#匿名函数"><span class="toc-number">1.</span> <span class="toc-text">匿名函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#map函数"><span class="toc-number">1.1.</span> <span class="toc-text">map函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量作用域"><span class="toc-number">2.</span> <span class="toc-text">变量作用域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#递归函数"><span class="toc-number">3.</span> <span class="toc-text">递归函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题-理解"><span class="toc-number">3.1.</span> <span class="toc-text">题 理解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#递归函数-二元查找"><span class="toc-number">4.</span> <span class="toc-text">递归函数-二元查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#递归函数-循环语句VS递归"><span class="toc-number">4.1.</span> <span class="toc-text">递归函数-循环语句VS递归</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/14/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-14T08:39:23.965Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/14/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2018/">&laquo; Prev</a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
   
 
 
@@ -306,8 +382,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
