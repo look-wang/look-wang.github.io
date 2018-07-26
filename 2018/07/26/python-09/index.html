@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>好好学习，天天向上</title>
+  <title>python基础9——函数 | 好好学习，天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="好好学习，天天向上">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="函数函数（function）是一段完成特定功能的已命名代码块。函数可以遵照参数完成特定的任务，并且可能返回一个值在Python中有两种函数：自定义函数与内置函数页面加载时函数不会立即执行，函数只有在被调用时才会执行函数具有重用性循环可以使单行代码重复利用，函数使代码功能可以重复利用">
+<meta name="keywords" content="calm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础9——函数">
+<meta property="og:url" content="http://yoursite.com/2018/07/26/python-09/index.html">
 <meta property="og:site_name" content="好好学习，天天向上">
+<meta property="og:description" content="函数函数（function）是一段完成特定功能的已命名代码块。函数可以遵照参数完成特定的任务，并且可能返回一个值在Python中有两种函数：自定义函数与内置函数页面加载时函数不会立即执行，函数只有在被调用时才会执行函数具有重用性循环可以使单行代码重复利用，函数使代码功能可以重复利用">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-26T09:27:29.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="好好学习，天天向上">
+<meta name="twitter:title" content="python基础9——函数">
+<meta name="twitter:description" content="函数函数（function）是一段完成特定功能的已命名代码块。函数可以遵照参数完成特定的任务，并且可能返回一个值在Python中有两种函数：自定义函数与内置函数页面加载时函数不会立即执行，函数只有在被调用时才会执行函数具有重用性循环可以使单行代码重复利用，函数使代码功能可以重复利用">
   
     <link rel="alternative" href="/atom.xml" title="好好学习，天天向上" type="application/atom+xml">
   
@@ -150,34 +155,70 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Python_01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-python-09" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/19/Python_01/">Python基础1-数据类型</a>
+    <h1 class="article-title" itemprop="name">
+      python基础9——函数
     </h1>
   
 
         
-        <a href="/2018/07/19/Python_01/" class="archive-article-date">
-  	<time datetime="2018-07-19T09:15:26.100Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-19</time>
+        <a href="/2018/07/26/python-09/" class="archive-article-date">
+  	<time datetime="2018-07-26T08:46:43.719Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a>python基础</h2><p>1.1<br>开发工具：<br>IDLE：Python内置IDE (随python安装包提供)<br>Vscode：图形化界面，比之前的好看<br>PyCharm：有调试、语法高亮、Project管理、代码跳转、智能提示、自动完成、单元测试、版本控制。此外，该IDE提供了一些高级功能，以用于支持Django框架下的专业Web开发。<br>Vim: 最新7.3版编译时可以加入python支持，提供python代码自动提示支持<br>Visual Studio：仅适用Windows，已停止维护，功能较差<br>Sublime、Notepad++、EditPlus、UltraEdit等<br>
-        
-          <a class="article-more-a" href="/2018/07/19/Python_01/#more">more >></a>
-        
+        <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>函数（function）是一段完成特定功能的已命名代码块。函数可以遵照参数完成特定的任务，并且可能返回一个值<br>在Python中有两种函数：自定义函数与内置函数<br>页面加载时函数不会立即执行，函数只有在被调用时才会执行<br>函数具有重用性<br>循环可以使单行代码重复利用，函数使代码功能可以重复利用<br><a id="more"></a></p>
+<h3 id="函数的优越性"><a href="#函数的优越性" class="headerlink" title="函数的优越性"></a>函数的优越性</h3><p>函数的优越性：<br>提高软件的开发效率<br>提高软件的可维护性<br>提高程序的重用性<br>我们都要可通过如下函数的三要素来了解一个函数：<br>函数的功能描述<br>函数的参数<br>函数的返回值</p>
+<h3 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h3><p>自定义函数语法格式：<br>    def  函数名称（[参数1 ,参数2=默认值 ,…]）:<br>        程序内容叙述(也叫函数体)<br>        [return value]     //return语句将终止函数的执行<br>函数是一个能完成特定功能的代码块，可在程序中重复使用，减少程序的代码量和提高程序的执行效率。<br>函数参数和返回值不是必须的，如果没有return语句，则Python函数默认返回值为None 。</p>
+<h3 id="函数的定义的规则"><a href="#函数的定义的规则" class="headerlink" title="函数的定义的规则"></a>函数的定义的规则</h3><p>关键词：函数代码块以 def 关键词开头，后接函数标识符名称和圆括号()。<br>函数名：函数名称区分大小写<br>参数：任何传入参数和自变量必须放在圆括号中间。圆括号之间可以用于定义参数。<br>格式：函数的第一行语句可以选择性地使用文档字符串—用于存放函数说明。<br>格式：函数内容以冒号起始，并且缩进。<br>返回值：return [表达式] 结束函数，选择性地返回一个值给调用方。不带表达式的return相当于返回 None。</p>
+<h3 id="函数的调用"><a href="#函数的调用" class="headerlink" title="函数的调用"></a>函数的调用</h3><p>函数调用的语法：<br>    方法一：函数名([实参列表])<br>    方法二：变量名=函数名()</p>
+<h2 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h2><h3 id="带有参数的函数"><a href="#带有参数的函数" class="headerlink" title="带有参数的函数"></a>带有参数的函数</h3><p>自定义函数语法格式：<br>    def  函数名称（[参数1 ,参数2=默认值 ,…]）:<br>        程序内容叙述(也叫函数体)<br>        [return value]     //return语句将终止函数的执行<br>函数名称(参数[实参])<br>定义函数时的参数称为形参，调用时写的参数称为实参，调用函数时，传入的两个值按照位置顺序依次赋给形参<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#带有参数的函数</span></span><br><span class="line"><span class="comment">#形参和实参问题</span></span><br><span class="line">def fun(a,b):</span><br><span class="line">    <span class="built_in">return</span>(a+b)</span><br><span class="line"><span class="built_in">print</span>(fun(3,5))  <span class="comment">#8</span></span><br><span class="line">s=fun(3,5)</span><br><span class="line"><span class="built_in">print</span>(s)</span><br></pre></td></tr></table></figure></p>
+<h3 id="函数的参数-默认参数"><a href="#函数的参数-默认参数" class="headerlink" title="函数的参数-默认参数"></a>函数的参数-默认参数</h3><p>函数在定义形参时可以给形参赋值，调用时，如果形参有值，调用时实参就可以不用给值，直接使用形参中的值；若不想使用形参中的值，可在调用时进行重新赋值<br>在此情况下使用实参值覆盖原有形参的默认值，本质上就是变量的重新复制操作<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#函数的参数-默认参数</span></span><br><span class="line">def fun(a=1,b=2):</span><br><span class="line">    <span class="built_in">print</span>(a+b)</span><br><span class="line">fun()</span><br><span class="line">fun(3,5)</span><br><span class="line"></span><br><span class="line">def sumNum(num1,num3,num2=7):</span><br><span class="line">    nums=<span class="string">'num1=%d,num2=%d,num3=%d'</span>%(num1,num2,num3)</span><br><span class="line">    <span class="built_in">return</span> nums</span><br><span class="line"><span class="built_in">print</span>(sumNum(num1=6,num2=5,num3=1)) <span class="comment">#num1=6,num2=5,num3=1</span></span><br></pre></td></tr></table></figure></p>
+<p>函数封装打印金字塔（正三角）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#不用函数</span></span><br><span class="line">hang=int(input(<span class="string">'行数：'</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1,hang+1):</span><br><span class="line">    <span class="built_in">print</span>((hang-i)*<span class="string">' '</span>,end=<span class="string">''</span>)</span><br><span class="line">    <span class="built_in">print</span>((2*i-1)*<span class="string">'*'</span>)</span><br><span class="line"><span class="comment">#函数方法</span></span><br><span class="line">num=int(input(<span class="string">'num:'</span>))</span><br><span class="line">def pyramid(hang):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(1,hang+1):</span><br><span class="line">        <span class="built_in">print</span>((hang-i)*<span class="string">' '</span>,end=<span class="string">''</span>)</span><br><span class="line">        <span class="built_in">print</span>((2*i-1)*<span class="string">'*'</span>)</span><br><span class="line">pyramid(num)</span><br></pre></td></tr></table></figure></p>
+<p>求列表值的平方</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">data = [1,2,3,4]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">    <span class="built_in">print</span>(i*i)</span><br><span class="line">data = [1,2,3,4]</span><br><span class="line"></span><br><span class="line">def func(x):</span><br><span class="line">    li=[x*x <span class="keyword">for</span> x <span class="keyword">in</span> data]</span><br><span class="line">    <span class="built_in">print</span>(li)</span><br><span class="line">func(data)</span><br><span class="line"></span><br><span class="line">data = [1,2,3,4]</span><br><span class="line">data1 = [6,7,8,9]</span><br><span class="line">def funcs(x):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> x:</span><br><span class="line">        <span class="built_in">print</span>(i*i)</span><br><span class="line">funcs(data)</span><br><span class="line">funcs(data1)</span><br></pre></td></tr></table></figure>
+<h3 id="函数的参数-可变参数"><a href="#函数的参数-可变参数" class="headerlink" title="函数的参数-可变参数"></a>函数的参数-可变参数</h3><p>可变参数又称为不定长参数。在python函数中，还可以定义可变参数。顾名思义，可变参数就是传入的参数个数是可变的，可以是1个、2个或者任意多个，也可以是0个，当不确定参数个数时，通常需要用到不定长参数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def fun(number):</span><br><span class="line">    sum=0</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> number:</span><br><span class="line">        sum+=i</span><br><span class="line">    <span class="built_in">print</span>(sum)</span><br><span class="line">fun([1,2])    <span class="comment">#3</span></span><br><span class="line">fun((1,2,3))  <span class="comment">#6</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="函数的参数-关键词参数-（缺省参数）"><a href="#函数的参数-关键词参数-（缺省参数）" class="headerlink" title="函数的参数-关键词参数  （缺省参数）"></a>函数的参数-关键词参数  （缺省参数）</h3><p>关键字参数允许传入的参数顺序与声明时不同，只需在调用时指明参数名称及其值。</p>
+<p>调用函数时，缺省参数的值如果没有传入，则被认为是默认值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">def person(name,age=18):  <span class="comment">#缺省参数</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'name:'</span>,name,<span class="string">'age:'</span>,age)</span><br><span class="line">person(<span class="string">'lucy'</span>)</span><br><span class="line">person(<span class="string">'lucy'</span>,20)</span><br><span class="line"></span><br><span class="line">def peo(name,age,sex):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'我的名字是%s，我的年龄是%s，我的性别是%s'</span>%(name,age,sex))</span><br><span class="line">peo(<span class="string">'张三'</span>,<span class="string">'18'</span>,<span class="string">'男'</span>)</span><br><span class="line"></span><br><span class="line">def peo(self):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'我的名字是%s，我的年龄是%s，我的性别是%s'</span>%(self[0],self[1],self[2]))</span><br><span class="line">peo([<span class="string">'张三'</span>,<span class="string">'18'</span>,<span class="string">'男'</span>])</span><br><span class="line"></span><br><span class="line">def peo(self):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'我的名字是%s，我的年龄是%s，我的性别是%s'</span>%(self[<span class="string">'name'</span>],self[<span class="string">'age'</span>],self[<span class="string">'sex'</span>]))</span><br><span class="line">peo(&#123;<span class="string">'name'</span>:<span class="string">'张三'</span>,<span class="string">'age'</span>:<span class="string">'18'</span>,<span class="string">'sex'</span>:<span class="string">'男'</span>&#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="函数的参数-特殊用法"><a href="#函数的参数-特殊用法" class="headerlink" title="函数的参数-特殊用法"></a>函数的参数-特殊用法</h3><p>python的星号（*）和双星号（**）用法</p>
+<pre><code>* 该位置接受任意多个非关键字（non-keyword）参数，在函数中将其转化为元组（1,2,3,4）
+* *该位置接受任意多个关键字（keyword）参数，在函数**位置上转化为词典 [key:value, key:value ]
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#*该位置接受任意多个非关键字（non-keyword）参数,在函数中将其转化为元组（1,2,3,4）</span></span><br><span class="line">def person(name,age,*other):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'name:'</span>,name,<span class="string">'age:'</span>,age,<span class="string">'other:'</span>,other)</span><br><span class="line">person(<span class="string">'lucy'</span>,18,165,45)  </span><br><span class="line">     <span class="comment">#name: lucy age: 18 other: (165, 45)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#**该位置接受任意多个关键字（keyword）参数，在函数**位置上转化为词典 [key:value, key:value ]</span></span><br><span class="line">def person(name,age,**other):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'name:'</span>,name,<span class="string">'age:'</span>,age,<span class="string">'other:'</span>,other)</span><br><span class="line">person(<span class="string">'lucy'</span>,18,height=165,weight=45)</span><br><span class="line">    <span class="comment">#name: lucy age: 18 other: &#123;'height': 165, 'weight': 45&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><p>封装九九乘法表<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">def chengfa(hang):</span><br><span class="line">    <span class="keyword">while</span> hang&lt;=9:</span><br><span class="line">        lie=1</span><br><span class="line">        <span class="keyword">while</span> lie&lt;=hang:</span><br><span class="line">            s=hang*lie</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'%d*%d=%d'</span>%(hang,lie,s),end=<span class="string">' '</span>)</span><br><span class="line">            lie+=1</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">''</span>)</span><br><span class="line">        hang+=1</span><br><span class="line">chengfa(5)   <span class="comment">#可选择范围打印 5代表从第五行开始打印</span></span><br></pre></td></tr></table></figure></p>
+<p>九九乘法表变为可-，+，/<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">def chengfa(hang,fuhao):</span><br><span class="line">    <span class="keyword">while</span> hang&lt;=9:</span><br><span class="line">        lie=1</span><br><span class="line">        <span class="keyword">while</span> lie&lt;=hang:</span><br><span class="line">            <span class="keyword">if</span> fuhao==<span class="string">'+'</span>:</span><br><span class="line">                s=hang+lie</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">'%d+%d=%d'</span>%(hang,lie,s),end=<span class="string">' '</span>)</span><br><span class="line">            <span class="keyword">elif</span> fuhao==<span class="string">'-'</span>:</span><br><span class="line">                s=hang-lie</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">'%d-%d=%d'</span>%(hang,lie,s),end=<span class="string">' '</span>)</span><br><span class="line">            <span class="keyword">elif</span> fuhao==<span class="string">'*'</span>:</span><br><span class="line">                s=hang-lie</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">'%d*%d=%d'</span>%(hang,lie,s),end=<span class="string">' '</span>)</span><br><span class="line">            <span class="keyword">elif</span> fuhao==<span class="string">'/'</span>:</span><br><span class="line">                s=hang/lie</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">'%d/%d=%.1f'</span>%(hang,lie,s),end=<span class="string">' '</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">'输入有误'</span>)</span><br><span class="line">            lie+=1</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">''</span>)</span><br><span class="line">        hang+=1</span><br><span class="line">chengfa(1,<span class="string">'/'</span>)  <span class="comment">#输入相应符号，执行相应操作</span></span><br></pre></td></tr></table></figure></p>
+<p>隔行打印空星星和黑星星<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def start(cols,rows,*heat):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(1,rows+1):</span><br><span class="line">        <span class="keyword">if</span> j%2==0:</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(cols):</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">'☆'</span>,end=<span class="string">''</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(cols):</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">'★'</span>,end=<span class="string">''</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">''</span>)</span><br><span class="line">start(5,2)</span><br><span class="line">      <span class="comment">#★★★★★</span></span><br><span class="line">      <span class="comment">#☆☆☆☆☆</span></span><br><span class="line">start(rows=5,cols=10)</span><br></pre></td></tr></table></figure></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -197,16 +238,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/19/Python_01/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/26/python-09/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/23/python-08(2)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python基础8（二）——元组，字典和集合相关操作</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -221,94 +321,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/14/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-14T08:39:23.965Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
-        
-          <a class="article-more-a" href="/2018/07/14/hello-world/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/14/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#函数"><span class="toc-number">1.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的优越性"><span class="toc-number">1.1.</span> <span class="toc-text">函数的优越性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的定义"><span class="toc-number">1.2.</span> <span class="toc-text">函数的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的定义的规则"><span class="toc-number">1.3.</span> <span class="toc-text">函数的定义的规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的调用"><span class="toc-number">1.4.</span> <span class="toc-text">函数的调用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数的参数"><span class="toc-number">2.</span> <span class="toc-text">函数的参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#带有参数的函数"><span class="toc-number">2.1.</span> <span class="toc-text">带有参数的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的参数-默认参数"><span class="toc-number">2.2.</span> <span class="toc-text">函数的参数-默认参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的参数-可变参数"><span class="toc-number">2.3.</span> <span class="toc-text">函数的参数-可变参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的参数-关键词参数-（缺省参数）"><span class="toc-number">2.4.</span> <span class="toc-text">函数的参数-关键词参数  （缺省参数）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的参数-特殊用法"><span class="toc-number">2.5.</span> <span class="toc-text">函数的参数-特殊用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#举例"><span class="toc-number">2.6.</span> <span class="toc-text">举例</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+
   
 
 
@@ -331,8 +369,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
