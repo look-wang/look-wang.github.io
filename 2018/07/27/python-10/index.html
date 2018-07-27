@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: fighting | 好好学习，天天向上</title>
+  <title>python基础十——嵌套函数 闭包 装饰器 | 好好学习，天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="好好学习，天天向上">
-<meta property="og:url" content="http://yoursite.com/tags/fighting/index.html">
+  <meta name="description" content="函数嵌套函数里面调用函数（其它函数）12345678910111213def da(x,y):    m=x if x&amp;gt;y else y    return mprint(da(5,3))def da2(a,b,c,d):    res1=da(a,b)    res2=da(res1,c) #在函数da2里面调用了其它函数da()    res3=da(res2,d)    print(r">
+<meta name="keywords" content="calm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础十——嵌套函数 闭包 装饰器">
+<meta property="og:url" content="http://yoursite.com/2018/07/27/python-10/index.html">
 <meta property="og:site_name" content="好好学习，天天向上">
+<meta property="og:description" content="函数嵌套函数里面调用函数（其它函数）12345678910111213def da(x,y):    m=x if x&amp;gt;y else y    return mprint(da(5,3))def da2(a,b,c,d):    res1=da(a,b)    res2=da(res1,c) #在函数da2里面调用了其它函数da()    res3=da(res2,d)    print(r">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-27T11:50:35.973Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="好好学习，天天向上">
+<meta name="twitter:title" content="python基础十——嵌套函数 闭包 装饰器">
+<meta name="twitter:description" content="函数嵌套函数里面调用函数（其它函数）12345678910111213def da(x,y):    m=x if x&amp;gt;y else y    return mprint(da(5,3))def da2(a,b,c,d):    res1=da(a,b)    res2=da(res1,c) #在函数da2里面调用了其它函数da()    res3=da(res2,d)    print(r">
   
     <link rel="alternative" href="/atom.xml" title="好好学习，天天向上" type="application/atom+xml">
   
@@ -150,212 +155,198 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-python-10" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python基础十——嵌套函数 闭包 装饰器
+    </h1>
+  
+
+        
+        <a href="/2018/07/27/python-10/" class="archive-article-date">
+  	<time datetime="2018-07-27T11:22:50.695Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="函数嵌套"><a href="#函数嵌套" class="headerlink" title="函数嵌套"></a>函数嵌套</h2><p>函数里面调用函数（其它函数）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def da(x,y):</span><br><span class="line">    m=x <span class="keyword">if</span> x&gt;y <span class="keyword">else</span> y</span><br><span class="line">    <span class="built_in">return</span> m</span><br><span class="line"><span class="built_in">print</span>(da(5,3))</span><br><span class="line"></span><br><span class="line">def da2(a,b,c,d):</span><br><span class="line">    res1=da(a,b)</span><br><span class="line">    res2=da(res1,c) <span class="comment">#在函数da2里面调用了其它函数da()</span></span><br><span class="line">    res3=da(res2,d)</span><br><span class="line">    <span class="built_in">print</span>(res1)</span><br><span class="line">    <span class="built_in">print</span>(res2)</span><br><span class="line">    <span class="built_in">print</span>(res3)</span><br><span class="line">da2(23,-7,31,11)  <span class="comment">#23 31 31</span></span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h3 id="案例：嵌套打印五行"><a href="#案例：嵌套打印五行" class="headerlink" title="案例：嵌套打印五行-"></a>案例：嵌套打印五行-</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def oneline():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'-'</span>*20) <span class="comment">#打印一行</span></span><br><span class="line">def line():</span><br><span class="line">    i=0</span><br><span class="line">    <span class="keyword">while</span> i&lt;5:</span><br><span class="line">        oneline()  <span class="comment">#打印5行</span></span><br><span class="line">        i+=1</span><br><span class="line">line()</span><br></pre></td></tr></table></figure>
+<h3 id="函数的作用域链：小范围作用域可以使用大范围的变量，但是反之不行，它是单向的。"><a href="#函数的作用域链：小范围作用域可以使用大范围的变量，但是反之不行，它是单向的。" class="headerlink" title="函数的作用域链：小范围作用域可以使用大范围的变量，但是反之不行，它是单向的。"></a>函数的作用域链：小范围作用域可以使用大范围的变量，但是反之不行，它是单向的。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#小范围可以使用大范围</span></span><br><span class="line">def out():</span><br><span class="line">    a=1</span><br><span class="line">    def inner():</span><br><span class="line">        b=2</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'inner'</span>)</span><br><span class="line">        <span class="built_in">print</span>(a,b)</span><br><span class="line">        def inner1():</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'inner1'</span>)</span><br><span class="line">            <span class="built_in">print</span>(a,b)</span><br><span class="line">        inner1()</span><br><span class="line">    inner()</span><br><span class="line">out()</span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">inner</span></span><br><span class="line"><span class="string">1 2</span></span><br><span class="line"><span class="string">inner1</span></span><br><span class="line"><span class="string">1 2</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#大范围不可以使用小范围</span></span><br><span class="line"></span><br><span class="line">def f1():</span><br><span class="line">    a=1</span><br><span class="line">    def f2():</span><br><span class="line">        a=2</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'a in f2:'</span>,a)</span><br><span class="line">    f2()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'a in f1:'</span>,a)</span><br><span class="line">        <span class="comment">#f1:a=1,f2:a=2  </span></span><br><span class="line">        <span class="comment">#a in f1: 1</span></span><br><span class="line">f1()</span><br></pre></td></tr></table></figure>
+<h3 id="函数名本质上就是函数的内存地址"><a href="#函数名本质上就是函数的内存地址" class="headerlink" title="函数名本质上就是函数的内存地址"></a>函数名本质上就是函数的内存地址</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def func():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'abc'</span>)</span><br><span class="line">func2=func  <span class="comment">#函数名就是变量地址</span></span><br><span class="line"><span class="built_in">print</span>(func2)  <span class="comment">#&lt;function func at 0x0000000002071E18&gt;</span></span><br><span class="line">     <span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">     执行结果，func赋值给f，这里f等于func，而func又是一个函数名，但是后面没有加()，所以上面的func没有被执行，最后打印f，实际上就是打印出func函数名指向的内存地址</span></span><br><span class="line"><span class="string">     '</span><span class="string">''</span></span><br><span class="line">func2()  <span class="comment">#abc</span></span><br></pre></td></tr></table></figure>
+<h3 id="可以被引用"><a href="#可以被引用" class="headerlink" title="可以被引用"></a>可以被引用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#可以被引用</span></span><br><span class="line">def fun():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'hello'</span>)</span><br><span class="line"><span class="comment"># func2=fun()</span></span><br><span class="line"><span class="comment"># print(func2)</span></span><br><span class="line"><span class="built_in">print</span>(fun)  <span class="comment">#hello</span></span><br><span class="line"><span class="built_in">print</span>(fun())  <span class="comment">#None</span></span><br><span class="line">func1=fun()   <span class="comment">#hello </span></span><br><span class="line"><span class="built_in">print</span>(func1)   <span class="comment">#None</span></span><br><span class="line">func2=fun</span><br><span class="line"><span class="built_in">print</span>(func2) <span class="comment">#对象&lt;function fun at 0x00000000004E1E18&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="可以被当做容器类型的元素使用"><a href="#可以被当做容器类型的元素使用" class="headerlink" title="可以被当做容器类型的元素使用"></a>可以被当做容器类型的元素使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">def f1():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'f1'</span>)</span><br><span class="line">def f2():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'f2'</span>)</span><br><span class="line">def f3():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'f3'</span>)</span><br><span class="line">f=[f1,f2,f3]</span><br><span class="line">d=&#123;<span class="string">'f1'</span>:f1,<span class="string">'f2'</span>:f2,<span class="string">'f3'</span>:f3&#125;</span><br><span class="line">f[0]()  <span class="comment">#相当于调用f1()</span></span><br><span class="line">d[<span class="string">'f2'</span>]()  <span class="comment">#相当于调用f2()</span></span><br></pre></td></tr></table></figure>
+<h3 id="可以当作函数的参数和返回值型的元素"><a href="#可以当作函数的参数和返回值型的元素" class="headerlink" title="可以当作函数的参数和返回值型的元素"></a>可以当作函数的参数和返回值型的元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">def f1():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'666'</span>)</span><br><span class="line">def f2(x):</span><br><span class="line">    x() </span><br><span class="line">    <span class="comment">#2、x()变成f1(),调用函数f1</span></span><br><span class="line">f2(f1)  </span><br><span class="line">   <span class="comment">#1、把实参f1传给f2函数的形参中</span></span><br><span class="line">      <span class="comment">#输出666</span></span><br><span class="line"></span><br><span class="line">def f1():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'666'</span>)</span><br><span class="line">def f2(x):</span><br><span class="line">    <span class="built_in">return</span> x</span><br><span class="line">f2(f1)  <span class="comment">#没有值</span></span><br><span class="line">f2(f1)() <span class="comment">#666</span></span><br></pre></td></tr></table></figure>
+<h3 id="两个问题"><a href="#两个问题" class="headerlink" title="两个问题"></a>两个问题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def f3():</span><br><span class="line">    a = 1</span><br><span class="line">    def f4():</span><br><span class="line">        b = 2</span><br><span class="line">        def f5():</span><br><span class="line">            c = 3  <span class="comment">#函数里面没有返回值</span></span><br><span class="line">            <span class="built_in">return</span> c</span><br><span class="line">        <span class="built_in">print</span>(f5()) </span><br><span class="line">    <span class="built_in">print</span>(f4())</span><br><span class="line"><span class="built_in">print</span>(f3())  <span class="comment">#3</span></span><br><span class="line">             <span class="comment">#None</span></span><br><span class="line">             <span class="comment">#None</span></span><br><span class="line"><span class="comment">#函数f3、f4里面没有返回值，所以没有输出值</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">def f1(f):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> f:</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br><span class="line">def f2():</span><br><span class="line">    l1=[1,2,3]</span><br><span class="line">    l2=[4,5,6]</span><br><span class="line">    f1(l1)</span><br><span class="line">    f1(l2)</span><br><span class="line">f2() <span class="comment">#1 2 3 4 5 6</span></span><br><span class="line">    <span class="comment">#调用f2函数，f2里面调用f1(l1),f2(l2)</span></span><br></pre></td></tr></table></figure>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>概念：内部函数包含对外部作用域而非全局作用域变量的引用，该内部函数称为闭包函数。<br>函数内部定义的函数称为内部函数<br>由于有了作用域的关系，我们就不能拿到函数内部的变量和函数了，如果我们就是想拿怎么办呢？返回！<br>我们都知道函数内的变量我们想在函数外部用，可以直接返回这个变量，那么如果我们想在函数外部调用函数内部的函数呢？</p>
+<h3 id="错误的闭包"><a href="#错误的闭包" class="headerlink" title="错误的闭包"></a>错误的闭包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def func():</span><br><span class="line">    name=<span class="string">'hello wold'</span></span><br><span class="line">    def inner():</span><br><span class="line">        <span class="built_in">print</span>(name)</span><br></pre></td></tr></table></figure>
+<h3 id="正确的闭包"><a href="#正确的闭包" class="headerlink" title="正确的闭包"></a>正确的闭包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def func():</span><br><span class="line">    name=<span class="string">'hello world'</span></span><br><span class="line">    def inner():</span><br><span class="line">        <span class="built_in">print</span>(name)</span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line">f=func()</span><br><span class="line">f()  <span class="comment">#相当于执行inner</span></span><br></pre></td></tr></table></figure>
+<h3 id="判断闭包函数的方法closure，会输出一下内容：cell表示有闭包函数"><a href="#判断闭包函数的方法closure，会输出一下内容：cell表示有闭包函数" class="headerlink" title="判断闭包函数的方法closure，会输出一下内容：cell表示有闭包函数"></a>判断闭包函数的方法<strong>closure</strong>，会输出一下内容：cell表示有闭包函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">def func():</span><br><span class="line">    name=<span class="string">'hello world'</span></span><br><span class="line">    def inner():</span><br><span class="line">        <span class="built_in">print</span>(name)</span><br><span class="line">    <span class="built_in">print</span>(inner.__closure__)</span><br><span class="line">    <span class="comment">#(&lt;cell at 0x0000000001E064C8: str object at 0x0000000001DCFFB0&gt;,)  则为闭包函数</span></span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line"><span class="built_in">print</span>(func.__closure__) <span class="comment">#什么都没有，外部函数不是闭包</span></span><br><span class="line">f=func()</span><br><span class="line">f()</span><br><span class="line"></span><br><span class="line"><span class="comment">#判断当前代码那个是 闭包函数（某个内部函数被当做对象返回时，夹带了这个内部函数之外的变量）,不是闭包函数返回None</span></span><br><span class="line"></span><br><span class="line">name=<span class="string">'hello world'</span></span><br><span class="line">def func():</span><br><span class="line">    </span><br><span class="line">    def inner():</span><br><span class="line">        <span class="built_in">print</span>(name)</span><br><span class="line">        <span class="built_in">print</span>(inner.__closure__)  <span class="comment">#cell</span></span><br><span class="line">    <span class="built_in">print</span>(func.__closure__)  <span class="comment">#None</span></span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line">f=func()</span><br><span class="line">f()  <span class="comment">#hello</span></span><br></pre></td></tr></table></figure>
+<h3 id="闭包的优劣势"><a href="#闭包的优劣势" class="headerlink" title="闭包的优劣势"></a>闭包的优劣势</h3><p>当函数开始执行时，如果遇到了闭包，Python机制会为其永远开辟一个内存空间，将闭包中的变量等值放入其中，不会随着函数的执行完毕而消失。<br>使用闭包的过程中，一旦外函数被调用一次返回了内函数的引用，虽然每次调用内函数，是开启一个函数执行过后消亡，但是闭包变量实际上只有一份，每次开启内函数都在使用同一份闭包变量</p>
+<h2 id="闭包的应用—装饰器"><a href="#闭包的应用—装饰器" class="headerlink" title="闭包的应用—装饰器"></a>闭包的应用—装饰器</h2><p>什么是装饰器？<br>装饰器本质上就是一个python函数，它可以让其他函数在不需要做任何代码变动的前提下，增加额外的功能，装饰器的返回值也是一个函数对象。<br>装饰器的应用场景：比如插入日志，性能测试，事务处理，缓存等等场景</p>
+<h3 id="具体应用"><a href="#具体应用" class="headerlink" title="具体应用"></a>具体应用</h3><p>现在有一个需求，我想让你测试这个函数的执行时间，在不改变这个函数代码的情况下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">def funcl(): <span class="comment">#8、执行</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'hello world'</span>) <span class="comment">#9、打印</span></span><br><span class="line">def timer(f): <span class="comment">#2、接收传过来的参数funcl</span></span><br><span class="line">    def inner():</span><br><span class="line">        start_time=time.time()</span><br><span class="line">                 <span class="comment">#6、开始计算时间</span></span><br><span class="line">        f() </span><br><span class="line">                 <span class="comment">#7、f=funcl,即执行funcl()函数</span></span><br><span class="line">        time.sleep(3)  </span><br><span class="line">                 <span class="comment">#10、模拟延迟3秒</span></span><br><span class="line">        end_time=time.time() </span><br><span class="line">                  <span class="comment">#11、结束时间</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'此函数的执行效率&#123;&#125;'</span>.format(end_time-start_time))</span><br><span class="line">    <span class="built_in">return</span> inner </span><br><span class="line">                <span class="comment">#3、把inner值返回给调用者，调用者是timer(funcl)整体</span></span><br><span class="line"></span><br><span class="line">funcl=timer(funcl) </span><br><span class="line">               <span class="comment">#1、把参数传给timer()变量f</span></span><br><span class="line">               <span class="comment">#4、算等号左边的，所以funcl=inner</span></span><br><span class="line">funcl()   <span class="comment">#5、即inner(),执行inner()这个函数</span></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">#hello world</span></span><br><span class="line"><span class="string">#此函数的执行效率3.000171661376953</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="语法糖"><a href="#语法糖" class="headerlink" title="语法糖"></a>语法糖</h3><p>挑战：但是如果有多个函数，我都想让你测试它们的执行时间，你每次是不是都得func1=timer(funcl)?<br>这样还是有点麻烦，因为这些函数的函数名可能是不相同，有funcl,func2,graph等。<br>所以更简单的方法，python给你提供了，那就是语法糖。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">def timer(f):</span><br><span class="line">    def inner():</span><br><span class="line">        start_t=time.time()</span><br><span class="line">        f()</span><br><span class="line">        time.sleep(3)</span><br><span class="line">        end_t=time.time()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'执行效率为:&#123;&#125;'</span>.format(end_t-start_t))</span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line">@timer <span class="comment">#装饰器函数，代替的是 fun=timer(funcl)</span></span><br><span class="line">def funcl():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'hell0'</span>)</span><br><span class="line">funcl() <span class="comment">#hell0</span></span><br><span class="line">        <span class="comment">#执行效率为:3.000171422958374</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">def timer(f):</span><br><span class="line">    def inner(*a,**b):</span><br><span class="line">        <span class="built_in">print</span>(a,b)</span><br><span class="line">        start_t=time.time()</span><br><span class="line">        f(*a,**b)</span><br><span class="line">        time.sleep(3)</span><br><span class="line">        end_t=time.time()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'执行效率为:&#123;&#125;'</span>.format(end_t-start_t))</span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line">def funcl(a,b):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'hello'</span>)</span><br><span class="line">def func2(a,b,c):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'world'</span>)</span><br><span class="line">fun=timer(funcl)  <span class="comment">#inner @timer</span></span><br><span class="line">fun2=timer(func2)  <span class="comment">#inner  @timer</span></span><br><span class="line">fun(<span class="string">'Jack'</span>,<span class="string">'Rose'</span>)  <span class="comment">#inner()</span></span><br><span class="line">fun2(<span class="string">'张三丰'</span>,<span class="string">'大张伟'</span>,<span class="string">'傻子张'</span>) <span class="comment">#inner()</span></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">('</span>Jack<span class="string">', '</span>Rose<span class="string">') &#123;&#125;</span></span><br><span class="line"><span class="string">hello</span></span><br><span class="line"><span class="string">执行效率为:3.000171422958374</span></span><br><span class="line"><span class="string">('</span>张三丰<span class="string">', '</span>大张伟<span class="string">', '</span>傻子张<span class="string">') &#123;&#125;</span></span><br><span class="line"><span class="string">world</span></span><br><span class="line"><span class="string">执行效率为:3.0001718997955322</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/ti-05/" class="archive-article-date">
-  	<time datetime="2018-07-26T13:24:19.484Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/ti-05/">博客园</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/27/python-10/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/ti-04/" class="archive-article-date">
-  	<time datetime="2018-07-26T12:49:34.968Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/26/ti-05/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">博客园</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/ti-04/">购物车功能</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#函数嵌套"><span class="toc-number">1.</span> <span class="toc-text">函数嵌套</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#案例：嵌套打印五行"><span class="toc-number">1.1.</span> <span class="toc-text">案例：嵌套打印五行-</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的作用域链：小范围作用域可以使用大范围的变量，但是反之不行，它是单向的。"><span class="toc-number">1.2.</span> <span class="toc-text">函数的作用域链：小范围作用域可以使用大范围的变量，但是反之不行，它是单向的。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数名本质上就是函数的内存地址"><span class="toc-number">1.3.</span> <span class="toc-text">函数名本质上就是函数的内存地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可以被引用"><span class="toc-number">1.4.</span> <span class="toc-text">可以被引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可以被当做容器类型的元素使用"><span class="toc-number">1.5.</span> <span class="toc-text">可以被当做容器类型的元素使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#可以当作函数的参数和返回值型的元素"><span class="toc-number">1.6.</span> <span class="toc-text">可以当作函数的参数和返回值型的元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#两个问题"><span class="toc-number">1.7.</span> <span class="toc-text">两个问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#闭包"><span class="toc-number">2.</span> <span class="toc-text">闭包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#错误的闭包"><span class="toc-number">2.1.</span> <span class="toc-text">错误的闭包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正确的闭包"><span class="toc-number">2.2.</span> <span class="toc-text">正确的闭包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#判断闭包函数的方法closure，会输出一下内容：cell表示有闭包函数"><span class="toc-number">2.3.</span> <span class="toc-text">判断闭包函数的方法closure，会输出一下内容：cell表示有闭包函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#闭包的优劣势"><span class="toc-number">2.4.</span> <span class="toc-text">闭包的优劣势</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#闭包的应用—装饰器"><span class="toc-number">3.</span> <span class="toc-text">闭包的应用—装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#具体应用"><span class="toc-number">3.1.</span> <span class="toc-text">具体应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法糖"><span class="toc-number">3.2.</span> <span class="toc-text">语法糖</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/ti-03/" class="archive-article-date">
-  	<time datetime="2018-07-26T12:33:16.443Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/ti-03/">省市级三级菜单</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/ti-2/" class="archive-article-date">
-  	<time datetime="2018-07-26T11:57:41.401Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/ti-2/">小型练习题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-04(2)/" class="archive-article-date">
-  	<time datetime="2018-07-21T09:14:01.918Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-04(2)/">控制语句整理案例</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -378,9 +369,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

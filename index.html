@@ -152,6 +152,281 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python-10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/27/python-10/">python基础十——嵌套函数 闭包 装饰器</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/27/python-10/" class="archive-article-date">
+  	<time datetime="2018-07-27T11:22:50.695Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="函数嵌套"><a href="#函数嵌套" class="headerlink" title="函数嵌套"></a>函数嵌套</h2><p>函数里面调用函数（其它函数）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def da(x,y):</span><br><span class="line">    m=x <span class="keyword">if</span> x&gt;y <span class="keyword">else</span> y</span><br><span class="line">    <span class="built_in">return</span> m</span><br><span class="line"><span class="built_in">print</span>(da(5,3))</span><br><span class="line"></span><br><span class="line">def da2(a,b,c,d):</span><br><span class="line">    res1=da(a,b)</span><br><span class="line">    res2=da(res1,c) <span class="comment">#在函数da2里面调用了其它函数da()</span></span><br><span class="line">    res3=da(res2,d)</span><br><span class="line">    <span class="built_in">print</span>(res1)</span><br><span class="line">    <span class="built_in">print</span>(res2)</span><br><span class="line">    <span class="built_in">print</span>(res3)</span><br><span class="line">da2(23,-7,31,11)  <span class="comment">#23 31 31</span></span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2018/07/27/python-10/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/27/python-10/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ti-05" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/26/ti-05/">博客园</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/26/ti-05/" class="archive-article-date">
+  	<time datetime="2018-07-26T13:24:19.484Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="博客园"><a href="#博客园" class="headerlink" title="博客园"></a>博客园</h2><p>要求：<br> 欢迎来到博客园首页<br> 1:请登录<br> 2:请注册<br> 3:文章页面<br> 4:日记页面<br> 5:评论页面<br> 6:收藏页面<br> 7:注销<br> 8:退出程序</p>
+<p>2)，用户输入选项，3~6选项必须在用户登录成功之后，才能访问成功。</p>
+<p>3)，用户选择登录，用户名密码从字典中读取验证，三次机会，没成功则结束整个程  序运行，成功之后，可以选择访问3~6项，访问页面之前，必须要在打印信息，  格式为–&gt;用户:xx 在xx年xx月xx日 执行了 %s操作，访问页面时，页面内容为：欢迎xx用户访问评论（文章，日记，收藏）页面</p>
+<p>4)，如果用户没有注册，则可以选择注册，注册成功之后，可以自动完成登录（完成自动登录+5分），然后进入首页选择。</p>
+<p>5)，注销用户是指注销用户的登录状态，使其在访问任何页面时，必须重新登录。</p>
+<p>6)，退出程序为结束整个程序运行。</p>
+<pre><code class="bash">x=<span class="string">'no'</span>
+userlist=[]  <span class="comment">#存储注册用户</span>
+<span class="comment">#登录</span>
+def login(userlist,x):  <span class="comment">#传递登录状态，用户</span>
+    <span class="keyword">if</span> x!=<span class="string">'no'</span>:
+        <span class="built_in">print</span>(<span class="string">'你已登录'</span>)
+    <span class="keyword">else</span>:
+        c=0
+        flag=True
+        <span class="keyword">while</span> flag:
+            <span class="keyword">while</span> c&lt;3:
+                uname=input(<span class="string">'请输入用户名：'</span>)
+                <span class="built_in">pwd</span>=input(<span class="string">'请输入密码：'</span>)
+                <span class="comment"># if uname!='' and pwd!='':</span>
+                <span class="comment">#     dict1={'uname':uname,'upwd':pwd}</span>
+                <span class="comment">#     if dict1 in userlist:</span>
+                <span class="comment">#         print('登录成功')</span>
+                <span class="comment">#         x=uname</span>
+                <span class="keyword">if</span> uname==<span class="string">'look'</span> and <span class="built_in">pwd</span>==<span class="string">'123'</span>:
+                    <span class="built_in">print</span>(<span class="string">'登录成功'</span>)
+                    x=uname
+                    <span class="built_in">break</span>
+                <span class="keyword">else</span>:
+                    c+=1
+                    <span class="built_in">print</span>(<span class="string">'账户或密码错误，你还有%d次机会'</span>%(3-c))
+            <span class="keyword">else</span>:
+                <span class="built_in">print</span>(<span class="string">'输入次数已达上限，退出程序'</span>)
+                x=<span class="string">'no'</span>
+                flag=False
+            <span class="built_in">return</span> x,userlist
+<span class="comment">#注册</span>
+def zhuce(userlist,x):
+    <span class="keyword">if</span> x!=<span class="string">'no'</span>:
+        <span class="built_in">print</span>(<span class="string">'你已登录，无需注册'</span>)
+    <span class="keyword">else</span>:
+        <span class="keyword">while</span> True:
+            uname=input(<span class="string">'请输入你的用户名：'</span>)
+            <span class="built_in">pwd</span>=input(<span class="string">'请输入你的密码：'</span>)
+            uname=uname.strip()
+            <span class="keyword">if</span> uname!=False:
+                userlist.append({<span class="string">'uname'</span>:uname,<span class="string">'upwd'</span>:<span class="built_in">pwd</span>})
+                <span class="built_in">print</span>(<span class="string">'你已完成注册，将为你自动登录'</span>)
+                x=uname
+            <span class="keyword">else</span>:
+                <span class="built_in">print</span>(<span class="string">'用户名不能为空'</span>)
+                <span class="built_in">continue</span>
+            <span class="built_in">return</span> x,userlist
+<span class="comment">#获取年月日           </span>
+def nowtime():
+    import datetime
+    y=datetime.datetime.now().year
+    m=datetime.datetime.now().month
+    d=datetime.datetime.now().day
+    <span class="built_in">print</span>(<span class="string">'%s年%s月%s日'</span>%(y,m,d))
+
+<span class="comment">#访问文章页面</span>
+def artical(x):
+    <span class="keyword">if</span> x!=<span class="string">'no'</span>:
+        <span class="built_in">print</span>(<span class="string">'你还未登录，请先登录'</span>)
+    <span class="keyword">else</span>:
+        <span class="built_in">print</span>(<span class="string">'用户执行了文章页面操作'</span>)
+        nowtime()
+        <span class="built_in">print</span>(<span class="string">'欢迎用户{}访问文章页面'</span>.format(x))
+    <span class="built_in">return</span> x
+<span class="comment">#访问日记页面</span>
+def rji(x):
+    <span class="keyword">if</span> x!=<span class="string">'no'</span>:
+        <span class="built_in">print</span>(<span class="string">'你还未登录，请先登录'</span>)
+    <span class="keyword">else</span>:
+        <span class="built_in">print</span>(<span class="string">'用户执行了日记页面操作'</span>)
+        nowtime()
+        <span class="built_in">print</span>(<span class="string">'欢迎用户{}访问日记页面'</span>.format(x))
+    <span class="built_in">return</span> x
+
+<span class="comment">#访问评论页面</span>
+def pinlu(x):
+    <span class="keyword">if</span> x!=<span class="string">'no'</span>:
+        <span class="built_in">print</span>(<span class="string">'你还未登录，请先登录'</span>)
+    <span class="keyword">else</span>:
+        <span class="built_in">print</span>(<span class="string">'用户执行了评论页面操作'</span>)
+        nowtime()
+        <span class="built_in">print</span>(<span class="string">'欢迎用户{}访问评论页面'</span>.format(x))
+<span class="comment">#访问收藏页面</span>
+def shouc(x):
+    <span class="keyword">if</span> x!=<span class="string">'no'</span>:
+        <span class="built_in">print</span>(<span class="string">'你还未登录，请先登录'</span>)
+    <span class="keyword">else</span>:
+        <span class="built_in">print</span>(<span class="string">'用户执行了收藏页面操作'</span>)
+        nowtime()
+        <span class="built_in">print</span>(<span class="string">'欢迎用户{}访问收藏页面'</span>.format(x))
+
+<span class="comment">#开始</span>
+menu=[<span class="string">'登录'</span>,<span class="string">'注册'</span>,<span class="string">'文章页面'</span>,<span class="string">'日记页面'</span>,<span class="string">'评论页面'</span>,<span class="string">'收藏页面'</span>,<span class="string">'注销'</span>,<span class="string">'退出程序'</span>]
+<span class="built_in">print</span>(<span class="string">'欢迎来到博客园首页'</span>.center(30,<span class="string">'*'</span>))
+<span class="keyword">for</span> i,j <span class="keyword">in</span> enumerate(menu,1):
+    <span class="built_in">print</span>(i,j)
+<span class="keyword">while</span> True:
+    u=input(<span class="string">'请输入相应操作序号:'</span>).strip()
+    <span class="keyword">if</span> u.isdigit():
+        u=int(u)
+        <span class="keyword">if</span> u==1:
+            login(userlist,x)
+        <span class="keyword">elif</span> u==2:
+            zhuce(userlist,x)
+        <span class="keyword">elif</span> u==3:
+            artical(x)
+        <span class="keyword">elif</span> u==4:
+            rji(x)
+        <span class="keyword">elif</span> u==5:
+            pinlu(x)
+        <span class="keyword">elif</span> u==6:
+            shouc(x)
+        <span class="keyword">elif</span> u==7:
+            login(userlist,x)
+        <span class="keyword">elif</span> u==8:
+            <span class="built_in">break</span>
+    <span class="keyword">else</span>:
+        <span class="built_in">print</span>(<span class="string">'输入有误，请重新输入'</span>)   
+
+</code></pre>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/26/ti-05/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ti-04" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -732,158 +1007,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/21/python-07/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-06" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/21/python-06/">python基础6——Python字符串操作</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/21/python-06/" class="archive-article-date">
-  	<time datetime="2018-07-21T10:59:12.016Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="字符串的定义"><a href="#字符串的定义" class="headerlink" title="字符串的定义"></a>字符串的定义</h2><p>字符串是 Python 中最常用的数据类型。我们可以使用引号(‘或”)来创建字符串，创建字符串很简单，只要为变量分配一个值即可<br>Python中的字符串可以如下表示：<br>单引号（’）：可以用单引号指示字符串，就如同’Quote me on this‘这样。所有的空白，即空格和制表符都照原样保留。<br>双引号（“）：测试数据显示在双引号中的字符串与单引号中的字符串的使用完全相同，例如”What‘s your name?“。<br>三引号（’’’)：不需要行属转义，它们已经包含在字符串中。<br>
-        
-          <a class="article-more-a" href="/2018/07/21/python-06/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/21/python-06/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python05" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/21/python05/">python基础5——Python高级特性</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/21/python05/" class="archive-article-date">
-  	<time datetime="2018-07-21T10:05:58.333Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="列表生成式"><a href="#列表生成式" class="headerlink" title="列表生成式"></a>列表生成式</h2><p>列表生成式通常是结合range()函数一起使用的，所以在介绍列表生成式前，我们先介绍Python的内置函数range()的使用方法。<br>Python 的内置函数range() 函数可创建一个整数序列，一般和 for 循环连用。<br>语法格式： range(start,end[,step])。<br>start：起始下标（可选）。默认为0，例如range(5)等价于range(0，5)等价于[0,1,2,3,4]。<br>end：终止下标。例如range(0,5)等价于[0,1,2,3,4]，注意不包括终止下标5。<br>step：步长（可选）。默认为1，例如range(0,3,1)等价于range(0,3)；range(0,6,2)等价于[0,2,4,6]。<br>
-        
-          <a class="article-more-a" href="/2018/07/21/python05/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/21/python05/">展开全文 >></a>
         </p>
       
 
