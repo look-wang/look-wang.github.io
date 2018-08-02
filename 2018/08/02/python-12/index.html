@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>python基础十二————python内置文件操作 | 好好学习，天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是文件文件是存储在外部介质上的数据集合，与文件名相关联。按文件中的数据组织形式可以把文件分为两类： 文本文件 二进制文件 字符编码常见的编码UTF-8     1个汉字占3个字节GB2312    1个汉字占2个字节GBKCP936     1个汉字占2个字节Unicode   1个汉字占1个字节ASCIIGB是国标，UTF-8国际，CP936隶属GB2312">
+  <meta name="description" content="什么是文件文件是存储在外部介质上的数据集合，与文件名相关联。按文件中的数据组织形式可以把文件分为两类： 文本文件 二进制文件">
 <meta name="keywords" content="calm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python基础十二————python内置文件操作">
 <meta property="og:url" content="http://yoursite.com/2018/08/02/python-12/index.html">
 <meta property="og:site_name" content="好好学习，天天向上">
-<meta property="og:description" content="什么是文件文件是存储在外部介质上的数据集合，与文件名相关联。按文件中的数据组织形式可以把文件分为两类： 文本文件 二进制文件 字符编码常见的编码UTF-8     1个汉字占3个字节GB2312    1个汉字占2个字节GBKCP936     1个汉字占2个字节Unicode   1个汉字占1个字节ASCIIGB是国标，UTF-8国际，CP936隶属GB2312">
+<meta property="og:description" content="什么是文件文件是存储在外部介质上的数据集合，与文件名相关联。按文件中的数据组织形式可以把文件分为两类： 文本文件 二进制文件">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-02T07:58:35.610Z">
+<meta property="og:updated_time" content="2018-08-02T08:15:36.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python基础十二————python内置文件操作">
-<meta name="twitter:description" content="什么是文件文件是存储在外部介质上的数据集合，与文件名相关联。按文件中的数据组织形式可以把文件分为两类： 文本文件 二进制文件 字符编码常见的编码UTF-8     1个汉字占3个字节GB2312    1个汉字占2个字节GBKCP936     1个汉字占2个字节Unicode   1个汉字占1个字节ASCIIGB是国标，UTF-8国际，CP936隶属GB2312">
+<meta name="twitter:description" content="什么是文件文件是存储在外部介质上的数据集合，与文件名相关联。按文件中的数据组织形式可以把文件分为两类： 文本文件 二进制文件">
   
     <link rel="alternative" href="/atom.xml" title="好好学习，天天向上" type="application/atom+xml">
   
@@ -175,8 +175,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="什么是文件"><a href="#什么是文件" class="headerlink" title="什么是文件"></a>什么是文件</h2><p>文件是存储在外部介质上的数据集合，与文件名相关联。<br>按文件中的数据组织形式可以把文件分为两类：<br> 文本文件<br> 二进制文件</p>
-<h3 id="字符编码"><a href="#字符编码" class="headerlink" title="字符编码"></a>字符编码</h3><p>常见的编码<br>UTF-8     1个汉字占3个字节<br>GB2312    1个汉字占2个字节<br>GBK<br>CP936     1个汉字占2个字节<br>Unicode   1个汉字占1个字节<br>ASCII<br>GB是国标，UTF-8国际，CP936隶属GB2312<br><a id="more"></a></p>
+        <h2 id="什么是文件"><a href="#什么是文件" class="headerlink" title="什么是文件"></a>什么是文件</h2><p>文件是存储在外部介质上的数据集合，与文件名相关联。<br>按文件中的数据组织形式可以把文件分为两类：<br> 文本文件<br> 二进制文件<br><a id="more"></a></p>
+<h3 id="字符编码"><a href="#字符编码" class="headerlink" title="字符编码"></a>字符编码</h3><p>常见的编码<br>UTF-8     1个汉字占3个字节<br>GB2312    1个汉字占2个字节<br>GBK<br>CP936     1个汉字占2个字节<br>Unicode   1个汉字占1个字节<br>ASCII<br>GB是国标，UTF-8国际，CP936隶属GB2312</p>
 <h3 id="文件的打开或创建"><a href="#文件的打开或创建" class="headerlink" title="文件的打开或创建"></a>文件的打开或创建</h3><p>语法<br>    文件变量名=open(文件名[, 打开方式[, 缓冲区]])<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f1=open(<span class="string">'file1.txt'</span>, <span class="string">'r'</span>)</span><br><span class="line">f2=open(<span class="string">'file2.txt'</span>, <span class="string">'w'</span>)</span><br></pre></td></tr></table></figure></p>
 <h3 id="打开的模式"><a href="#打开的模式" class="headerlink" title="打开的模式"></a>打开的模式</h3><p>w    打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。<br>r    以只读方式打开文件。文件的指针将会放在文件的开头。这是默认模式。<br>a    写：打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入<br>x    写：抑或模式（xor），文件存在则报错，文件不存在则新建文件<br>b    二进制模式（binary），以二进制模式打开一个文件用于只读，辅助模式不能单独使用<br>数字和字母可以正常读出，汉字转义<br>‘+’    增强模式（plus），也是辅助模式不能单独使用  </p>
 <p>以上模式可以相互组合，wrax不可以互相组合<br>    w,w+,wb,wb+,<br>    r,r+,rb,rb+,<br>    a,a+,ab,ab+,<br>    x,x+,xb,xb+</p>
