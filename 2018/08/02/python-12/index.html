@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>好好学习，天天向上</title>
+  <title>python基础十二————python内置文件操作 | 好好学习，天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="好好学习，天天向上">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="什么是文件文件是存储在外部介质上的数据集合，与文件名相关联。按文件中的数据组织形式可以把文件分为两类： 文本文件 二进制文件 字符编码常见的编码UTF-8     1个汉字占3个字节GB2312    1个汉字占2个字节GBKCP936     1个汉字占2个字节Unicode   1个汉字占1个字节ASCIIGB是国标，UTF-8国际，CP936隶属GB2312">
+<meta name="keywords" content="calm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础十二————python内置文件操作">
+<meta property="og:url" content="http://yoursite.com/2018/08/02/python-12/index.html">
 <meta property="og:site_name" content="好好学习，天天向上">
+<meta property="og:description" content="什么是文件文件是存储在外部介质上的数据集合，与文件名相关联。按文件中的数据组织形式可以把文件分为两类： 文本文件 二进制文件 字符编码常见的编码UTF-8     1个汉字占3个字节GB2312    1个汉字占2个字节GBKCP936     1个汉字占2个字节Unicode   1个汉字占1个字节ASCIIGB是国标，UTF-8国际，CP936隶属GB2312">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-02T07:58:35.610Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="好好学习，天天向上">
+<meta name="twitter:title" content="python基础十二————python内置文件操作">
+<meta name="twitter:description" content="什么是文件文件是存储在外部介质上的数据集合，与文件名相关联。按文件中的数据组织形式可以把文件分为两类： 文本文件 二进制文件 字符编码常见的编码UTF-8     1个汉字占3个字节GB2312    1个汉字占2个字节GBKCP936     1个汉字占2个字节Unicode   1个汉字占1个字节ASCIIGB是国标，UTF-8国际，CP936隶属GB2312">
   
     <link rel="alternative" href="/atom.xml" title="好好学习，天天向上" type="application/atom+xml">
   
@@ -150,16 +155,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-python-12" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-python-12" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/02/python-12/">python基础十二————python内置文件操作</a>
+    <h1 class="article-title" itemprop="name">
+      python基础十二————python内置文件操作
     </h1>
   
 
@@ -173,12 +176,67 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="什么是文件"><a href="#什么是文件" class="headerlink" title="什么是文件"></a>什么是文件</h2><p>文件是存储在外部介质上的数据集合，与文件名相关联。<br>按文件中的数据组织形式可以把文件分为两类：<br> 文本文件<br> 二进制文件</p>
-<h3 id="字符编码"><a href="#字符编码" class="headerlink" title="字符编码"></a>字符编码</h3><p>常见的编码<br>UTF-8     1个汉字占3个字节<br>GB2312    1个汉字占2个字节<br>GBK<br>CP936     1个汉字占2个字节<br>Unicode   1个汉字占1个字节<br>ASCII<br>GB是国标，UTF-8国际，CP936隶属GB2312<br>
-        
-          <a class="article-more-a" href="/2018/08/02/python-12/#more">more >></a>
-        
+<h3 id="字符编码"><a href="#字符编码" class="headerlink" title="字符编码"></a>字符编码</h3><p>常见的编码<br>UTF-8     1个汉字占3个字节<br>GB2312    1个汉字占2个字节<br>GBK<br>CP936     1个汉字占2个字节<br>Unicode   1个汉字占1个字节<br>ASCII<br>GB是国标，UTF-8国际，CP936隶属GB2312<br><a id="more"></a></p>
+<h3 id="文件的打开或创建"><a href="#文件的打开或创建" class="headerlink" title="文件的打开或创建"></a>文件的打开或创建</h3><p>语法<br>    文件变量名=open(文件名[, 打开方式[, 缓冲区]])<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f1=open(<span class="string">'file1.txt'</span>, <span class="string">'r'</span>)</span><br><span class="line">f2=open(<span class="string">'file2.txt'</span>, <span class="string">'w'</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="打开的模式"><a href="#打开的模式" class="headerlink" title="打开的模式"></a>打开的模式</h3><p>w    打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。<br>r    以只读方式打开文件。文件的指针将会放在文件的开头。这是默认模式。<br>a    写：打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入<br>x    写：抑或模式（xor），文件存在则报错，文件不存在则新建文件<br>b    二进制模式（binary），以二进制模式打开一个文件用于只读，辅助模式不能单独使用<br>数字和字母可以正常读出，汉字转义<br>‘+’    增强模式（plus），也是辅助模式不能单独使用  </p>
+<p>以上模式可以相互组合，wrax不可以互相组合<br>    w,w+,wb,wb+,<br>    r,r+,rb,rb+,<br>    a,a+,ab,ab+,<br>    x,x+,xb,xb+</p>
+<h3 id="文件的写入"><a href="#文件的写入" class="headerlink" title="文件的写入"></a>文件的写入</h3><p>以下两种方法可以进行文本文件的写入。<br> write(str)：将字符串str写入文件。<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fp=open(<span class="string">'file1.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">fp.write(<span class="string">'it is nerver\n too old to learn '</span>)</span><br><span class="line">                    <span class="comment">#\n可以实现换行</span></span><br><span class="line">fp.close()   <span class="comment">#创建一个文件并写入</span></span><br></pre></td></tr></table></figure></p>
+<p> writelines(sequence_of_strings)：写多行到文件，其中sequence_of_strings是由字符串所组成的列表，或者迭代器。             列表，元组，字典（key）<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#多行写入 列表，元组,字典（key）</span></span><br><span class="line">fp=open(<span class="string">'comp.txt'</span>,<span class="string">'a'</span>)</span><br><span class="line">res=fp.writelines(&#123;<span class="string">'computer'</span>:<span class="string">'外星人1'</span>,<span class="string">'computer1'</span>:<span class="string">'未来人1'</span>,<span class="string">'computer2'</span>:<span class="string">'Apple1'</span>,<span class="string">'computer3'</span>:<span class="string">'华为1'</span>,<span class="string">'computer4'</span>:<span class="string">'联想1'</span>&#125;)                   <span class="comment">#writelines 是一个执行过程的函数</span></span><br><span class="line"><span class="built_in">print</span>(res)  <span class="comment">#None</span></span><br><span class="line">fp.close()  <span class="comment">#文件被创建写入字典的键名(一行，无换行)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#换行,上面的字典若实现换行，在每个键名后面加\n</span></span><br><span class="line">res=fp.writelines(&#123;<span class="string">'computer\n'</span>:<span class="string">'外星人1'</span>,<span class="string">'computer1\n'</span>:<span class="string">'未来人1'</span>,<span class="string">'computer2\n'</span>:<span class="string">'Apple1'</span>,<span class="string">'computer3\n'</span>:<span class="string">'华为1'</span>,<span class="string">'computer4\n'</span>:<span class="string">'联想1'</span>&#125;)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#如果是列表，则可以循环在i后面加\n</span></span><br><span class="line">fo = open(<span class="string">"3.txt"</span>, <span class="string">"w"</span>)</span><br><span class="line">list1=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'\n'</span>] </span><br><span class="line">           <span class="comment">#如果不加\n，也不在列表后面追加换行 与后面的内容连在一起</span></span><br><span class="line"></span><br><span class="line">list1.append(<span class="string">'\n'</span>)   <span class="comment">#添加列表换行元素</span></span><br><span class="line">fo.writelines(list1)</span><br><span class="line">fo.writelines([line+<span class="string">'\n'</span> <span class="keyword">for</span> line <span class="keyword">in</span> list1])  </span><br><span class="line">        <span class="comment">#每个元素都进行换行操作</span></span><br></pre></td></tr></table></figure>
+<p>truncate() 从文件的首行首字符开始截断，截断文件为 size 个字符，无 size 表示从当前位置截断,什么都不写，默认从0开始截取，为空<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">fp=open(<span class="string">'file1.txt'</span>,<span class="string">'r+'</span>)</span><br><span class="line">fp.write(<span class="string">'it is nerver too old to learn '</span>)</span><br><span class="line">fp.truncate()</span><br><span class="line"><span class="comment">#res=fp.close()  #1、默认从0开始截取</span></span><br><span class="line">res=fp.truncate(4)  <span class="comment">#2、从位置4开始截取</span></span><br><span class="line"><span class="built_in">print</span>(res)   <span class="comment">#1、None</span></span><br><span class="line">             <span class="comment">#2、4</span></span><br><span class="line">fp.close()</span><br></pre></td></tr></table></figure></p>
+<h3 id="指针的移动"><a href="#指针的移动" class="headerlink" title="指针的移动"></a>指针的移动</h3><p>文件指针<br>写入文件后，必须打开才能读取写入的内容。<br>读取文件后，无法再次读取读过的内容。<br>seek(n) ，其中n&gt;=0，seek(0)表示文件指针移到文件头；n&gt;0时，表示移动到文件头之后的位置，从任意位置读取内容时或从任意位置覆盖内容时需要这样做。<br>seek(0,2)表示把文件指针移到文件尾，在追加新内容时需要这样做(指定指针参考点方式目前不能使用)<br>tell()指针定位，获取指针的当前位置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#seek(offset[,whence])</span></span><br><span class="line">fp=open(<span class="string">'file1.txt'</span>,<span class="string">'w+'</span>)</span><br><span class="line">fp.write(<span class="string">'it is nerver too old to learn'</span>)</span><br><span class="line">fp.seek(0,2) </span><br><span class="line"> <span class="comment">#从文件尾开始，在文末加上add</span></span><br><span class="line">fp.seek(0)  </span><br><span class="line"><span class="comment">#从文件头开始it is 替换成addis</span></span><br><span class="line">fp.seek(4)   </span><br><span class="line"><span class="comment">#指针移到4个位置之后 it is nerver 变成 it iadderver</span></span><br><span class="line">fp.write(<span class="string">'add'</span>)</span><br><span class="line">fp.close()</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fp=open(<span class="string">'file1.txt'</span>,<span class="string">'w+'</span>)</span><br><span class="line">fp.write(<span class="string">'it is nerver too old to learn'</span>)</span><br><span class="line">fp.seek(0,2)</span><br><span class="line">     <span class="comment">#29,指针移到文件尾，输出整个文件的长度</span></span><br><span class="line"><span class="comment">#fp.seek(0)</span></span><br><span class="line">     <span class="comment">#0</span></span><br><span class="line">length=fp.tell()</span><br><span class="line"><span class="built_in">print</span>(length)</span><br><span class="line">fp.close()</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#it is nerver</span></span><br><span class="line"><span class="comment">#too old</span></span><br><span class="line"><span class="comment">#to learn </span></span><br><span class="line">fp=open(<span class="string">'file1.txt'</span>,<span class="string">'r+'</span>)</span><br><span class="line">fp.seek(0,2)</span><br><span class="line">length=fp.tell()</span><br><span class="line"><span class="built_in">print</span>(length)</span><br><span class="line">   <span class="comment">#31,换行占？个字节</span></span><br><span class="line">   </span><br><span class="line"><span class="comment">#    it</span></span><br><span class="line"><span class="comment">#    too</span></span><br><span class="line"><span class="comment">#    to #11</span></span><br><span class="line">   </span><br><span class="line">fp.close</span><br></pre></td></tr></table></figure>
+<h3 id="文件写入案例"><a href="#文件写入案例" class="headerlink" title="文件写入案例"></a>文件写入案例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">f=open(<span class="string">'file2.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">f.write(<span class="string">'好好学习天天向上'</span>)</span><br><span class="line">f.seek(0,2) 	     <span class="comment">#把文件指针移到文件尾</span></span><br><span class="line">length=f.tell()   <span class="comment">#会返回文件尾的位置，其值刚好等于文件长度</span></span><br><span class="line">f.close()</span><br><span class="line"><span class="built_in">print</span> (<span class="string">'文件长度='</span>,length) </span><br><span class="line"> <span class="comment">#  16默认采用的是cp936编码，逗号占一个汉字字节</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#创建文件，修改编码方式，并获取长度</span></span><br><span class="line">import codecs</span><br><span class="line">fp=codecs.open(<span class="string">'file5.txt'</span>,<span class="string">'w'</span>,<span class="string">'UTF-8'</span>)</span><br><span class="line">fp.write(<span class="string">'好好学习天天向上'</span>)</span><br><span class="line">fp.seek(0,2)</span><br><span class="line">leng=fp.tell()</span><br><span class="line">fp.close()</span><br><span class="line"><span class="built_in">print</span>(leng)</span><br><span class="line">   <span class="comment">#24  UTF-8一个汉字占3个字符</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#file2 为 no cross no crown</span></span><br><span class="line">fp=open(<span class="string">'file2.txt'</span>,<span class="string">'r+'</span>)</span><br><span class="line">post1=fp.tell()<span class="comment">#获取指针位置</span></span><br><span class="line"><span class="built_in">print</span>(post1) <span class="comment">#0</span></span><br><span class="line"></span><br><span class="line">res=fp.read(5)  <span class="comment">#读取内容</span></span><br><span class="line"><span class="built_in">print</span>(res) <span class="comment">#no cr</span></span><br><span class="line"><span class="comment"># #获取指针位置</span></span><br><span class="line"><span class="comment"># post2=fp.tell()</span></span><br><span class="line"><span class="comment"># print(post2) #0</span></span><br><span class="line">tru=fp.truncate(5)</span><br><span class="line"><span class="built_in">print</span>(tru)<span class="comment">#截取5个</span></span><br><span class="line"><span class="comment">#使用的是read读取操作，指针随着移动</span></span><br><span class="line"><span class="comment">#使用truncate，直接从指针头开始</span></span><br><span class="line"><span class="comment">#指针不会影响截取，指针会影响读</span></span><br></pre></td></tr></table></figure>
+<h3 id="文件的读取"><a href="#文件的读取" class="headerlink" title="文件的读取"></a>文件的读取</h3><p>文本文件的读取<br>read([size])：读取文件，如果文件大于size个字节，则只读取size个字节；如果小于size个字节，则读取完；如果不设置size，则默认读取全部。<br>    格式：fileObject.read([count])<br>    返回值：当前文件的字符<br>readline([size])：从文件读取整行，包括 “\n” 字符。如果指定了一个非负数的参数，则返回指定大小的字节数，包括 “\n” 字符<br>readlines([size])：读取所有行并返回列表<br>    格式：fileObject.readlines()<br>    返回值：返回列表，包含所有的行   [      \n,     \n]<br>    注意：读取的行数由字符长度决定，如果字符长度读取了N行后，还有指定长度的字符没有读取，则直接读取下一行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#文件的读取</span></span><br><span class="line"><span class="comment">#读取数据，read(num) 读取个数，没有num，表示读取所有的内容</span></span><br><span class="line"><span class="comment">#readline（num） 读取一行，num 读取当前行的num个内容；超出整行，读取一行</span></span><br><span class="line"><span class="comment">#readlines（num），没有超出一行数量的范围，读取一行，超出范围，读取两行，没有参数读取全部内容 return[] 读取的内容里面包含\n</span></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">file1:</span></span><br><span class="line"><span class="string">crown</span></span><br><span class="line"><span class="string">cross</span></span><br><span class="line"><span class="string">feather</span></span><br><span class="line"><span class="string">eggs</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line">f=open(<span class="string">'file1.txt'</span>,<span class="string">'r'</span>)</span><br><span class="line"><span class="comment">#res=f.read(6) #crown</span></span><br><span class="line">res=f.read(8)<span class="comment">#crown</span></span><br><span class="line">             <span class="comment">#cr</span></span><br><span class="line"><span class="built_in">print</span>(res)</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fp=open(<span class="string">'file1.txt'</span>,<span class="string">'r'</span>)</span><br><span class="line"><span class="comment">#txt=fp.read(1)</span></span><br><span class="line"><span class="comment">#txt=fp.readlines() #readline 字 </span></span><br><span class="line">txt=fp.readlines(8)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> txt:</span><br><span class="line">    <span class="built_in">print</span>(i,end=<span class="string">''</span>) <span class="comment">#用for循环输出#crown</span></span><br><span class="line">                     <span class="comment">#cross</span></span><br><span class="line"><span class="built_in">print</span>(txt)  <span class="comment">#['crown\n', 'cross\n']</span></span><br><span class="line">fp.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">f=open(<span class="string">'file1.txt'</span>,<span class="string">'r'</span>)</span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    line=f.readline()</span><br><span class="line">    <span class="keyword">if</span> line==<span class="string">''</span>:</span><br><span class="line">        <span class="built_in">break</span></span><br><span class="line">    <span class="built_in">print</span>(line)</span><br><span class="line"><span class="comment">#逗号不会产生换行符，但文件中有换行符，因此会换行</span></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure></p>
+<h3 id="二进制文件的写入和读取"><a href="#二进制文件的写入和读取" class="headerlink" title="二进制文件的写入和读取"></a>二进制文件的写入和读取</h3><p>以下两种方法可以进行二进制文件的写入。<br> 一种是通过struct模块的pack()方法把数字和布尔值转换成字节串（以字节为单位的字符串），然后用write()方法写入二进制文件中，字符串则可直接写入二进制文件中。    pack()方法的语法是：pack（格式串，数字对象表）。<br> 另外一种是用pickle模块的dump()方法直接把对象转换为字节串（bytes）并存入文件中。<br>示例：把1个整数、1个浮点数、1个布尔型对象、1个字符串，存入二进制文件file3.dat中。</p>
+<p>二进制文件的读取<br>用struct模块的pack()方法完成转换而写的文件，应该用read()方法读出相应数据的字节串，然后通过代码还原数据。字符串不用还原。<br>用pickle模块的dump()方法完成转换而写的文件，应该用pickle模块的load()方法还原对象。<br>read()方法<br>    字符串可以直接读出，数字和布尔对象需要用struct模块的unpack()方法还原。<br>unpack()方法：<br>    语法：unpack(格式串，字符串表)<br>使用pickle模块的load()方法<br>pickle模块的load(f)方法可以从二进制文件中读取对象的字节串并还原对象，使用起来非常方便。参数f是文件对象，该方法返回还原后的对象。</p>
+<p>二进制文件的写入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#文件的写入，二进制写入</span></span><br><span class="line"><span class="comment">#struck pack</span></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">import struct</span></span><br><span class="line"><span class="string">n=102400000</span></span><br><span class="line"><span class="string">x=10.24</span></span><br><span class="line"><span class="string">b=True</span></span><br><span class="line"><span class="string">s='</span>hello<span class="string">'</span></span><br><span class="line"><span class="string">sn=struct.pack('</span><span class="keyword">if</span>?<span class="string">',n,x,b) </span></span><br><span class="line"><span class="string">               #i是int,f是float,?是bool，对应后面的n,x,b类型</span></span><br><span class="line"><span class="string">f=open('</span>file7.dat<span class="string">','</span>wb<span class="string">')</span></span><br><span class="line"><span class="string">f.write(sn) 	#写入字节串</span></span><br><span class="line"><span class="string">#f.write(s) 	#字符串可直接写入</span></span><br><span class="line"><span class="string">f.close()</span></span><br><span class="line"><span class="string">   #.dat文件打不开</span></span><br></pre></td></tr></table></figure></p>
+<p>二进制文件的读取unpack<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#二进制文件的读取，unpack</span></span><br><span class="line">import struct</span><br><span class="line">f=open(<span class="string">'file7.dat'</span>,<span class="string">'rb'</span>)</span><br><span class="line">txt=f.read()</span><br><span class="line">all=struct.unpack(<span class="string">'if?'</span>,txt)<span class="comment">#取出来的格式元组</span></span><br><span class="line">              </span><br><span class="line"><span class="built_in">print</span>(all[0])</span><br><span class="line"><span class="built_in">print</span>(all[1])</span><br><span class="line"><span class="built_in">print</span>(all[2])</span><br><span class="line"><span class="comment">#102400000</span></span><br><span class="line"><span class="comment">#10.239999771118164</span></span><br><span class="line"><span class="comment">#True</span></span><br></pre></td></tr></table></figure></p>
+<p>dump<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import pickle</span><br><span class="line">f=open(<span class="string">'file7s.dat'</span>,<span class="string">'wb'</span>)</span><br><span class="line">n=7</span><br><span class="line">i=102400000</span><br><span class="line">a=10.24</span><br><span class="line">s=<span class="string">'人人都爱雷蒙德123abc'</span></span><br><span class="line">lst=[[1,2,3],[4,5,6],[7,8,9]]</span><br><span class="line">tu=(-5,10,8)</span><br><span class="line">coll=&#123;4,5,6&#125;</span><br><span class="line">dic=&#123;<span class="string">'a'</span>:<span class="string">'apple'</span>,<span class="string">'b'</span>:<span class="string">'banana'</span>,<span class="string">'g'</span>:<span class="string">'grape'</span>,<span class="string">'o'</span>:<span class="string">'orange'</span>&#125;</span><br><span class="line">try:</span><br><span class="line">    pickle.dump(n,f) <span class="comment">#表示后面将要写入的数据个数</span></span><br><span class="line">    pickle.dump(i,f) <span class="comment">#把整数i转换为字节串，并写入文件</span></span><br><span class="line">    pickle.dump(a,f)</span><br><span class="line">    pickle.dump(lst,f)</span><br><span class="line">    pickle.dump(i,f)</span><br><span class="line">    pickle.dump(tu,f)</span><br><span class="line">    pickle.dump(coll,f)</span><br><span class="line">    pickle.dump(dic,f)</span><br><span class="line">except:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'写文件异常!'</span>)  <span class="comment">#如果写文件异常则跳到此处执行</span></span><br><span class="line">    f.close()</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import pickle</span><br><span class="line">fp=open(<span class="string">'file7s.dat'</span>,<span class="string">'rb'</span>)</span><br><span class="line">res=pickle.load(fp)</span><br><span class="line"><span class="comment"># i=0</span></span><br><span class="line"><span class="comment"># while i&lt;=8:</span></span><br><span class="line"><span class="comment">#     x=pickle.load(fp)</span></span><br><span class="line"><span class="comment">#     print(x)</span></span><br><span class="line"><span class="comment">#     i+=1</span></span><br><span class="line"><span class="built_in">print</span>(res)</span><br><span class="line">res=pickle</span><br><span class="line"><span class="built_in">print</span>(res)</span><br><span class="line"><span class="built_in">print</span>(res)</span><br><span class="line">res=pickle.load(fp)</span><br><span class="line"><span class="built_in">print</span>(res)</span><br><span class="line">res=pickle.load(fp)</span><br><span class="line"><span class="built_in">print</span>(res)</span><br><span class="line">fp.close()</span><br></pre></td></tr></table></figure>
+<h2 id="使用-json-存储结构化数据"><a href="#使用-json-存储结构化数据" class="headerlink" title="使用 json 存储结构化数据"></a>使用 json 存储结构化数据</h2><p>从文件中读写字符串很容易。<br>数值就要多费点儿周折，因为 read() 方法只会返回字符串，应将其传入 int() 这样的函数，就可以将 ‘123’ 这样的字符串转换为对应的数值 123。<br>当你想要保存更为复杂的数据类型，例如嵌套的列表和字典，手工解析和序列化它们将变得更复杂。</p>
+<p>Python 允许你使用常用的数据交换格式 JSON（JavaScript Object Notation）。<br>标准模块 json 可以接受 Python 数据结构，并将它们转换为字符串表示形式；此过程称为 序列化。<br>从字符串表示形式重新构建数据结构称为 反序列化。<br>序列化和反序列化的过程中，表示该对象的字符串可以存储在文件或数据中，也可以通过网络连接传送给远程的机器。<br>提示：JSON 格式经常用于现代应用程序中进行数据交换。许多程序员都已经熟悉它了，使它成为相互协作的一个不错的选择。<br>如果你有一个对象 x，你可以用简单的一行代码查看其 JSON 字符串表示形式:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; json.dumps([1, <span class="string">'simple'</span>, <span class="string">'list'</span>])</span><br><span class="line"><span class="string">'[1, "simple", "list"]’</span></span><br></pre></td></tr></table></figure></p>
+<p>dumps() 函数的另外一个变体 dump()，直接将对象序列化到一个文件。所以如果 f 是为写入而打开的一个 文件对象，我们可以这样做:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">json.dump(x, f)</span><br></pre></td></tr></table></figure></p>
+<p>为了重新解码对象，如果 f 是为读取而打开的文件对象:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x = json.load(f)</span><br></pre></td></tr></table></figure></p>
+<p>这种简单的序列化技术可以处理列表和字典，但不能直接序列化任意类实例。</p>
+<p>例：json将列表转为字符串<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line">list1=[10,<span class="string">'Jack'</span>,<span class="string">'Rose'</span>]</span><br><span class="line"><span class="built_in">print</span>(list1)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(list1))</span><br><span class="line">json_str=json.dumps(list1)<span class="comment">#json字符串</span></span><br><span class="line"><span class="built_in">print</span>(json_str)  <span class="comment">#[10, "Jack", "Rose"]</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(json_str))  <span class="comment">#&lt;class 'str'&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>json.dumps将字典类型转换为字符串类型<br>json.lodes将转换过来的字符串类型转换为原来的字典原型</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line">dict_test=&#123;<span class="string">'1001'</span>:[<span class="string">'banlangen'</span>,&#123;<span class="string">'price'</span>:[[<span class="string">'old'</span>,10],[<span class="string">'new'</span>,12]]&#125;]&#125;</span><br><span class="line"><span class="built_in">print</span>(dict_test)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(dict_test))</span><br><span class="line"><span class="comment">#转为json字符串格式</span></span><br><span class="line">json_str=json.dumps(dict_test)</span><br><span class="line"><span class="built_in">print</span>(json_str)</span><br><span class="line">  <span class="comment">#&#123;"1001": ["banlangen", &#123;"price": [["old", 10], ["new", 12]]&#125;]&#125;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(json_str))  <span class="comment">#str</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">'----------change----------'</span>)</span><br><span class="line"><span class="comment">#json格式转为原来的格式</span></span><br><span class="line">dict_new=json.loads(json_str)</span><br><span class="line"><span class="built_in">print</span>(dict_new)  </span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(dict_new)) <span class="comment">#dict</span></span><br></pre></td></tr></table></figure>
+<p>json.dump()<br>往文件中写json格式   .json<br>with   as #文件（管理，运行表达式  资源）  能够对资源进行访问</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line">dict_test=123</span><br><span class="line"><span class="comment">#存入json文件</span></span><br><span class="line"></span><br><span class="line">with open(<span class="string">'loade.json'</span>,<span class="string">'w'</span>) as fil:</span><br><span class="line">                <span class="comment">#文件夹建立一个json文件</span></span><br><span class="line">    json.dump(dict_test,fil)</span><br><span class="line">               <span class="comment">#写</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'ok'</span>)</span><br><span class="line">with open(<span class="string">'loade.json'</span>,<span class="string">'r'</span>) as ld_f:</span><br><span class="line">    dict_new=json.load(ld_f)</span><br><span class="line">    <span class="built_in">print</span>(dict_new)  <span class="comment">#ok  123</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import json    </span><br><span class="line">name_emb = &#123;<span class="string">'a'</span>:<span class="string">'1111'</span>,<span class="string">'b'</span>:<span class="string">'2222'</span>,<span class="string">'c'</span>:<span class="string">'3333'</span>,<span class="string">'d'</span>:<span class="string">'4444'</span>&#125;    </span><br><span class="line">emb_filename = (<span class="string">'zzz.json'</span>)    </span><br><span class="line"><span class="comment"># solution 1  </span></span><br><span class="line">jsObj = json.dumps(name_emb)      </span><br><span class="line">with open(emb_filename, <span class="string">"w"</span>) as f:    </span><br><span class="line">    f.write(jsObj)    </span><br><span class="line">    f.close()  </span><br><span class="line"></span><br><span class="line">filename = (<span class="string">'zzz2.json'</span>)    </span><br><span class="line"><span class="comment"># solution 2     </span></span><br><span class="line">json.dump(name_emb, open(filename, <span class="string">"w"</span>))</span><br></pre></td></tr></table></figure>
+<p>备注：json需继续理解</p>
+<h3 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h3><p>1、文件a.txt内容：每一行内容分别为商品名字，价钱，个数。<br>apple 10 3 # tesla 100000 1 # mac 3000 2 # lenovo 30000 3<br>chicken 10 3 # 通过代码，将其构建成这种数据类型：[{‘name’:’apple’,’price’:10,’amount’:3},{‘name’:’tesla’,’price’:1000000,’amount’:1}……] 并计算出总价钱。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">list1=[<span class="string">'name'</span>,<span class="string">'price'</span>,<span class="string">'amount'</span>]</span><br><span class="line">list2=[]</span><br><span class="line">f=open(<span class="string">'a.txt'</span>,<span class="string">'w+'</span>)</span><br><span class="line">b=f.write(<span class="string">'apple 10 3 # tesla 100000 1 # mac 3000 2 # lenovo 30000 3 # chicken 10 3'</span>)</span><br><span class="line">f.seek(0)</span><br><span class="line">res=f.read()</span><br><span class="line">res1=res.split(<span class="string">'#'</span>)</span><br><span class="line"><span class="built_in">print</span>(res1)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> res1:</span><br><span class="line">    m=i.split()</span><br><span class="line">    dic=dict(zip(list1,m))</span><br><span class="line">    list2.append(dic)</span><br><span class="line"><span class="built_in">print</span>(list2)</span><br><span class="line"></span><br><span class="line">sum=0</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list2:</span><br><span class="line">    a=int(i[<span class="string">'price'</span>])*int(i[<span class="string">'amount'</span>])</span><br><span class="line">    sum+=a</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'总价为：%d'</span>%sum)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<p>改良后<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">def wfile():</span><br><span class="line">    f=open(<span class="string">'sui.txt'</span>,<span class="string">'a+'</span>)</span><br><span class="line">    n=0</span><br><span class="line">    <span class="keyword">while</span> True:</span><br><span class="line">        goods=input(<span class="string">'空格分开，商品 价格 数量：'</span>)</span><br><span class="line">        f.write(goods+<span class="string">'\n'</span>)</span><br><span class="line">        n+=1</span><br><span class="line">        <span class="keyword">if</span> n==2:</span><br><span class="line">            <span class="built_in">break</span></span><br><span class="line">    f.close()</span><br><span class="line">wfile()</span><br><span class="line"></span><br><span class="line">def rfile():</span><br><span class="line">    rlist=[]</span><br><span class="line">    f=open(<span class="string">'sui.txt'</span>,<span class="string">'r'</span>)</span><br><span class="line">    <span class="keyword">while</span> True:</span><br><span class="line">        res=f.readline()</span><br><span class="line">        <span class="keyword">if</span> res==<span class="string">''</span>:</span><br><span class="line">            <span class="built_in">break</span></span><br><span class="line">        dic=&#123;&#125;</span><br><span class="line">        line=res.split()</span><br><span class="line">        dic[<span class="string">'name'</span>]=line[0]</span><br><span class="line">        dic[<span class="string">'price'</span>]=line[1]</span><br><span class="line">        dic[<span class="string">'number'</span>]=line[2]</span><br><span class="line">        dic[<span class="string">'zprice'</span>]=int(line[1])*int(line[2])</span><br><span class="line">        rlist.append(dic)</span><br><span class="line">    f.close()</span><br><span class="line">    <span class="built_in">return</span> rlist</span><br><span class="line">rfile()</span><br><span class="line"><span class="built_in">print</span>(rfile())</span><br></pre></td></tr></table></figure></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -198,16 +256,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/02/python-12/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/02/python-12/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/27/python-11/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python基础十一——匿名函数，map函数，reduce函数，fliter函数</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -222,701 +339,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/27/python-11/">python基础十一——匿名函数，map函数，reduce函数，fliter函数</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/27/python-11/" class="archive-article-date">
-  	<time datetime="2018-07-27T12:30:45.266Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p>某些时候，我们定义的函数比较简单且复用性很低，可以无需显式的定义函数，将其定义为匿名函数更方便。<br>Python用lambda来创建匿名函数。<br>定义匿名函数的语法格式：<br>lambda arg1,arg2,…,argn: expression<br>
-        
-          <a class="article-more-a" href="/2018/07/27/python-11/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/27/python-11/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是文件"><span class="toc-number">1.</span> <span class="toc-text">什么是文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符编码"><span class="toc-number">1.1.</span> <span class="toc-text">字符编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件的打开或创建"><span class="toc-number">1.2.</span> <span class="toc-text">文件的打开或创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打开的模式"><span class="toc-number">1.3.</span> <span class="toc-text">打开的模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件的写入"><span class="toc-number">1.4.</span> <span class="toc-text">文件的写入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指针的移动"><span class="toc-number">1.5.</span> <span class="toc-text">指针的移动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件写入案例"><span class="toc-number">1.6.</span> <span class="toc-text">文件写入案例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件的读取"><span class="toc-number">1.7.</span> <span class="toc-text">文件的读取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二进制文件的写入和读取"><span class="toc-number">1.8.</span> <span class="toc-text">二进制文件的写入和读取</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-json-存储结构化数据"><span class="toc-number">2.</span> <span class="toc-text">使用 json 存储结构化数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#作业"><span class="toc-number">2.1.</span> <span class="toc-text">作业</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-python-10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/27/python-10/">python基础十——嵌套函数 闭包 装饰器</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/27/python-10/" class="archive-article-date">
-  	<time datetime="2018-07-27T11:22:50.695Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="函数嵌套"><a href="#函数嵌套" class="headerlink" title="函数嵌套"></a>函数嵌套</h2><p>函数里面调用函数（其它函数）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def da(x,y):</span><br><span class="line">    m=x <span class="keyword">if</span> x&gt;y <span class="keyword">else</span> y</span><br><span class="line">    <span class="built_in">return</span> m</span><br><span class="line"><span class="built_in">print</span>(da(5,3))</span><br><span class="line"></span><br><span class="line">def da2(a,b,c,d):</span><br><span class="line">    res1=da(a,b)</span><br><span class="line">    res2=da(res1,c) <span class="comment">#在函数da2里面调用了其它函数da()</span></span><br><span class="line">    res3=da(res2,d)</span><br><span class="line">    <span class="built_in">print</span>(res1)</span><br><span class="line">    <span class="built_in">print</span>(res2)</span><br><span class="line">    <span class="built_in">print</span>(res3)</span><br><span class="line">da2(23,-7,31,11)  <span class="comment">#23 31 31</span></span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2018/07/27/python-10/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/27/python-10/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ti-05" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/26/ti-05/">博客园</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/26/ti-05/" class="archive-article-date">
-  	<time datetime="2018-07-26T13:24:19.484Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="博客园"><a href="#博客园" class="headerlink" title="博客园"></a>博客园</h2><p>要求：<br> 欢迎来到博客园首页<br> 1:请登录<br> 2:请注册<br> 3:文章页面<br> 4:日记页面<br> 5:评论页面<br> 6:收藏页面<br> 7:注销<br> 8:退出程序<br>
-        
-          <a class="article-more-a" href="/2018/07/26/ti-05/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/26/ti-05/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ti-04" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/26/ti-04/">购物车功能</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/26/ti-04/" class="archive-article-date">
-  	<time datetime="2018-07-26T12:49:34.968Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="写一个购物车"><a href="#写一个购物车" class="headerlink" title="写一个购物车"></a>写一个购物车</h3><p>购物车<br>功能要求：<br>要求用户输入总资产，例如：2000<br>显示商品列表，让用户根据序号选择商品，加入购物车<br>购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。<br>充值功能，删除功能，退出功能<br>
-        
-          <a class="article-more-a" href="/2018/07/26/ti-04/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/26/ti-04/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ti-03" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/26/ti-03/">省市级三级菜单</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/26/ti-03/" class="archive-article-date">
-  	<time datetime="2018-07-26T12:33:16.443Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="要求-打印省、市、县三级菜单-可返回上一级-可随时退出程序"><a href="#要求-打印省、市、县三级菜单-可返回上一级-可随时退出程序" class="headerlink" title="要求: 打印省、市、县三级菜单,可返回上一级,可随时退出程序"></a>要求: 打印省、市、县三级菜单,可返回上一级,可随时退出程序</h3>
-        
-          <a class="article-more-a" href="/2018/07/26/ti-03/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/26/ti-03/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ti-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/26/ti-2/">小型练习题</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/26/ti-2/" class="archive-article-date">
-  	<time datetime="2018-07-26T11:57:41.401Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、写程序：模拟公司hr录入员工账号密码的程序。（10分）"><a href="#1、写程序：模拟公司hr录入员工账号密码的程序。（10分）" class="headerlink" title="1、写程序：模拟公司hr录入员工账号密码的程序。（10分）"></a>1、写程序：模拟公司hr录入员工账号密码的程序。（10分）</h3><p>   1)，员工的账号密码存储在这种数据类型中：<br>   user_list = [<br>     {‘username’:’barry’,’password’:’1234’},<br>     {‘username’:’alex’,’password’:’asdf’},<br>     ………<br>              ]<br>  2)非法字符模板：board = [‘共产党’,’毛主席’,’周恩来’]<br>  3)Hr输入用户名，密码（可持续输入，如果想终止程序，那就在输入用户名时输入Q或者q退出程序），在Hr输入用户名时，检测此用户名是否有board里面的非法字符，如果有非法字符，则将非法字符替换成同数量的*（如王二麻子替换成<em>**</em>），然后添加到user_list中，如果没有非法字符，则直接添加到user_list中，每次添加成功后，打印出刚添加的用户名，密码。<br>
-        
-          <a class="article-more-a" href="/2018/07/26/ti-2/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/26/ti-2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-9(2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/26/python-9(2)/">python基础九（二）——函数</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/26/python-9(2)/" class="archive-article-date">
-  	<time datetime="2018-07-26T09:30:15.632Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p>python 使用 lambda 来创建匿名函数。<br>lambda只是一个表达式，函数体比def简单很多。<br>lambda的主体是一个表达式，而不是一个代码块。仅仅能在lambda表达式中封装有限的逻辑进去。<br>lambda函数拥有自己的命名空间，且不能访问自有参数列表之外或全局命名空间里的参数。<br>虽然lambda函数看起来只能写一行，却不等同于C或C++的内联函数，后者的目的是调用小函数时不占用栈内存从而增加运行效率。<br>语法：<br>lambda [arg1 [,arg2,…..argn]]:expression<br>
-        
-          <a class="article-more-a" href="/2018/07/26/python-9(2)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/26/python-9(2)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-09" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/26/python-09/">python基础九（一）——函数</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/26/python-09/" class="archive-article-date">
-  	<time datetime="2018-07-26T08:46:43.719Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>函数（function）是一段完成特定功能的已命名代码块。函数可以遵照参数完成特定的任务，并且可能返回一个值<br>在Python中有两种函数：自定义函数与内置函数<br>页面加载时函数不会立即执行，函数只有在被调用时才会执行<br>函数具有重用性<br>循环可以使单行代码重复利用，函数使代码功能可以重复利用<br>
-        
-          <a class="article-more-a" href="/2018/07/26/python-09/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/26/python-09/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-08(2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/23/python-08(2)/">python基础8（二）——元组，字典和集合相关操作</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/23/python-08(2)/" class="archive-article-date">
-  	<time datetime="2018-07-23T04:39:51.181Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="字典修改和删除"><a href="#字典修改和删除" class="headerlink" title="字典修改和删除"></a>字典修改和删除</h3><p>字典和列表一样，可以随时向字典中添加新的键—值对，或者修改现有键所关联的值<br>添加和修改的方法相同，都是使用“字典变量名[键名]=键值”的形式，主要区分在于字典中是否已存在该键—值对，若存在则为修改，否则为添加<br>因为字典是无序的，类似于append在尾部添加键—值对的方法是没有任何意义的。<br>
-        
-          <a class="article-more-a" href="/2018/07/23/python-08(2)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/23/python-08(2)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -939,8 +387,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
