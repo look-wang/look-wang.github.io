@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://github.com/look-wang/look-wang.github.io/blob/master/img/article/time1.png">
 <meta property="og:image" content="https://github.com/look-wang/look-wang.github.io/blob/master/img/article/time2.png">
 <meta property="og:image" content="https://github.com/look-wang/look-wang.github.io/blob/master/img/article/time3s.png">
-<meta property="og:updated_time" content="2018-08-03T13:13:50.143Z">
+<meta property="og:updated_time" content="2018-08-03T13:19:28.865Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python基础十四————日期时间操作">
 <meta name="twitter:description" content="time1.时间戳(timestamp)的方式：通常来说，时间戳表示的是从1970年1月１日开始按秒计算的偏移量(time.gmtime(0))此模块中的函数无法处理1970纪元年以前的时间或太遥远的未来(处理极限取决于C函数库，对于32位系统而言，是2038年)2.UTC(Coordinated Universal Time,世界协调时)也叫格林威治天文时间，是世界标准时间．在我国为UTC+83">
@@ -179,7 +179,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="time"><a href="#time" class="headerlink" title="time"></a>time</h2><p>1.时间戳(timestamp)的方式：通常来说，时间戳表示的是从1970年1月１日开始按秒计算的偏移量(time.gmtime(0))此模块中的函数无法处理1970纪元年以前的时间或太遥远的未来(处理极限取决于C函数库，对于32位系统而言，是2038年)<br>2.UTC(Coordinated Universal Time,世界协调时)也叫格林威治天文时间，是世界标准时间．在我国为UTC+8<br>3.DST(Daylight Saving Time)即夏令时<br>4.时间元组：用于表示时间格式的元组数据而已，他是time模块操作时间的主要方式</p>
+        <h2 id="time"><a href="#time" class="headerlink" title="time"></a>time</h2><p>1.时间戳(timestamp)的方式：通常来说，时间戳表示的是从1970年1月１日开始按秒计算的偏移量(time.gmtime(0))此模块中的函数无法处理1970纪元年以前的时间或太遥远的未来(处理极限取决于C函数库，对于32位系统而言，是2038年)<br>2.UTC(Coordinated Universal Time,世界协调时)也叫格林威治天文时间，是世界标准时间．在我国为UTC+8<br>3.DST(Daylight Saving Time)即夏令时<br>4.时间元组：用于表示时间格式的元组数据而已，他是time模块操作时间的主要方式<br><a id="more"></a></p>
 <p>时间模块的值<br>timezone()当前时区与格林尼治时间相差的秒数<br>altzone() 在有夏令营的情况下，获取当前时区与格林尼治的时间差<br>dayligth() 检测是否为夏令时状态</p>
 <h3 id="时间模块的函数"><a href="#时间模块的函数" class="headerlink" title="时间模块的函数"></a>时间模块的函数</h3><p>time()    time() 函数用于返回当前时间的时间戳<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">nows=int(time.time())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'时间戳为：'</span>,time.time())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'时间戳为：'</span>,nows)</span><br><span class="line"><span class="comment">#时间戳的单位是秒，微妙数</span></span><br></pre></td></tr></table></figure></p>
 <p>localtime()    获得当前日期元组+8<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(time.localtime())</span><br><span class="line"><span class="comment">#time.struct_time(tm_year=2018, tm_mon=8, tm_mday=3, tm_hour=19, tm_min=28, tm_sec=37, tm_wday=4, tm_yday=215, tm_isdst=0)</span></span><br><span class="line">               </span><br><span class="line"><span class="comment">#将时间戳转为年月日（时间元组）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">'本地时间：'</span>,time.localtime(time.time()))</span><br></pre></td></tr></table></figure></p>
@@ -308,6 +308,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/08/03/python-15/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          python基础十五————模块与包
+        
+      </div>
+    </a>
   
   
     <a href="/2018/08/02/python-13/" id="article-nav-older" class="article-nav-link-wrap">

@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 好好学习，天天向上</title>
+  <title>python基础十五————模块与包 | 好好学习，天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="好好学习，天天向上">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="什么是模块模块是包括 Python 定义和声明的文件。文件名就是模块名加上 .py 后缀。模块的模块名（做为一个字符串）可以由全局变量 name 得到。 为什么使用模块使用场景：如果退出python解释器然后重新进入，那么你之前定义的函数或者变量都将丢失，因此我们通常将程序写到文件中以便永久保存下来，需要时就通过python test.py方式去执行，此时test.py被称为脚本script">
+<meta name="keywords" content="calm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础十五————模块与包">
+<meta property="og:url" content="http://yoursite.com/2018/08/03/python-15/index.html">
 <meta property="og:site_name" content="好好学习，天天向上">
+<meta property="og:description" content="什么是模块模块是包括 Python 定义和声明的文件。文件名就是模块名加上 .py 后缀。模块的模块名（做为一个字符串）可以由全局变量 name 得到。 为什么使用模块使用场景：如果退出python解释器然后重新进入，那么你之前定义的函数或者变量都将丢失，因此我们通常将程序写到文件中以便永久保存下来，需要时就通过python test.py方式去执行，此时test.py被称为脚本script">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-03T10:46:14.009Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="好好学习，天天向上">
+<meta name="twitter:title" content="python基础十五————模块与包">
+<meta name="twitter:description" content="什么是模块模块是包括 Python 定义和声明的文件。文件名就是模块名加上 .py 后缀。模块的模块名（做为一个字符串）可以由全局变量 name 得到。 为什么使用模块使用场景：如果退出python解释器然后重新进入，那么你之前定义的函数或者变量都将丢失，因此我们通常将程序写到文件中以便永久保存下来，需要时就通过python test.py方式去执行，此时test.py被称为脚本script">
   
     <link rel="alternative" href="/atom.xml" title="好好学习，天天向上" type="application/atom+xml">
   
@@ -150,36 +155,78 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-python-15" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python基础十五————模块与包
+    </h1>
+  
+
+        
+        <a href="/2018/08/03/python-15/" class="archive-article-date">
+  	<time datetime="2018-08-03T13:33:12.085Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-03</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是模块"><a href="#什么是模块" class="headerlink" title="什么是模块"></a>什么是模块</h2><p>模块是包括 Python 定义和声明的文件。<br>文件名就是模块名加上 .py 后缀。<br>模块的模块名（做为一个字符串）可以由全局变量 <strong>name</strong> 得到。</p>
+<h2 id="为什么使用模块"><a href="#为什么使用模块" class="headerlink" title="为什么使用模块"></a>为什么使用模块</h2><p>使用场景：<br>如果退出python解释器然后重新进入，那么你之前定义的函数或者变量都将丢失，因此我们通常将程序写到文件中以便永久保存下来，需要时就通过python test.py方式去执行，此时test.py被称为脚本script<br><a id="more"></a><br>随着程序规模及功能越来越多，为了方便管理，我们通常将程序按照功能分为一个个的文件，这样做程序的结构更清晰，方便管理。这时我们不仅把这些文件当做脚本去执行，还可以把他们当做模块导入到其它的模块中，实现了功能的重复利用。<br>为什么使用模块：<br>首先，提高了代码的可维护<br>其次，提高了代码的可重用性<br>最后，避免了函数名和变量名冲突<br>从抽象的视角来看，模块至少有三个角色：<br>代码的重用<br>系统命名空间的划分<br>服务和数据的共享</p>
+<h2 id="模块的载入"><a href="#模块的载入" class="headerlink" title="模块的载入"></a>模块的载入</h2><p>块可以包含可执行的语句和函数的定义，这些语句的目的是初始化模块，它们只在模块名第一次遇到导入import语句时才执行。<br>import语句是可以在程序中的任意位置使用的，如果针对同一个模块import多次，为了防止你重复导入，只有第一次导入后就将模块名加载到内存了。<br>后续的import语句仅是对已经加载到内存中的模块对象增加了一次引用，不会重新执行模块内的语句。</p>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>当引入模块的时候，当前工作所在文件夹会多一个文件夹<strong>pycache</strong>，里面放的是我们引入的模块，如sendmsg<br><strong>pycache</strong>是一个缓冲，我们在执行文件的时候，编程语言（可识别语言），通过解释器，形成二进制文件，而有了这个缓冲之后，我们写的代码可以不用再重头开始经过解释器执行，而直接通过缓冲执行</p>
+<h3 id="第一种方法：用import引入，import-模块名-或-import-模块名-as-sen"><a href="#第一种方法：用import引入，import-模块名-或-import-模块名-as-sen" class="headerlink" title="第一种方法：用import引入，import 模块名 或 import 模块名 as sen"></a>第一种方法：用import引入，import 模块名 或 import 模块名 as sen</h3><p>sendmsg.py内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def test1():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'-----sendmsg_test1------'</span>)</span><br><span class="line">def test2():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'-----sendmsg_test2------'</span>)</span><br><span class="line">test1()</span><br><span class="line">test2()</span><br></pre></td></tr></table></figure></p>
+<p>在test.py调用,直接import sendmsg<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import sendmsg</span><br><span class="line"><span class="comment">#-----sendmsg_test1------</span></span><br><span class="line"><span class="comment">#-----sendmsg_test2------</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="第二种方法：用from-模块-import-函数名-调用"><a href="#第二种方法：用from-模块-import-函数名-调用" class="headerlink" title="第二种方法：用from 模块 import 函数名 调用"></a>第二种方法：用from 模块 import 函数名 调用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from sendmsg import test1,test2</span><br><span class="line"><span class="comment">#-----sendmsg_test1------</span></span><br><span class="line"><span class="comment">#-----sendmsg_test2------</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from sendmsg import test1,test2</span><br><span class="line">test1()</span><br><span class="line">test2()</span><br><span class="line"><span class="comment">#-----sendmsg_test1------</span></span><br><span class="line"><span class="comment">#-----sendmsg_test2------</span></span><br><span class="line"><span class="comment">#-----sendmsg_test1------</span></span><br><span class="line"><span class="comment">#-----sendmsg_test2------</span></span><br></pre></td></tr></table></figure>
+<p>如果只引入test1()函数，test2()不能使用，会报错显示test2不能识别<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from sendmsg import test1</span><br><span class="line">test1()</span><br><span class="line">test2()</span><br><span class="line"><span class="comment">#NameError: name 'test2' is not defined</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="第三种方法：用from引入模块时如果参数太多，可以用from-模块名-import"><a href="#第三种方法：用from引入模块时如果参数太多，可以用from-模块名-import" class="headerlink" title="第三种方法：用from引入模块时如果参数太多，可以用from 模块名 import *"></a>第三种方法：用from引入模块时如果参数太多，可以用from 模块名 import *</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from sendmsg import *</span><br><span class="line"><span class="comment">#-----sendmsg_test1------</span></span><br><span class="line"><span class="comment">#-----sendmsg_test2------</span></span><br></pre></td></tr></table></figure>
+<p>当两个模块的函数名一样，如果都引用，前面的引用会被后面的更新，想当于只调用了后面写的模块，所以遇到这种情况，不能用from 模块 import 函数名，只能用import 模块名这种方法<br>recmsg.py模块代码，和sendmsg.py一样<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def test1():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'-----recmsg_test1------'</span>)</span><br><span class="line">def test2():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'-----recmsg_test2------'</span>)</span><br><span class="line">test1()</span><br><span class="line">test2()</span><br></pre></td></tr></table></figure></p>
+<p>引用模块，这里调用test1(),只能是后面写的recmsg模块里面的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from sendmsg import test1</span><br><span class="line">from recmsg import test1</span><br><span class="line">test1()</span><br><span class="line"><span class="comment">#-----sendmsg_test1------</span></span><br><span class="line"><span class="comment">#-----sendmsg_test2------</span></span><br><span class="line"><span class="comment">#-----recmsg_test1------</span></span><br><span class="line"><span class="comment">#-----recmsg_test2------</span></span><br><span class="line"><span class="comment">#-----recmsg_test1------</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="if-name-’main‘方法"><a href="#if-name-’main‘方法" class="headerlink" title="if name==’main‘方法"></a>if <strong>name</strong>==’<strong>main</strong>‘方法</h3><p>我们可以看到上面调用模块重复执行（模块内部的函数执行了一次，在引入模块的时候又执行了一次），为了避免这种情况，需要在模块里面用if <strong>name</strong>==’<strong>main</strong>‘方法，如在recmsg里面(sendmsg一样)：<br>官方说明：<br>我们可以通过模块的全局变量<strong>name</strong>来查看模块名<br>当做脚本运行:<br><strong>name</strong> 等于’<strong>main</strong>‘<br>当做模块导入:<br><strong>name</strong> 等于模块名<br>如果一个py文件被导入了，他就是一个模块<br>如果这个py文件被直接执行，这个被直接执行的文件就是一个脚本<br>作用：用来控制.py文件在不同的应用场景下执行不同的逻辑</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def test1():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'-----recmsg_test1------'</span>)</span><br><span class="line">def test2():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'-----recmsg_test2------'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    test1()</span><br><span class="line">    test2()</span><br></pre></td></tr></table></figure>
+<p>总结：当一个模块被当做脚本执行的时候，<strong>name</strong>是一个字符串数据类型的’<strong>main</strong>‘<br>当一个模块被当做模块导入的时候，<strong>name</strong>是一个字符串数据类型模块名<br>if <strong>name</strong> == ‘<strong>main</strong>‘:控制了:<br>    只要当前这个文件直接被执行，就会执行if条件语句内的代码<br>    否则，就不会执行if条件语句内的代码</p>
+<p>在test.py应用调用，就只有调用的test1()的内容了<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from sendmsg import test1</span><br><span class="line">from recmsg import test1</span><br><span class="line">test1()</span><br><span class="line"><span class="comment">#-----recmsg_test1------</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="all方法"><a href="#all方法" class="headerlink" title="all方法"></a><strong>all</strong>方法</h3><p>在引入模块中，有些功能不想全被调用，此时我们可以在模块里面设置权限，用<strong>all</strong>方法，把能被调用的函数功能放进去，这样引用模块之后也不能调用模板<strong>all</strong>外面的函数,注意只针对from 模块名 import *这种方法，对import sendmsg as sen的方法不受影响</p>
+<p>如：在recmsg中添加<strong>all</strong>把函数test1()和变量num放进去，在外面引用recmsg模板的时候就只能调用里面的test1()和输出num的值，无法识别test2()函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">recmsg.py:</span><br><span class="line"></span><br><span class="line">__all__=[<span class="string">'test1'</span>,<span class="string">'num'</span>]</span><br><span class="line">def test1():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'-----recmsg_test1------'</span>)</span><br><span class="line">def test2():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'-----recmsg_test2------'</span>)</span><br><span class="line"></span><br><span class="line">num=100</span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    test1()</span><br><span class="line">    test2()</span><br><span class="line">    <span class="built_in">print</span>(num)</span><br><span class="line"></span><br><span class="line">test.py</span><br><span class="line">from recmsg import *</span><br><span class="line">test1()</span><br><span class="line"><span class="built_in">print</span>(num)</span><br><span class="line">test2()</span><br><span class="line"><span class="comment">#-----recmsg_test1------</span></span><br><span class="line"><span class="comment">#100</span></span><br><span class="line"><span class="comment">#NameError: name 'test2' is not defined</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="包"><a href="#包" class="headerlink" title="包"></a>包</h2><p>Python的程序由包（package）、模块（module）和函数组成。包是由一系列模块组成的集合，模块是处理某一类问题的函数和类的集合</p>
+<p>把写有功能函数的模板(.py)文件加进一个文件夹中，把文件夹变成一个包，如上述例子建立一个文件夹<br>msg,把sendmsg.py和recmsg.py放进msg文件夹中，同时在msg包文件夹下建立一个<strong>init</strong>.py文件，<br>在<strong>init</strong>文件中引入里面的模块，用from . import sending,再在main主程序中调用<br>main调用格式：<br>包-模块 -方法<br>import 文件夹名字<br>文件夹名字.sendmsg.test1()<br>举例理解：<br>recmsg.py<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">__all__=[<span class="string">'test1'</span>,<span class="string">'num'</span>]</span><br><span class="line">def test1():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'-----recmsg_test1------'</span>)</span><br><span class="line">def test2():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'-----recmsg_test2------'</span>)</span><br><span class="line"></span><br><span class="line">num=100</span><br><span class="line"><span class="comment">#__name__变量  如果在当前文件下。抵用的时候显示的是__main__</span></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    test1()</span><br><span class="line">    test2()</span><br><span class="line">    <span class="built_in">print</span>(num)</span><br></pre></td></tr></table></figure></p>
+<p>sendmsg.py<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def test1():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'-----sendmsg_test1------'</span>)</span><br><span class="line">def test2():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'-----sendmsg_test2------'</span>)</span><br><span class="line"><span class="comment"># test1()</span></span><br><span class="line"><span class="comment"># test2()</span></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    test1()</span><br><span class="line">    test2()</span><br></pre></td></tr></table></figure></p>
+<p><strong>init</strong>.py<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">__all__=[<span class="string">'sendmsg'</span>,<span class="string">'recmsg'</span>]</span><br><span class="line"><span class="comment">#__all__  包  定义在init总的模块能够被调用。</span></span><br><span class="line">from . import sendmsg</span><br><span class="line">from . import recmsg</span><br></pre></td></tr></table></figure></p>
+<p>主程序调用包，三种方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#包的调用</span></span><br><span class="line"><span class="comment">#第一种</span></span><br><span class="line">import msg</span><br><span class="line">msg.sendmsg.test1()</span><br><span class="line">msg.recmsg.test2()</span><br><span class="line"><span class="comment">#-----sendmsg_test1------</span></span><br><span class="line"><span class="comment">#-----recmsg_test2------</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#第二种</span></span><br><span class="line">from msg import sendmsg</span><br><span class="line">sendmsg.test1()</span><br><span class="line"><span class="comment">#-----sendmsg_test1------</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#第三种</span></span><br><span class="line">from msg import *</span><br><span class="line">recmsg.test1()</span><br><span class="line"><span class="comment">#----recmsg_test1------</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="建议写程序的模式"><a href="#建议写程序的模式" class="headerlink" title="建议写程序的模式"></a>建议写程序的模式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">函数功能描述</span><br><span class="line">参数说明</span><br><span class="line">返回值</span><br><span class="line">def add():</span><br><span class="line">    pass</span><br><span class="line">函数功能描述</span><br><span class="line">参数说明</span><br><span class="line">返回值   </span><br><span class="line">def delete():</span><br><span class="line">    pass</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">def main():</span><br><span class="line">    pass</span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/python-9(2)/" class="archive-article-date">
-  	<time datetime="2018-07-26T09:30:15.632Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/python-9(2)/">python基础九（二）——函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,364 +238,118 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/03/python-15/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/python-09/" class="archive-article-date">
-  	<time datetime="2018-07-26T08:46:43.719Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/03/python-14/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python基础十四————日期时间操作</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/python-09/">python基础九（一）——函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是模块"><span class="toc-number">1.</span> <span class="toc-text">什么是模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么使用模块"><span class="toc-number">2.</span> <span class="toc-text">为什么使用模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模块的载入"><span class="toc-number">3.</span> <span class="toc-text">模块的载入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模块"><span class="toc-number">4.</span> <span class="toc-text">模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一种方法：用import引入，import-模块名-或-import-模块名-as-sen"><span class="toc-number">4.1.</span> <span class="toc-text">第一种方法：用import引入，import 模块名 或 import 模块名 as sen</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二种方法：用from-模块-import-函数名-调用"><span class="toc-number">4.2.</span> <span class="toc-text">第二种方法：用from 模块 import 函数名 调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三种方法：用from引入模块时如果参数太多，可以用from-模块名-import"><span class="toc-number">4.3.</span> <span class="toc-text">第三种方法：用from引入模块时如果参数太多，可以用from 模块名 import *</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#if-name-’main‘方法"><span class="toc-number">4.4.</span> <span class="toc-text">if name==’main‘方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#all方法"><span class="toc-number">4.5.</span> <span class="toc-text">all方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#包"><span class="toc-number">5.</span> <span class="toc-text">包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#建议写程序的模式"><span class="toc-number">5.1.</span> <span class="toc-text">建议写程序的模式</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/python-08(2)/" class="archive-article-date">
-  	<time datetime="2018-07-23T04:39:51.181Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/python-08(2)/">python基础8（二）——元组，字典和集合相关操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/python-08/" class="archive-article-date">
-  	<time datetime="2018-07-23T03:47:52.036Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/python-08/">Python基础8（一）——元组，字典和集合相关操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-07/" class="archive-article-date">
-  	<time datetime="2018-07-21T11:36:37.955Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-07/">python基础7——Python数学和列表操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-06/" class="archive-article-date">
-  	<time datetime="2018-07-21T10:59:12.016Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-06/">python基础6——Python字符串操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python05/" class="archive-article-date">
-  	<time datetime="2018-07-21T10:05:58.333Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python05/">python基础5——Python高级特性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-04(2)/" class="archive-article-date">
-  	<time datetime="2018-07-21T09:14:01.918Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-04(2)/">控制语句整理案例</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-04/" class="archive-article-date">
-  	<time datetime="2018-07-21T07:42:15.741Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-04/">Python基础4——流程控制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-03/" class="archive-article-date">
-  	<time datetime="2018-07-21T06:40:58.128Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-03/">Python基础3——运算和运算符</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -572,8 +373,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
