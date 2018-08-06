@@ -152,6 +152,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ti-04" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/26/ti-04/">购物车功能</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/26/ti-04/" class="archive-article-date">
+  	<time datetime="2018-07-26T12:49:34.968Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="写一个购物车"><a href="#写一个购物车" class="headerlink" title="写一个购物车"></a>写一个购物车</h3><p>购物车<br>功能要求：<br>要求用户输入总资产，例如：2000<br>显示商品列表，让用户根据序号选择商品，加入购物车<br>购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。<br>充值功能，删除功能，退出功能<br>
+        
+          <a class="article-more-a" href="/2018/07/26/ti-04/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/26/ti-04/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ti-03" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -808,82 +884,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/21/python05/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-04(2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/21/python-04(2)/">控制语句整理案例</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/21/python-04(2)/" class="archive-article-date">
-  	<time datetime="2018-07-21T09:14:01.918Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、石头剪刀布游戏<br>用户：石头 1  剪刀 2  布 3<br>电脑：石头 1  剪刀 2  布 3   电脑 石头 1<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#固定：电脑出石头</span></span><br><span class="line">user=int(input(<span class="string">'请开始你的表演（石头-1，剪刀-2，布-3）：'</span>))</span><br><span class="line"><span class="keyword">if</span> user==3:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'win'</span>)</span><br><span class="line"><span class="keyword">elif</span> user==1:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'平局'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'loser'</span>)</span><br><span class="line"><span class="comment">#随机</span></span><br><span class="line">user=int(input(<span class="string">'请开始你的表演（石头-1，剪刀-2，布-3）：'</span>))</span><br><span class="line">import random</span><br><span class="line">com=random.randint(1,3)</span><br><span class="line"><span class="keyword">if</span> com==1:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'石头'</span>)</span><br><span class="line"><span class="keyword">elif</span> com==2:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'剪刀'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'布'</span>)</span><br><span class="line"><span class="keyword">if</span> (user==1 and com==2) and (user==2 and com==3) and (user==3 and com==1):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'win'</span>)</span><br><span class="line"><span class="keyword">elif</span> user==com:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'平局'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'loser'</span>)</span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2018/07/21/python-04(2)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/21/python-04(2)/">展开全文 >></a>
         </p>
       
 
