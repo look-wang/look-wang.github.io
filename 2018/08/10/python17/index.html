@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: calm | 好好学习，天天向上</title>
+  <title>python基础十七————面向对象(一) | 好好学习，天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="好好学习，天天向上">
-<meta property="og:url" content="http://yoursite.com/tags/calm/page/2/index.html">
+  <meta name="description" content="面向过程与面向对象需要了解的定义性文字:面向对象(object-oriented ;简称: OO) 至今还没有统一的概念 我这里把它定义为: 按人们 认识客观世界的系统思维方式,采用基于对象(实体) 的概念建立模型,模拟客观世界分析、设 计、实现软件的办法。 面向对象编程(Object Oriented Programming-OOP) 是一种解决软件复用的设计和编程方法。 这种方法把软件系统中相">
+<meta name="keywords" content="calm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础十七————面向对象(一)">
+<meta property="og:url" content="http://yoursite.com/2018/08/10/python17/index.html">
 <meta property="og:site_name" content="好好学习，天天向上">
+<meta property="og:description" content="面向过程与面向对象需要了解的定义性文字:面向对象(object-oriented ;简称: OO) 至今还没有统一的概念 我这里把它定义为: 按人们 认识客观世界的系统思维方式,采用基于对象(实体) 的概念建立模型,模拟客观世界分析、设 计、实现软件的办法。 面向对象编程(Object Oriented Programming-OOP) 是一种解决软件复用的设计和编程方法。 这种方法把软件系统中相">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-09T09:57:22.105Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="好好学习，天天向上">
+<meta name="twitter:title" content="python基础十七————面向对象(一)">
+<meta name="twitter:description" content="面向过程与面向对象需要了解的定义性文字:面向对象(object-oriented ;简称: OO) 至今还没有统一的概念 我这里把它定义为: 按人们 认识客观世界的系统思维方式,采用基于对象(实体) 的概念建立模型,模拟客观世界分析、设 计、实现软件的办法。 面向对象编程(Object Oriented Programming-OOP) 是一种解决软件复用的设计和编程方法。 这种方法把软件系统中相">
   
     <link rel="alternative" href="/atom.xml" title="好好学习，天天向上" type="application/atom+xml">
   
@@ -150,36 +155,73 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-python17" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python基础十七————面向对象(一)
+    </h1>
+  
+
+        
+        <a href="/2018/08/10/python17/" class="archive-article-date">
+  	<time datetime="2018-08-10T10:47:34.019Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="面向过程与面向对象"><a href="#面向过程与面向对象" class="headerlink" title="面向过程与面向对象"></a>面向过程与面向对象</h2><p>需要了解的定义性文字:<br>面向对象(object-oriented ;简称: OO) 至今还没有统一的概念 我这里把它定义为: 按人们 认识客观世界的系统思维方式,采用基于对象(实体) 的概念建立模型,模拟客观世界分析、设 计、实现软件的办法。</p>
+<p>面向对象编程(Object Oriented Programming-OOP) 是一种解决软件复用的设计和编程方法。 这种方法把软件系统中相近相似的操作逻辑和操作 应用数据、状态,以类的型式描述出来,以对象实例的形式在软件系统中复用,以达到提高软件开发效率的作用。<br><a id="more"></a></p>
+<p>理解性文字：<br>面向过程(Procedure Oriented Programming)：<br>    以事件为中心，分析出解决问题的步骤，然后用函数将这些步骤一步步实现，使用的时候依次调用<br>步骤1：做饭<br>步骤2：收拾房间<br>步骤3：做饭<br>步骤4：洗衣服<br>步骤5：做饭<br>面向对象(Object Oriented Programming)：<br>以事物为中心，万物皆对象，由实体引发事件，更贴近现实世界，更易于扩展<br>如上述步骤可以交给一个人来做，不用自己按步骤做<br>用面向对象的思维解决问题的重点<br>当遇到一个需求的时候不用自己去实现，如果自己一步步实现那就是面向过程<br>应该找一个专门做这个事的人来做<br>面向对象是基于面向过程的</p>
+<p>面向过程：根据业务逻辑从上到下写代码<br>面向对象：将数据与函数绑定到一起，进行封装，这样能够更快速的开发程序，减少了重复代码的重写过程<br>面向过程编程最易被初学者接受，其往往用一长段代码来实现指定功能，开发过程的思路是将数据与函数按照执行的逻辑顺序组织在一起，数据与函数分开考虑。</p>
+<p>面向对象的概念（OOP）：<br>OOP(Object-Oriented Programming, 面向对象的编程)技术为编程人员敞开了一扇大门，使其编程的代码更简洁、更易于维护，并且具有更强的可重用性。<br>OOP达到了软件工程的三个目标：<br>重用性、灵活性、扩展性<br>OOP面向对象编程的特点：<br>封装、继承、多态</p>
+<h2 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h2><p>面向对象编程的2个非常重要的概念：类和对象<br>对象是面向对象编程的核心，在使用对象的过程中，为了将具有共同特征和行为的一组对象抽象定义，提出了另外一个新的概念——类<br>类就相当于制造飞机时的图纸，用它来进行创建的飞机就相当于对象<br>1、类<br>人以类聚 物以群分。<br>具有相似内部状态和运动规律的实体的集合(或统称为抽象)。<br>具有相同属性和行为事物的统称<br>类是抽象的,在使用的时候通常会找到这个类的一个具体的存在,使用这个具体的存在。一个类可以找到多个对象</p>
+<p>2、 对象<br>某一个具体事物的存在 ,在现实世界中可以是看得见摸得着的。<br>可以是直接使用的<br>3、类和对象之间的关系<br>类就是创建对象的模板</p>
+<p>举例：区分类和对象<br>奔驰汽车 类<br>奔驰smart 类<br>张三的那辆奔驰smart 对象<br>狗 类<br>大黄狗 类<br>李四家那只大黄狗 对象<br>水果 类<br>苹果 类<br>红苹果 类 红富士苹果 类<br>我手里拿着的的苹果 对象</p>
+<h3 id="类的构成"><a href="#类的构成" class="headerlink" title="类的构成"></a>类的构成</h3><p>类(Class) 由3个部分构成<br>类的名称:类名<br>类的属性:一组数据<br>类的方法:允许对进行操作的方法 (行为)</p>
+<p>如：<br>狗类的设计<br>类名:狗(Dog)<br>属性:品种 、毛色、性别、名字、 腿儿的数量<br>方法(行为/功能):叫 、跑、咬人、吃、摇尾巴</p>
+<h3 id="理解self"><a href="#理解self" class="headerlink" title="理解self"></a>理解self</h3><p>所谓的self，可以理解为自己<br>可以把self当做C++中类里面的this指针一样理解，就是对象自身的意思<br>某个对象调用其方法时，python解释器会把这个对象作为第一个参数传递给self，所以开发者只需要传递后面的参数即可<br>如定义一个猫类：<br>后面的调用Tom，执行的时候self=tom<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class Cat:</span><br><span class="line">    <span class="comment">#如果函数定义在class里面 方法</span></span><br><span class="line">    <span class="comment">#定义在class外面  函数</span></span><br><span class="line">	<span class="comment">#tom.name='汤姆'</span></span><br><span class="line">    <span class="comment">#tom.age=65</span></span><br><span class="line">    def eat(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'猫在吃鱼...'</span>)</span><br><span class="line">    def drink(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"猫在喝可乐...."</span>)</span><br><span class="line">    def speak(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'%s的年龄是：%d'</span>%(self.name,self.age)) <span class="comment">#this.name</span></span><br><span class="line"><span class="comment">#class类 概念</span></span><br><span class="line"><span class="comment">#概念-实物（对象）    </span></span><br><span class="line"><span class="comment"># 创建一个对象</span></span><br><span class="line">tom=Cat()</span><br><span class="line">tom.eat()</span><br><span class="line">tom.drink()</span><br><span class="line">tom.name=<span class="string">'汤姆'</span></span><br><span class="line">tom.age=65</span><br><span class="line">tom.speak()</span><br><span class="line"></span><br><span class="line">sanqian=Cat()</span><br><span class="line">sanqian.name=<span class="string">'三千'</span></span><br><span class="line">sanqian.age=3</span><br><span class="line">sanqian.speak()</span><br></pre></td></tr></table></figure></p>
+<h3 id="init和str"><a href="#init和str" class="headerlink" title="init和str"></a><strong>init</strong>和<strong>str</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Cat:</span><br><span class="line">    <span class="comment">#属性</span></span><br><span class="line">    <span class="comment">#初始化方法</span></span><br><span class="line">    def __init__(self,new_name,new_age):</span><br><span class="line">        self.name=new_name</span><br><span class="line">        self.age=new_age</span><br><span class="line"></span><br><span class="line">    <span class="comment">#获取对象的描述信息。</span></span><br><span class="line">    def __str__(self):</span><br><span class="line">        <span class="built_in">return</span> <span class="string">'%s的年龄是：%d'</span>%(self.name,self.age)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#方法</span></span><br><span class="line">    def eat(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'猫在吃鱼...'</span>)</span><br><span class="line">    def drink(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"猫在喝可乐...."</span>)</span><br><span class="line"></span><br><span class="line">tom=Cat(<span class="string">'Tom'</span>,20)</span><br><span class="line"><span class="built_in">print</span>(tom)</span><br><span class="line"></span><br><span class="line">sanqian=Cat(<span class="string">'三千'</span>,3)</span><br><span class="line"><span class="built_in">print</span>(sanqian)</span><br><span class="line"><span class="comment">#Tom的年龄是：20</span></span><br><span class="line"><span class="comment">#三千的年龄是：3</span></span><br></pre></td></tr></table></figure>
+<p>总结<br>在python中方法名如果是<strong>xxxx</strong>()的，那么就有特殊的功能，因此叫做“魔法”方法<br>当使用print输出对象的时候，只要自己定义了<strong>str</strong>(self)方法，那么就会打印从在这个方法中return的数据</p>
+<p>全局变量，函数和属性，方法的联系和区别<br>总结：<br>相同点：原来共享数据用的全局变量，现在用的是属性；<br>不同：全局变量改变，各个函数中的值都会改变；属性改变不会影响其他对象中的值</p>
+<p>函数：相当于把一些独立的功能封装起来了；<br>对象：把一些函数的功能和一些全局变量的功能又封装在一起了</p>
+<p>全局变量原来怎么用，现在属性就怎么用，不过加上一个self</p>
+<h3 id="烤地瓜案例"><a href="#烤地瓜案例" class="headerlink" title="烤地瓜案例"></a>烤地瓜案例</h3><p>1、分析“烤地瓜”的属性和方法<br>示例属性如下:<br>cookedLevel : 这是数字；0~3表示还是生的，超过3表示半生不熟，超过5表示已经烤好了，超过8表示已经烤成木炭了！我们的地瓜开始时时生的<br>cookedString : 这是字符串；描述地瓜的生熟程度<br>condiments : 这是地瓜的配料列表，比如番茄酱、芥末酱等<br>示例方法如下:<br>cook() : 把地瓜烤一段时间<br>addCondiments() : 给地瓜添加配料<br><strong>init</strong>() : 设置默认的属性<br><strong>str</strong>() : 让print的结果看起来更好一些<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Potato:</span><br><span class="line">    def __init__(self):</span><br><span class="line">       self.cookedString=<span class="string">'生的'</span></span><br><span class="line">       self.condiments=[]</span><br><span class="line">       self.cookedLevel=0</span><br><span class="line">    def __str__(self):</span><br><span class="line">        <span class="built_in">return</span> <span class="string">'地瓜烤了：&#123;&#125;，地瓜状态:&#123;&#125;,加的佐料：&#123;&#125;'</span>.format(self.cookedLevel,self.cookedString,self.condiments)</span><br><span class="line">    def cook(self,cooktime):</span><br><span class="line">        self.cookedLevel+=cooktime</span><br><span class="line">        <span class="keyword">if</span> self.cookedLevel&gt;0 and self.cookedLevel&lt;=3:</span><br><span class="line">            self.cookedString=<span class="string">'生的'</span></span><br><span class="line">        <span class="keyword">elif</span> self.cookedLevel&gt;3 and self.cookedLevel&lt;=5:</span><br><span class="line">            self.cookedString=<span class="string">'半生不熟'</span></span><br><span class="line">        <span class="keyword">elif</span> self.cookedLevel&gt;5 and self.cookedLevel&lt;=8:</span><br><span class="line">            self.cookedString=<span class="string">'烤好了'</span></span><br><span class="line">        <span class="keyword">elif</span> self.cookedLevel&gt;8:</span><br><span class="line">            self.cookedString=<span class="string">'烤成木炭了'</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'出现异常'</span>)</span><br><span class="line">    def add_condiments(self,condiment):</span><br><span class="line">        self.condiments.append(condiment)</span><br><span class="line">dd=Potato()</span><br><span class="line">dd.cook(2)</span><br><span class="line">dd.add_condiments(<span class="string">'番茄酱'</span>)</span><br><span class="line"><span class="built_in">print</span>(dd)</span><br><span class="line">dd.cook(2)</span><br><span class="line">dd.add_condiments(<span class="string">'孜然'</span>)</span><br><span class="line"><span class="built_in">print</span>(dd)</span><br></pre></td></tr></table></figure></p>
+<h3 id="类与类的调用"><a href="#类与类的调用" class="headerlink" title="类与类的调用"></a>类与类的调用</h3><p>两种方法，第一种方法是参数为另一个类的名字，引入另一个类的全部变量，在自己的类中做处理。<br>第二种时参数写另一类中需要用到的参数如下面例子中的（bed.area）<br>例子：<br>买家具<br>房子（大小，户型，位置）-装修-买家具<br>买家具，床，类型，大小<br>原面积：128  剩下面积：124<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">class Home:</span><br><span class="line">    def __init__(self,new_area,new_info,new_add):</span><br><span class="line">        self.area=new_area</span><br><span class="line">        self.info=new_info</span><br><span class="line">        self.add=new_add</span><br><span class="line">        self.rest_area=new_area</span><br><span class="line">    def __str__(self):</span><br><span class="line">        <span class="built_in">return</span> <span class="string">'房子的面积是：%s,剩余面积是:%s,户型是：%s,地址是：%s'</span>%(self.area,self.rest_area,self.info,self.add)</span><br><span class="line">    def rest(self,mj):</span><br><span class="line">        <span class="comment">#第一种方法</span></span><br><span class="line">        self.rest_area=int(self.area)-int(mj)</span><br><span class="line">        <span class="comment">#第二种方法</span></span><br><span class="line">        self.rest_area=int(self.area)-int(mj.area) </span><br><span class="line">       </span><br><span class="line">    </span><br><span class="line">fangzi=Home(<span class="string">'128'</span>,<span class="string">'三室一厅'</span>,<span class="string">'郑州市'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class Bed:</span><br><span class="line">    def __init__(self,new_name,new_area):</span><br><span class="line">        self.name=new_name</span><br><span class="line">        self.area=new_area</span><br><span class="line">    def __str__(self):</span><br><span class="line">        <span class="built_in">return</span> <span class="string">'%s的面积是：%d'</span>%(self.name,self.area)</span><br><span class="line"></span><br><span class="line">fangzi=Home(<span class="string">'128'</span>,<span class="string">'三室一厅'</span>,<span class="string">'郑州市'</span>)</span><br><span class="line"><span class="built_in">print</span>(fangzi)</span><br><span class="line">bed=Bed(<span class="string">'床'</span>,4)</span><br><span class="line"><span class="built_in">print</span>(bed)</span><br><span class="line"><span class="comment">#方法一</span></span><br><span class="line">fangzi.rest(bed.area)</span><br><span class="line"><span class="built_in">print</span>(fangzi)</span><br><span class="line"><span class="comment">#方法二</span></span><br><span class="line">fangzi.rest(bed)</span><br><span class="line"><span class="built_in">print</span>(fangzi)</span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">房子的面积是：128,剩余面积是:128,户型是</span></span><br><span class="line"><span class="string">：三室一厅,地址是：郑州市</span></span><br><span class="line"><span class="string">床的面积是：4</span></span><br><span class="line"><span class="string">房子的面积是：128,剩余面积是:124,户型是</span></span><br><span class="line"><span class="string">：三室一厅,地址是：郑州市</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/python-9(2)/" class="archive-article-date">
-  	<time datetime="2018-07-26T09:30:15.632Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/python-9(2)/">python基础九（二）——函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,364 +233,127 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/10/python17/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/python-09/" class="archive-article-date">
-  	<time datetime="2018-07-26T08:46:43.719Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/08/10/python-18/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          python基础十七————面向对象(二)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/08/06/python-16/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python基础十六————Python异常与调试</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/python-09/">python基础九（一）——函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#面向过程与面向对象"><span class="toc-number">1.</span> <span class="toc-text">面向过程与面向对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类和对象"><span class="toc-number">2.</span> <span class="toc-text">类和对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#类的构成"><span class="toc-number">2.1.</span> <span class="toc-text">类的构成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#理解self"><span class="toc-number">2.2.</span> <span class="toc-text">理解self</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#init和str"><span class="toc-number">2.3.</span> <span class="toc-text">init和str</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#烤地瓜案例"><span class="toc-number">2.4.</span> <span class="toc-text">烤地瓜案例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类与类的调用"><span class="toc-number">2.5.</span> <span class="toc-text">类与类的调用</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/python-08(2)/" class="archive-article-date">
-  	<time datetime="2018-07-23T04:39:51.181Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/python-08(2)/">python基础8（二）——元组，字典和集合相关操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/python-08/" class="archive-article-date">
-  	<time datetime="2018-07-23T03:47:52.036Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/python-08/">Python基础8（一）——元组，字典和集合相关操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-07/" class="archive-article-date">
-  	<time datetime="2018-07-21T11:36:37.955Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-07/">python基础7——Python数学和列表操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-06/" class="archive-article-date">
-  	<time datetime="2018-07-21T10:59:12.016Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-06/">python基础6——Python字符串操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python05/" class="archive-article-date">
-  	<time datetime="2018-07-21T10:05:58.333Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python05/">python基础5——Python高级特性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-04/" class="archive-article-date">
-  	<time datetime="2018-07-21T07:42:15.741Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-04/">Python基础4——流程控制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-03/" class="archive-article-date">
-  	<time datetime="2018-07-21T06:40:58.128Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-03/">Python基础3——运算和运算符</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/20/python02/" class="archive-article-date">
-  	<time datetime="2018-07-20T05:08:33.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/20/python02/">python基础2——数据类型转换</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/calm/">&laquo; Prev</a><a class="page-number" href="/tags/calm/">1</a><span class="page-number current">2</span><a class="page-number" href="/tags/calm/page/3/">3</a><a class="extend next" rel="next" href="/tags/calm/page/3/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -572,9 +377,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

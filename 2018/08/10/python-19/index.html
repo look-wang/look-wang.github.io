@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: calm | 好好学习，天天向上</title>
+  <title>python基础十七————面向对象(二) | 好好学习，天天向上</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="好好学习，天天向上">
-<meta property="og:url" content="http://yoursite.com/tags/calm/page/2/index.html">
+  <meta name="description" content="面向对象三大特征：继承、多态、封装">
+<meta name="keywords" content="calm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础十七————面向对象(二)">
+<meta property="og:url" content="http://yoursite.com/2018/08/10/python-19/index.html">
 <meta property="og:site_name" content="好好学习，天天向上">
+<meta property="og:description" content="面向对象三大特征：继承、多态、封装">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-10T10:46:46.995Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="好好学习，天天向上">
+<meta name="twitter:title" content="python基础十七————面向对象(二)">
+<meta name="twitter:description" content="面向对象三大特征：继承、多态、封装">
   
     <link rel="alternative" href="/atom.xml" title="好好学习，天天向上" type="application/atom+xml">
   
@@ -150,36 +155,84 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-python-19" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python基础十七————面向对象(二)
+    </h1>
+  
+
+        
+        <a href="/2018/08/10/python-19/" class="archive-article-date">
+  	<time datetime="2018-08-10T10:47:47.200Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>面向对象三大特征：继承、多态、封装<br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line"><span class="comment">## 继承</span></span><br><span class="line">继承是为代码重用而设计的，当我们设计一个新类时，为了代码重用可以继承一个已设计好的类。在继承关系中，原来设计好的类称为父类，新设计的类称为子类。</span><br><span class="line">子类继承父类时用class子类名（父类名）来表示。子类能继承父类的所有公有成员。在需要的时候，在子类中可通过super()来调用父类的构造函数，也可通过父类名来调用父类的构造函数。</span><br><span class="line">Python支持类的单继承，同时也支持多继承，其派生类定义如下：</span><br><span class="line">``` bash</span><br><span class="line">class son(father1,father2,father3)</span><br></pre></td></tr></table></figure></p>
+<p>请注意基类的排列顺序，当子类调用自身没有定义的方法，也并没有指定具体的基类名称时，python会从左到右依次查找继承的基类中是否包含该方法，直到找到就停止，否则报错。</p>
+<p>当然子类也可以添加自己新的属性或者在自己这里重新定义这种属性(不会影响到父类)，需要注意的是，一旦重新定义了自己的属性且与父类重名，那么调用新增的属性时，就以自己为准了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#基础类 Animal  动物-狗类-哈士奇      小学-初中-高中</span></span><br><span class="line">class Animal:</span><br><span class="line">    <span class="built_in">type</span>=<span class="string">'活的'</span></span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.eye=<span class="string">'两个'</span></span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Animal会跑'</span>)</span><br><span class="line"><span class="comment">#dog子类   cat子类</span></span><br><span class="line">class Dog(Animal):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'dog会跑'</span>)</span><br><span class="line">    def eat(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'狗会吃肉'</span>)</span><br><span class="line"></span><br><span class="line">class Cat(Animal):</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'cat会跑'</span>)</span><br><span class="line"></span><br><span class="line">class hashiqi(Dog):</span><br><span class="line">    def demo(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'拆家'</span>)</span><br><span class="line"><span class="comment">#对象1</span></span><br><span class="line"><span class="comment"># dog=Dog()</span></span><br><span class="line"><span class="comment"># dog.run()</span></span><br><span class="line"><span class="comment"># dog.eat()</span></span><br><span class="line"><span class="comment"># print(dog.type)</span></span><br><span class="line"><span class="comment"># print(dog.eye)</span></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">dog会跑</span></span><br><span class="line"><span class="string">狗会吃肉</span></span><br><span class="line"><span class="string">活的</span></span><br><span class="line"><span class="string">两个</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line"><span class="comment">#对象2</span></span><br><span class="line">cat=Cat()</span><br><span class="line">cat.run()</span><br><span class="line"><span class="comment">#cat会跑</span></span><br><span class="line"></span><br><span class="line">dog_h=hashiqi()</span><br><span class="line"><span class="built_in">print</span>(dog_h.type)</span><br><span class="line">dog_h.eat()</span><br><span class="line"><span class="comment">#活的</span></span><br><span class="line"><span class="comment">#狗会吃肉</span></span><br></pre></td></tr></table></figure>
+<p>构造函数的继承，通过在自己的<strong>init</strong>方法中写父类名.<strong>init</strong>(self, , )，继承父类的构造方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#继承类的构造方法</span></span><br><span class="line"><span class="comment">#父类.__init__(self,name,age)</span></span><br><span class="line">class Person():</span><br><span class="line">    def __init__(self,name,age):</span><br><span class="line">        self.name=name</span><br><span class="line">        self.age=age</span><br><span class="line">        self.weight=<span class="string">'50kg'</span></span><br><span class="line">    def speak(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'这个人会说....'</span>)</span><br><span class="line"></span><br><span class="line">class Chinese(Person):</span><br><span class="line">    def __init__(self,name,age,language): <span class="comment">#Chinese Person</span></span><br><span class="line">        Person.__init__(self,name,age)</span><br><span class="line">        self.language=language</span><br><span class="line">    def run(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'我会走路'</span>)</span><br><span class="line"></span><br><span class="line">c=Chinese(<span class="string">'马冬梅'</span>,35,<span class="string">'河南'</span>)</span><br><span class="line">c.run()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">'我叫%s，今年%d岁，我会说%s话'</span>%(c.name,c.age,c.language))</span><br><span class="line"><span class="comment">#我会走路</span></span><br><span class="line"><span class="comment">#我叫马冬梅，今年35岁，我会说河南话</span></span><br></pre></td></tr></table></figure>
+<h3 id="多继承"><a href="#多继承" class="headerlink" title="多继承"></a>多继承</h3><p><strong>mro</strong>获取执行的先后顺序<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#单继承  多继承</span></span><br><span class="line">class Father():</span><br><span class="line">    def test1(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Father---才华---test1'</span>)</span><br><span class="line">    def test2(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Father----test2'</span>)</span><br><span class="line"></span><br><span class="line">class Mother():</span><br><span class="line">    def demo1(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Mother---美貌---demo1'</span>)</span><br><span class="line">    def demo2(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'Mother----demo2'</span>)</span><br><span class="line"></span><br><span class="line">class Daughter(Mother,Father):</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line">d=Daughter()</span><br><span class="line">d.test1()</span><br><span class="line">d.demo1()</span><br><span class="line"><span class="comment">#Father---才华---test1</span></span><br><span class="line"><span class="comment">#Mother---美貌---demo1</span></span><br><span class="line"><span class="built_in">print</span>(Daughter.__mro__)</span><br><span class="line"><span class="comment">#(&lt;class '__main__.Daughter'&gt;, &lt;class '__main__.Mother'&gt;, &lt;class '__main__.Father'&gt;, &lt;class 'object'&gt;)</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="继承与抽象"><a href="#继承与抽象" class="headerlink" title="继承与抽象"></a>继承与抽象</h3><p>抽象即抽取同一类事物类似的部分<br>抽象分为两个层次<br>将奥巴马和梅西这两对象比较像的部分抽取成类<br>将人,猪,狗这三个类比较像的部分抽取成父类<br>抽象最主要的作用是划分类别(可以隔离关注点，降低复杂度)</p>
+<p>继承：是基于抽象的结果，通过编程语言去实现它，肯定是先经历抽象这个过程，才能通过继承的方式去表达出抽象的结构<br>抽象只是分析和设计的过程中，一个动作或者说一种技巧，通过抽象可以得到类</p>
+<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p>概念：隐藏对象的属性和实现细节，仅对外提供公共访问方式<br>优势：<br>1 将变化隔离<br>2 便于使用<br>3 提高复用性<br>4 提高安全性<br>封装原则：<br>1 将不需要对外提供的内容都隐藏起来<br>2 把属性都隐藏，提供公共方法对其访问</p>
+<p>私有变量和私有方法：<br>在python中用双下划开头的方式将属性隐藏来(设置成私有的)<br>函数和属性装到了一个非全局的命名空间–封装</p>
+<p>私有变量,错误示例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class A:</span><br><span class="line">    __N=<span class="string">'aaa'</span></span><br><span class="line"><span class="built_in">print</span>(A.__N)</span><br><span class="line"><span class="comment">#报错，私有变量不能直接访问</span></span><br></pre></td></tr></table></figure></p>
+<p>定义一个私有的名字:就是在私有的名字前面加两条下划线__N = ‘aaa’,所谓私有，就是不能在类的外面去引用它</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class A:</span><br><span class="line">    __N=<span class="string">'aaa'</span></span><br><span class="line">    def func(self):</span><br><span class="line">        <span class="built_in">print</span>(A.__N)<span class="comment">#在内部可以访问</span></span><br><span class="line">a=A()</span><br><span class="line">a.func()</span><br><span class="line"><span class="comment">#aaa</span></span><br><span class="line"><span class="built_in">print</span>(A.__dict__)</span><br><span class="line"><span class="comment">#&#123;'__module__': '__main__', '_A__N': 'aaa', 'func': &lt;function #A.func at 0x00000000027FBAE8&gt;, '__dict__': &lt;attribute '__dict__' of 'A' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'A' objects&gt;,'__doc__': None&#125;</span></span><br></pre></td></tr></table></figure>
+<p>通过观察结果，可以看到类属性多了一个‘_A__N’:‘aaa’的属性，其实这个<em>A__N 就是<strong>N,这是python解释器自动做的一个变形操作。<br>类中所有双下划线开头的名称如：</strong>x都会自动变形成:</em>类名__x的形式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class A:</span><br><span class="line">    __N=0</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.__X=10</span><br><span class="line">    def __foo(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'from A'</span>)</span><br><span class="line">    def bar(self):</span><br><span class="line">        self.__foo()</span><br><span class="line"><span class="built_in">print</span>(A._A__N)</span><br><span class="line"></span><br><span class="line">a=A()</span><br><span class="line"><span class="built_in">print</span>(a._A__X)</span><br><span class="line">a.bar()</span><br><span class="line"><span class="comment">#0</span></span><br><span class="line"><span class="comment">#10</span></span><br><span class="line"><span class="comment">#from A</span></span><br></pre></td></tr></table></figure>
+<p>私有属性<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class B:</span><br><span class="line">    def __init__(self,name):</span><br><span class="line">        self.__name=name</span><br><span class="line">    def func(self): <span class="comment">#外部调用func来获取私有属性</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'in func &#123;&#125;'</span>.format(self.__name))</span><br><span class="line">b=B(<span class="string">'Sam'</span>)</span><br><span class="line">b.func()</span><br><span class="line"><span class="comment">#in func Sam</span></span><br></pre></td></tr></table></figure></p>
+<p>私有方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class C:</span><br><span class="line">    def __wahaha(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'wahaha'</span>)</span><br><span class="line">    def ACD(self):<span class="comment">#外部调用ACD执行私有方法</span></span><br><span class="line">        self.__wahaha()</span><br><span class="line">c=C()</span><br><span class="line">c.ACD()</span><br><span class="line"><span class="comment">#wahaha</span></span><br></pre></td></tr></table></figure></p>
+<p>在类中，静态属性，方法，对象属性都可以变成私有的，只需要在这些名字之前加上<strong><br>下面代码中</strong>name不是私有变量<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class F:</span><br><span class="line">    pass</span><br><span class="line">F.__name=<span class="string">'Sam'</span></span><br><span class="line"><span class="built_in">print</span>(F.__name)</span><br><span class="line"><span class="built_in">print</span>(F.__dict__)</span><br><span class="line"><span class="comment">#Sam</span></span><br><span class="line"><span class="comment">#&#123;'__module__': '__main__', '__dict__': &lt;attribute '__dict__' of #'F' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'F' objects&gt;, '__doc__': None, '__name': 'Sam'&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>可以很明确的看到__name并没有发生变形，变形只在类的内部发生，在类的外面创建的双下划线的属性，并不是私有属性</p>
+<p>下面这段代码会报错，因为__func为D的私有方法，私有方面没在类中获取，不可以被继承调用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class D:</span><br><span class="line">    def __func(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'in func'</span>)</span><br><span class="line">class E(D):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.__func()</span><br><span class="line">e=E()</span><br></pre></td></tr></table></figure></p>
+<p>正确写法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class D:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.__func()</span><br><span class="line">    def __func(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'in D'</span>)</span><br><span class="line">class E(D):</span><br><span class="line">    def __func(self):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'in E'</span>)</span><br><span class="line">e=E()</span><br><span class="line"><span class="comment">#in D</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="property方法"><a href="#property方法" class="headerlink" title="property方法"></a>property方法</h3><p>作用：将一个方法伪装成一个属性<br>1 并不会让你的代码有什么逻辑上的提高<br>2 只是从调用者的角度上换了一种方式，使之看起来更合理</p>
+<p>property将方法伪装成属性，在调用时不用加（）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    def __init__(self,name):</span><br><span class="line">        self.__name=name</span><br><span class="line">    @property</span><br><span class="line">    def name(self):</span><br><span class="line">        <span class="built_in">return</span> self.__name</span><br><span class="line">p=Person(<span class="string">'lucy'</span>)</span><br><span class="line"><span class="built_in">print</span>(p.name)</span><br><span class="line"><span class="comment">#lucy</span></span><br></pre></td></tr></table></figure></p>
+<p>@func.setter –&gt; func 对伪装的属性进行赋值的时候调用这个方法，一般情况下用来修改<br>示例：对方法伪装成的属性进行修改<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    def __init__(self,name):</span><br><span class="line">        self.__name=name</span><br><span class="line">    @property</span><br><span class="line">    def name(self):</span><br><span class="line">        <span class="built_in">return</span> self.__name</span><br><span class="line">    @name.setter</span><br><span class="line">    def name(self,newname):</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(newname) is str:</span><br><span class="line">            self.__name=newname</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'你提供的姓名数据类型不合法'</span>)</span><br><span class="line">p=Person(<span class="string">'lucy'</span>)</span><br><span class="line"><span class="built_in">print</span>(p.name)</span><br><span class="line"><span class="comment">#lucy</span></span><br><span class="line">p.name=<span class="string">'jack'</span></span><br><span class="line"><span class="built_in">print</span>(p.name)</span><br><span class="line"><span class="comment">#jack    #修改成功</span></span><br></pre></td></tr></table></figure></p>
+<p>@func.deleter –&gt; func 在执行del 对象.func的时候调用这个方法， 一般情况下用来做删除（基本不用）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    def __init__(self,name):</span><br><span class="line">        self.__name=name</span><br><span class="line">    @property</span><br><span class="line">    def name(self):</span><br><span class="line">        <span class="built_in">return</span> self.__name</span><br><span class="line">    @name.deleter</span><br><span class="line">    def name(self):</span><br><span class="line">        del self.__name    </span><br><span class="line">p=Person(<span class="string">'lucy'</span>)</span><br><span class="line"><span class="built_in">print</span>(p.name)</span><br><span class="line">del p.name  <span class="comment">#类中的del与类外的del必须都用，才能删除</span></span><br><span class="line"><span class="built_in">print</span>(p.name)</span><br><span class="line"><span class="comment">#报错，因为name已经被删除了</span></span><br></pre></td></tr></table></figure></p>
+<p>将一些需要随着一部分属性的变化而变化的值的计算过程 从方法伪装成属性<br>将私有的属性保护起来，让修改的部分增加一些约束，来提高程序的稳定性和数据的安全性<br>示例：浏览商品：原价，折扣，当我要查看价格的时候，肯定只看折后的价格<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Goods:</span><br><span class="line">    def __init__(self,name,origin_price,discount):</span><br><span class="line">        self.name=name</span><br><span class="line">        self.__price=origin_price</span><br><span class="line">        self.__discount=discount</span><br><span class="line">    @property</span><br><span class="line">    def price(self):</span><br><span class="line">        <span class="built_in">return</span> self.__price*self.__discount</span><br><span class="line">    @price.setter</span><br><span class="line">    def price(self,newprice):</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(newprice) is int or <span class="built_in">type</span>(newprice) is <span class="built_in">float</span>:</span><br><span class="line">            self.__price=newprice</span><br><span class="line">apple=Goods(<span class="string">'apple'</span>,5,0.8)</span><br><span class="line"><span class="built_in">print</span>(apple.price)<span class="comment">#打折后的价格</span></span><br><span class="line">apple.price=10 <span class="comment">#苹果价格上涨</span></span><br><span class="line"><span class="built_in">print</span>(apple.price) <span class="comment">#打折后的价格</span></span><br></pre></td></tr></table></figure></p>
+<p>待续。。。。。。。。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">``` bash</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">``` bash</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/python-9(2)/" class="archive-article-date">
-  	<time datetime="2018-07-26T09:30:15.632Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/python-9(2)/">python基础九（二）——函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,364 +244,118 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/10/python-19/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/python-09/" class="archive-article-date">
-  	<time datetime="2018-07-26T08:46:43.719Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/10/python-18/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python基础十七————面向对象(二)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/python-09/">python基础九（一）——函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#多继承"><span class="toc-number">1.</span> <span class="toc-text">多继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#继承与抽象"><span class="toc-number">2.</span> <span class="toc-text">继承与抽象</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#封装"><span class="toc-number"></span> <span class="toc-text">封装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#property方法"><span class="toc-number">1.</span> <span class="toc-text">property方法</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/python-08(2)/" class="archive-article-date">
-  	<time datetime="2018-07-23T04:39:51.181Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/python-08(2)/">python基础8（二）——元组，字典和集合相关操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/python-08/" class="archive-article-date">
-  	<time datetime="2018-07-23T03:47:52.036Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/python-08/">Python基础8（一）——元组，字典和集合相关操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-07/" class="archive-article-date">
-  	<time datetime="2018-07-21T11:36:37.955Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-07/">python基础7——Python数学和列表操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-06/" class="archive-article-date">
-  	<time datetime="2018-07-21T10:59:12.016Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-06/">python基础6——Python字符串操作</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python05/" class="archive-article-date">
-  	<time datetime="2018-07-21T10:05:58.333Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python05/">python基础5——Python高级特性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-04/" class="archive-article-date">
-  	<time datetime="2018-07-21T07:42:15.741Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-04/">Python基础4——流程控制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/21/python-03/" class="archive-article-date">
-  	<time datetime="2018-07-21T06:40:58.128Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/21/python-03/">Python基础3——运算和运算符</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/20/python02/" class="archive-article-date">
-  	<time datetime="2018-07-20T05:08:33.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/20/python02/">python基础2——数据类型转换</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/calm/">&laquo; Prev</a><a class="page-number" href="/tags/calm/">1</a><span class="page-number current">2</span><a class="page-number" href="/tags/calm/page/3/">3</a><a class="extend next" rel="next" href="/tags/calm/page/3/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -572,9 +379,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
