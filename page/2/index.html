@@ -163,29 +163,29 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-python-14" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Python_01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/03/python-14/">python基础十四————日期时间操作</a>
+      <a class="article-title" href="/2018/10/16/Python_01/">Python基础1-数据类型</a>
     </h1>
   
 
         
-        <a href="/2018/08/03/python-14/" class="archive-article-date">
-  	<time datetime="2018-08-03T13:00:00.792Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-03</time>
+        <a href="/2018/10/16/Python_01/" class="archive-article-date">
+  	<time datetime="2018-10-16T11:14:33.639Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="time"><a href="#time" class="headerlink" title="time"></a>time</h2><p>1.时间戳(timestamp)的方式：通常来说，时间戳表示的是从1970年1月１日开始按秒计算的偏移量(time.gmtime(0))此模块中的函数无法处理1970纪元年以前的时间或太遥远的未来(处理极限取决于C函数库，对于32位系统而言，是2038年)<br>2.UTC(Coordinated Universal Time,世界协调时)也叫格林威治天文时间，是世界标准时间．在我国为UTC+8<br>3.DST(Daylight Saving Time)即夏令时<br>4.时间元组：用于表示时间格式的元组数据而已，他是time模块操作时间的主要方式<br>
+        <h2 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a>python基础</h2><p>1.1<br>开发工具：<br>IDLE：Python内置IDE (随python安装包提供)<br>Vscode：图形化界面，比之前的好看<br>PyCharm：有调试、语法高亮、Project管理、代码跳转、智能提示、自动完成、单元测试、版本控制。此外，该IDE提供了一些高级功能，以用于支持Django框架下的专业Web开发。<br>Vim: 最新7.3版编译时可以加入python支持，提供python代码自动提示支持<br>Visual Studio：仅适用Windows，已停止维护，功能较差<br>Sublime、Notepad++、EditPlus、UltraEdit等<br>
         
-          <a class="article-more-a" href="/2018/08/03/python-14/#more">more >></a>
+          <a class="article-more-a" href="/2018/10/16/Python_01/#more">more >></a>
         
       
 
@@ -209,7 +209,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/03/python-14/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/10/16/Python_01/">展开全文 >></a>
         </p>
       
 
@@ -239,29 +239,30 @@
 
 
   
-    <article id="post-python-13" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-python17" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/02/python-13/">python基础十三————I/O文件操作</a>
+      <a class="article-title" href="/2018/10/16/python17/">python基础十七————面向对象(一)</a>
     </h1>
   
 
         
-        <a href="/2018/08/02/python-13/" class="archive-article-date">
-  	<time datetime="2018-08-02T10:55:07.595Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
+        <a href="/2018/10/16/python17/" class="archive-article-date">
+  	<time datetime="2018-10-16T11:14:33.627Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h2><p>协议：主机：文件：附加资源<br>http:// <a href="http://www.xinlanjian.com.cn/jczt/php/index.php" target="_blank" rel="noopener">http://www.xinlanjian.com.cn/jczt/php/index.php</a> ? uname=tina&amp;age=20<br>相对URL:<br>    Images/logo.gif<br>    ../css/demo.py<br>    ../../js/demo.js              ../../上上级目录<br>    ./admin/index.py              ./同级目录    ../ 上级目录<br>绝对URL:<br>    C:/appserv/www/image/logo.gif<br>    <a href="http://www.xinlanjian.com.cn/" target="_blank" rel="noopener">http://www.xinlanjian.com.cn/</a><br>    <a href="ftp://192.168.0.1/python/zuoye/11/test.txt" target="_blank" rel="noopener">ftp://192.168.0.1/python/zuoye/11/test.txt</a><br>
+        <h2 id="面向过程与面向对象"><a href="#面向过程与面向对象" class="headerlink" title="面向过程与面向对象"></a>面向过程与面向对象</h2><p>需要了解的定义性文字:<br>面向对象(object-oriented ;简称: OO) 至今还没有统一的概念 我这里把它定义为: 按人们 认识客观世界的系统思维方式,采用基于对象(实体) 的概念建立模型,模拟客观世界分析、设 计、实现软件的办法。</p>
+<p>面向对象编程(Object Oriented Programming-OOP) 是一种解决软件复用的设计和编程方法。 这种方法把软件系统中相近相似的操作逻辑和操作 应用数据、状态,以类的型式描述出来,以对象实例的形式在软件系统中复用,以达到提高软件开发效率的作用。<br>
         
-          <a class="article-more-a" href="/2018/08/02/python-13/#more">more >></a>
+          <a class="article-more-a" href="/2018/10/16/python17/#more">more >></a>
         
       
 
@@ -285,7 +286,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/02/python-13/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/10/16/python17/">展开全文 >></a>
         </p>
       
 
@@ -315,29 +316,29 @@
 
 
   
-    <article id="post-python-12" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-python05" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/02/python-12/">python基础十二————python内置文件操作</a>
+      <a class="article-title" href="/2018/10/16/python05/">python基础5——Python高级特性</a>
     </h1>
   
 
         
-        <a href="/2018/08/02/python-12/" class="archive-article-date">
-  	<time datetime="2018-08-02T07:59:02.726Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
+        <a href="/2018/10/16/python05/" class="archive-article-date">
+  	<time datetime="2018-10-16T11:14:33.504Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="什么是文件"><a href="#什么是文件" class="headerlink" title="什么是文件"></a>什么是文件</h2><p>文件是存储在外部介质上的数据集合，与文件名相关联。<br>按文件中的数据组织形式可以把文件分为两类：<br> 文本文件<br> 二进制文件<br>
+        <h2 id="列表生成式"><a href="#列表生成式" class="headerlink" title="列表生成式"></a>列表生成式</h2><p>列表生成式通常是结合range()函数一起使用的，所以在介绍列表生成式前，我们先介绍Python的内置函数range()的使用方法。<br>Python 的内置函数range() 函数可创建一个整数序列，一般和 for 循环连用。<br>语法格式： range(start,end[,step])。<br>start：起始下标（可选）。默认为0，例如range(5)等价于range(0，5)等价于[0,1,2,3,4]。<br>end：终止下标。例如range(0,5)等价于[0,1,2,3,4]，注意不包括终止下标5。<br>step：步长（可选）。默认为1，例如range(0,3,1)等价于range(0,3)；range(0,6,2)等价于[0,2,4,6]。<br>
         
-          <a class="article-more-a" href="/2018/08/02/python-12/#more">more >></a>
+          <a class="article-more-a" href="/2018/10/16/python05/#more">more >></a>
         
       
 
@@ -361,7 +362,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/02/python-12/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/10/16/python05/">展开全文 >></a>
         </p>
       
 
@@ -391,29 +392,29 @@
 
 
   
-    <article id="post-python-11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-python02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/27/python-11/">python基础十一——匿名函数，map函数，reduce函数，fliter函数</a>
+      <a class="article-title" href="/2018/10/16/python02/">python基础2——数据类型转换</a>
     </h1>
   
 
         
-        <a href="/2018/07/27/python-11/" class="archive-article-date">
-  	<time datetime="2018-07-27T12:30:45.266Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
+        <a href="/2018/10/16/python02/" class="archive-article-date">
+  	<time datetime="2018-10-16T11:14:33.484Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p>某些时候，我们定义的函数比较简单且复用性很低，可以无需显式的定义函数，将其定义为匿名函数更方便。<br>Python用lambda来创建匿名函数。<br>定义匿名函数的语法格式：<br>lambda arg1,arg2,…,argn: expression<br>
+        <p>数据类型转换分为两种：自动转换和强制转换<br>自动转换<br>    自动转换不需要人工干预<br>    自动类型转换多发生在运算或者判断过程中<br>    转换时向着更加精确的类型转换<br>强制转换<br>    根据程序需要，由程序员人为改变数据类型的方式就叫做强制转换。例：int()、float()、str()等等。<br>
         
-          <a class="article-more-a" href="/2018/07/27/python-11/#more">more >></a>
+          <a class="article-more-a" href="/2018/10/16/python02/#more">more >></a>
         
       
 
@@ -437,387 +438,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/27/python-11/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python-10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/27/python-10/">python基础十——嵌套函数 闭包 装饰器</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/27/python-10/" class="archive-article-date">
-  	<time datetime="2018-07-27T11:22:50.695Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="函数嵌套"><a href="#函数嵌套" class="headerlink" title="函数嵌套"></a>函数嵌套</h2><p>函数里面调用函数（其它函数）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">def da(x,y):</span><br><span class="line">    m=x <span class="keyword">if</span> x&gt;y <span class="keyword">else</span> y</span><br><span class="line">    <span class="built_in">return</span> m</span><br><span class="line"><span class="built_in">print</span>(da(5,3))</span><br><span class="line"></span><br><span class="line">def da2(a,b,c,d):</span><br><span class="line">    res1=da(a,b)</span><br><span class="line">    res2=da(res1,c) <span class="comment">#在函数da2里面调用了其它函数da()</span></span><br><span class="line">    res3=da(res2,d)</span><br><span class="line">    <span class="built_in">print</span>(res1)</span><br><span class="line">    <span class="built_in">print</span>(res2)</span><br><span class="line">    <span class="built_in">print</span>(res3)</span><br><span class="line">da2(23,-7,31,11)  <span class="comment">#23 31 31</span></span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2018/07/27/python-10/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/27/python-10/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ti-05" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/26/ti-05/">博客园</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/26/ti-05/" class="archive-article-date">
-  	<time datetime="2018-07-26T13:24:19.484Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="博客园"><a href="#博客园" class="headerlink" title="博客园"></a>博客园</h2><p>要求：<br> 欢迎来到博客园首页<br> 1:请登录<br> 2:请注册<br> 3:文章页面<br> 4:日记页面<br> 5:评论页面<br> 6:收藏页面<br> 7:注销<br> 8:退出程序<br>
-        
-          <a class="article-more-a" href="/2018/07/26/ti-05/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/26/ti-05/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ti-04" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/26/ti-04/">购物车功能</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/26/ti-04/" class="archive-article-date">
-  	<time datetime="2018-07-26T12:49:34.968Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="写一个购物车"><a href="#写一个购物车" class="headerlink" title="写一个购物车"></a>写一个购物车</h3><p>购物车<br>功能要求：<br>要求用户输入总资产，例如：2000<br>显示商品列表，让用户根据序号选择商品，加入购物车<br>购买，如果商品总额大于总资产，提示账户余额不足，否则，购买成功。<br>充值功能，删除功能，退出功能<br>
-        
-          <a class="article-more-a" href="/2018/07/26/ti-04/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/26/ti-04/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ti-03" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/26/ti-03/">省市级三级菜单</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/26/ti-03/" class="archive-article-date">
-  	<time datetime="2018-07-26T12:33:16.443Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="要求-打印省、市、县三级菜单-可返回上一级-可随时退出程序"><a href="#要求-打印省、市、县三级菜单-可返回上一级-可随时退出程序" class="headerlink" title="要求: 打印省、市、县三级菜单,可返回上一级,可随时退出程序"></a>要求: 打印省、市、县三级菜单,可返回上一级,可随时退出程序</h3>
-        
-          <a class="article-more-a" href="/2018/07/26/ti-03/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/26/ti-03/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ti-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/26/ti-2/">小型练习题</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/26/ti-2/" class="archive-article-date">
-  	<time datetime="2018-07-26T11:57:41.401Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1、写程序：模拟公司hr录入员工账号密码的程序。（10分）"><a href="#1、写程序：模拟公司hr录入员工账号密码的程序。（10分）" class="headerlink" title="1、写程序：模拟公司hr录入员工账号密码的程序。（10分）"></a>1、写程序：模拟公司hr录入员工账号密码的程序。（10分）</h3><p>   1)，员工的账号密码存储在这种数据类型中：<br>   user_list = [<br>     {‘username’:’barry’,’password’:’1234’},<br>     {‘username’:’alex’,’password’:’asdf’},<br>     ………<br>              ]<br>  2)非法字符模板：board = [‘共产党’,’毛主席’,’周恩来’]<br>  3)Hr输入用户名，密码（可持续输入，如果想终止程序，那就在输入用户名时输入Q或者q退出程序），在Hr输入用户名时，检测此用户名是否有board里面的非法字符，如果有非法字符，则将非法字符替换成同数量的*（如王二麻子替换成<em>**</em>），然后添加到user_list中，如果没有非法字符，则直接添加到user_list中，每次添加成功后，打印出刚添加的用户名，密码。<br>
-        
-          <a class="article-more-a" href="/2018/07/26/ti-2/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">fighting</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/26/ti-2/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/10/16/python02/">展开全文 >></a>
         </p>
       
 
@@ -854,13 +475,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/26/python-9(2)/">python基础九（二）——函数</a>
+      <a class="article-title" href="/2018/10/16/python-9(2)/">python基础九（二）——函数</a>
     </h1>
   
 
         
-        <a href="/2018/07/26/python-9(2)/" class="archive-article-date">
-  	<time datetime="2018-07-26T09:30:15.632Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
+        <a href="/2018/10/16/python-9(2)/" class="archive-article-date">
+  	<time datetime="2018-10-16T11:14:33.474Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
 </a>
         
       </header>
@@ -869,7 +490,7 @@
       
         <h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p>python 使用 lambda 来创建匿名函数。<br>lambda只是一个表达式，函数体比def简单很多。<br>lambda的主体是一个表达式，而不是一个代码块。仅仅能在lambda表达式中封装有限的逻辑进去。<br>lambda函数拥有自己的命名空间，且不能访问自有参数列表之外或全局命名空间里的参数。<br>虽然lambda函数看起来只能写一行，却不等同于C或C++的内联函数，后者的目的是调用小函数时不占用栈内存从而增加运行效率。<br>语法：<br>lambda [arg1 [,arg2,…..argn]]:expression<br>
         
-          <a class="article-more-a" href="/2018/07/26/python-9(2)/#more">more >></a>
+          <a class="article-more-a" href="/2018/10/16/python-9(2)/#more">more >></a>
         
       
 
@@ -893,7 +514,391 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/26/python-9(2)/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/10/16/python-9(2)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python-19" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/16/python-19/">python基础十七————面向对象(二)</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/16/python-19/" class="archive-article-date">
+  	<time datetime="2018-10-16T11:14:33.451Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>面向对象三大特征：继承、多态、封装<br>
+        
+          <a class="article-more-a" href="/2018/10/16/python-19/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/16/python-19/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python-18" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/16/python-18/">python基础十七————面向对象(二)</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/16/python-18/" class="archive-article-date">
+  	<time datetime="2018-10-16T11:14:33.415Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>私有属性，私有方法，构建函数，析构函数，运算符的重载，<strong>getitem</strong>，<strong>iter</strong>,<strong>next</strong>，迭代</p>
+<h2 id="私有属性与私有方法"><a href="#私有属性与私有方法" class="headerlink" title="私有属性与私有方法"></a>私有属性与私有方法</h2><h3 id="私有属性"><a href="#私有属性" class="headerlink" title="私有属性"></a>私有属性</h3><p>如果属性名以__（双下划线）开头则是私有属性，否则是公有属性。私有属性在类外不能直接访问。Python提供了访问私有属性的方式，可用于程序的测试和调试。<br>对象名._类名+私有成员名    </p>
+<p>私有属性：在类外不能直接访问<br>在类外通过object._classname__私有属性名称可访问<br>
+        
+          <a class="article-more-a" href="/2018/10/16/python-18/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/16/python-18/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python-16" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/16/python-16/">python基础十六————Python异常与调试</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/16/python-16/" class="archive-article-date">
+  	<time datetime="2018-10-16T11:14:33.281Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Python中的异常类"><a href="#Python中的异常类" class="headerlink" title="Python中的异常类"></a>Python中的异常类</h2><p>在这一节，我们将要面对异常，这是一种可以改变程序中控制流程的程序结构。<br>在Python中，异常会根据错误自动地被触发，也能由代码触发和捕获。<br>异常由四个相关语句进行处理，分别为：try、except、else和finally</p>
+<h3 id="什么是异常"><a href="#什么是异常" class="headerlink" title="什么是异常"></a>什么是异常</h3><p>当Python检测到一个错误时，解释器就会指出当前流已无法继续执行下去，这时候就出现了异常。<br>异常是指因为程序出错而在正常控制流以外采取的行为。异常即是一个事件，该事件会在程序执行过程中发生，影响了程序的正常执行。</p>
+        
+          <a class="article-more-a" href="/2018/10/16/python-16/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/16/python-16/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python-15" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/16/python-15/">python基础十五————模块与包</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/16/python-15/" class="archive-article-date">
+  	<time datetime="2018-10-16T11:14:33.271Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是模块"><a href="#什么是模块" class="headerlink" title="什么是模块"></a>什么是模块</h2><p>模块是包括 Python 定义和声明的文件。<br>文件名就是模块名加上 .py 后缀。<br>模块的模块名（做为一个字符串）可以由全局变量 <strong>name</strong> 得到。</p>
+<h2 id="为什么使用模块"><a href="#为什么使用模块" class="headerlink" title="为什么使用模块"></a>为什么使用模块</h2><p>使用场景：<br>如果退出python解释器然后重新进入，那么你之前定义的函数或者变量都将丢失，因此我们通常将程序写到文件中以便永久保存下来，需要时就通过python test.py方式去执行，此时test.py被称为脚本script<br>
+        
+          <a class="article-more-a" href="/2018/10/16/python-15/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/16/python-15/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python-14" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/16/python-14/">python基础十四————日期时间操作</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/16/python-14/" class="archive-article-date">
+  	<time datetime="2018-10-16T11:14:33.251Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="time"><a href="#time" class="headerlink" title="time"></a>time</h2><p>1.时间戳(timestamp)的方式：通常来说，时间戳表示的是从1970年1月１日开始按秒计算的偏移量(time.gmtime(0))此模块中的函数无法处理1970纪元年以前的时间或太遥远的未来(处理极限取决于C函数库，对于32位系统而言，是2038年)<br>2.UTC(Coordinated Universal Time,世界协调时)也叫格林威治天文时间，是世界标准时间．在我国为UTC+8<br>3.DST(Daylight Saving Time)即夏令时<br>4.时间元组：用于表示时间格式的元组数据而已，他是time模块操作时间的主要方式<br>
+        
+          <a class="article-more-a" href="/2018/10/16/python-14/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">calm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/16/python-14/">展开全文 >></a>
         </p>
       
 
@@ -1024,6 +1029,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">calm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
               <li class="article-tag-list-item">
