@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-16T12:25:13.923Z</updated>
+  <updated>2018-10-16T12:30:09.261Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,16 +21,15 @@
     <link href="http://yoursite.com/2018/10/16/boke/"/>
     <id>http://yoursite.com/2018/10/16/boke/</id>
     <published>2018-10-16T12:06:02.402Z</published>
-    <updated>2018-10-16T12:25:13.923Z</updated>
+    <updated>2018-10-16T12:30:09.261Z</updated>
     
-    <content type="html"><![CDATA[<p>###在安装好Node.js和git的前提下</p><h3 id="1-将你原来电脑上经配置好并生成的hexo目录拷到你的新电脑上"><a href="#1-将你原来电脑上经配置好并生成的hexo目录拷到你的新电脑上" class="headerlink" title="1.将你原来电脑上经配置好并生成的hexo目录拷到你的新电脑上"></a>1.将你原来电脑上经配置好并生成的hexo目录拷到你的新电脑上</h3><h3 id="2-在git-bush中进入hexo目录中，执行以下命令"><a href="#2-在git-bush中进入hexo目录中，执行以下命令" class="headerlink" title="2.在git bush中进入hexo目录中，执行以下命令"></a>2.在git bush中进入hexo目录中，执行以下命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装hexo框架</span></span><br><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure><h3 id="3-进入blog目录下执行以下命令"><a href="#3-进入blog目录下执行以下命令" class="headerlink" title="3.进入blog目录下执行以下命令"></a>3.进入blog目录下执行以下命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进行Hexo的模板安装</span></span><br><span class="line">npm install </span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure><h3 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">./deploy.sh</span><br></pre></td></tr></table></figure><p>执行完出现source中所有文件即同步成功</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="在安装好Node-js和git的前提下"><a href="#在安装好Node-js和git的前提下" class="headerlink" title="在安装好Node.js和git的前提下"></a>在安装好Node.js和git的前提下</h3><h3 id="1-将你原来电脑上经配置好并生成的hexo目录拷到你的新电脑上"><a href="#1-将你原来电脑上经配置好并生成的hexo目录拷到你的新电脑上" class="headerlink" title="1.将你原来电脑上经配置好并生成的hexo目录拷到你的新电脑上"></a>1.将你原来电脑上经配置好并生成的hexo目录拷到你的新电脑上</h3><h3 id="2-在git-bush中进入hexo目录中，执行以下命令"><a href="#2-在git-bush中进入hexo目录中，执行以下命令" class="headerlink" title="2.在git bush中进入hexo目录中，执行以下命令"></a>2.在git bush中进入hexo目录中，执行以下命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装hexo框架</span></span><br><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure><h3 id="3-进入blog目录下执行以下命令"><a href="#3-进入blog目录下执行以下命令" class="headerlink" title="3.进入blog目录下执行以下命令"></a>3.进入blog目录下执行以下命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进行Hexo的模板安装</span></span><br><span class="line">npm install </span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure><h3 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">./deploy.sh</span><br></pre></td></tr></table></figure><p>执行完出现source中所有文件即同步成功</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;###在安装好Node.js和git的前提下&lt;/p&gt;
-&lt;h3 id=&quot;1-将你原来电脑上经配置好并生成的hexo目录拷到你的新电脑上&quot;&gt;&lt;a href=&quot;#1-将你原来电脑上经配置好并生成的hexo目录拷到你的新电脑上&quot; class=&quot;headerlink&quot; title=&quot;
+        &lt;h3 id=&quot;在安装好Node-js和git的前提下&quot;&gt;&lt;a href=&quot;#在安装好Node-js和git的前提下&quot; class=&quot;headerlink&quot; title=&quot;在安装好Node.js和git的前提下&quot;&gt;&lt;/a&gt;在安装好Node.js和git的前提下&lt;/h3&gt;&lt;h3 i
       
     
     </summary>
