@@ -163,6 +163,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-boke" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/16/boke/">换电脑，如何同步博客</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/16/boke/" class="archive-article-date">
+  	<time datetime="2018-10-16T12:06:02.402Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###在安装好Node.js和git的前提下</p>
+<h3 id="1-将你原来电脑上经配置好并生成的hexo目录拷到你的新电脑上"><a href="#1-将你原来电脑上经配置好并生成的hexo目录拷到你的新电脑上" class="headerlink" title="1.将你原来电脑上经配置好并生成的hexo目录拷到你的新电脑上"></a>1.将你原来电脑上经配置好并生成的hexo目录拷到你的新电脑上</h3><h3 id="2-在git-bush中进入hexo目录中，执行以下命令"><a href="#2-在git-bush中进入hexo目录中，执行以下命令" class="headerlink" title="2.在git bush中进入hexo目录中，执行以下命令"></a>2.在git bush中进入hexo目录中，执行以下命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装hexo框架</span></span><br><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h3 id="3-进入blog目录下执行以下命令"><a href="#3-进入blog目录下执行以下命令" class="headerlink" title="3.进入blog目录下执行以下命令"></a>3.进入blog目录下执行以下命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进行Hexo的模板安装</span></span><br><span class="line">npm install </span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+<h3 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">./deploy.sh</span><br></pre></td></tr></table></figure>
+<p>执行完出现source中所有文件即同步成功</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">change</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/16/boke/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-mysql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -868,82 +946,6 @@
 
 
   
-    <article id="post-python_p1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/16/python_p1/">网络爬虫基础01——HTML网页结构</a>
-    </h1>
-  
-
-        
-        <a href="/2018/10/16/python_p1/" class="archive-article-date">
-  	<time datetime="2018-10-16T11:14:33.673Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h3 id="什么是HTML？"><a href="#什么是HTML？" class="headerlink" title="什么是HTML？"></a>什么是HTML？</h3><p>HTML = Hyper Text Markup Language<br>超文本标记语言<br>标记是用来告诉 浏览器（Browser）标记的内容是什么类型<br>这种标记形式 是通过 &lt; 标记语言 &gt; 的形式<br>标记语言又称之位 标签 tag/ Element<br>
-        
-          <a class="article-more-a" href="/2018/10/16/python_p1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">pachong</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/16/python_p1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1057,6 +1059,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">pachong</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">change</a>
               </li>
             
             <div class="clearfix"></div>
